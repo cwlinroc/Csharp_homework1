@@ -19,25 +19,45 @@ namespace Csharp_homework1
 
         private void button_showhelloform_Click(object sender, EventArgs e)
         {
-            clicked_times++;
+            Utility.CountClicked();
             M01_form_hello m01 = new M01_form_hello();
             m01.Show();
         }
 
         private void btn_show_clicked_Click(object sender, EventArgs e)
         {
-            clicked_times++;
+            Utility.CountClicked();
             show_clicked_times();
         }
 
-        int clicked_times = 0;
+        
 
-        void show_clicked_times()
+        private void show_clicked_times()
         {
-            string message  = "一共按了" + clicked_times + "次";
+            string message  = "一共按了" + Utility.TimesClicked() + "次";
             MessageBox.Show(message);
         }
 
+        private void btn_show_date_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            MessageBox.Show( Utility.ShowDate() );
+        }
 
+        private void btn_showloanform_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M03_form_loancounter m03 = new M03_form_loancounter();
+            m03.Show();
+        }
+
+        private void btm_show_barapp_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M04_barapp m04 = new M04_barapp();
+            m04.Show();
+
+
+        }
     }
 }

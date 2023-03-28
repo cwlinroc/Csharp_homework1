@@ -30,6 +30,9 @@
         {
             this.button_showhelloform = new System.Windows.Forms.Button();
             this.btn_show_clicked = new System.Windows.Forms.Button();
+            this.btn_show_date = new System.Windows.Forms.Button();
+            this.btn_showloanform = new System.Windows.Forms.Button();
+            this.btm_show_barapp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_showhelloform
@@ -52,16 +55,49 @@
             this.btn_show_clicked.UseVisualStyleBackColor = true;
             this.btn_show_clicked.Click += new System.EventHandler(this.btn_show_clicked_Click);
             // 
+            // btn_show_date
+            // 
+            this.btn_show_date.Location = new System.Drawing.Point(646, 311);
+            this.btn_show_date.Name = "btn_show_date";
+            this.btn_show_date.Size = new System.Drawing.Size(120, 48);
+            this.btn_show_date.TabIndex = 2;
+            this.btn_show_date.TabStop = false;
+            this.btn_show_date.Text = "show date";
+            this.btn_show_date.UseVisualStyleBackColor = true;
+            this.btn_show_date.Click += new System.EventHandler(this.btn_show_date_Click);
+            // 
+            // btn_showloanform
+            // 
+            this.btn_showloanform.Location = new System.Drawing.Point(291, 43);
+            this.btn_showloanform.Name = "btn_showloanform";
+            this.btn_showloanform.Size = new System.Drawing.Size(165, 71);
+            this.btn_showloanform.TabIndex = 3;
+            this.btn_showloanform.Text = "Show Loan Form";
+            this.btn_showloanform.UseVisualStyleBackColor = true;
+            this.btn_showloanform.Click += new System.EventHandler(this.btn_showloanform_Click);
+            // 
+            // btm_show_barapp
+            // 
+            this.btm_show_barapp.Location = new System.Drawing.Point(524, 43);
+            this.btm_show_barapp.Name = "btm_show_barapp";
+            this.btm_show_barapp.Size = new System.Drawing.Size(165, 71);
+            this.btm_show_barapp.TabIndex = 4;
+            this.btm_show_barapp.Text = "Show bar app";
+            this.btm_show_barapp.UseVisualStyleBackColor = true;
+            this.btm_show_barapp.Click += new System.EventHandler(this.btm_show_barapp_Click);
+            // 
             // M02_form_index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btm_show_barapp);
+            this.Controls.Add(this.btn_showloanform);
+            this.Controls.Add(this.btn_show_date);
             this.Controls.Add(this.btn_show_clicked);
             this.Controls.Add(this.button_showhelloform);
             this.Name = "M02_form_index";
             this.Text = "Form2";
-            this.TopMost = true;
             this.ResumeLayout(false);
 
         }
@@ -70,5 +106,8 @@
 
         private System.Windows.Forms.Button button_showhelloform;
         private System.Windows.Forms.Button btn_show_clicked;
+        private System.Windows.Forms.Button btn_show_date;
+        private System.Windows.Forms.Button btn_showloanform;
+        private System.Windows.Forms.Button btm_show_barapp;
     }
 }

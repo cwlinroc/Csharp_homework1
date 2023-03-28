@@ -153,7 +153,6 @@
             this.Controls.Add(this.label_name);
             this.Name = "M01_form_hello";
             this.Text = "Hello Form";
-            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
