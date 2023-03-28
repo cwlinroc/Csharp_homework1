@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class Form1 : Form
+    public partial class M03_loancounter : Form
     {
-        public Form1()
+        public M03_loancounter()
         {
             InitializeComponent();
         }

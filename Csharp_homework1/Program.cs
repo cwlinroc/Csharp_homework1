@@ -16,7 +16,7 @@ namespace Csharp_homework1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new M02_form_index());
         }
     }
 }
