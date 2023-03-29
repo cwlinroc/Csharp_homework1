@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M02_form_index
+    partial class M00_form_index
     {
         /// <summary>
         /// Required designer variable.

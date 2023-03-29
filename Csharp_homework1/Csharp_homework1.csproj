@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="M05_student_structform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M05_student_structform.Designer.cs">
+      <DependentUpon>M05_student_structform.cs</DependentUpon>
+    </Compile>
     <Compile Include="M04_barapp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +77,11 @@
     <Compile Include="M01_form_hello.Designer.cs">
       <DependentUpon>M01_form_hello.cs</DependentUpon>
     </Compile>
-    <Compile Include="M02_form_index.cs">
+    <Compile Include="M00_form_index.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="M02_form_index.Designer.cs">
-      <DependentUpon>M02_form_index.cs</DependentUpon>
+    <Compile Include="M00_form_index.Designer.cs">
+      <DependentUpon>M00_form_index.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,11 +94,14 @@
     <EmbeddedResource Include="M01_form_hello.resx">
       <DependentUpon>M01_form_hello.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="M02_form_index.resx">
-      <DependentUpon>M02_form_index.cs</DependentUpon>
+    <EmbeddedResource Include="M00_form_index.resx">
+      <DependentUpon>M00_form_index.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="M04_barapp.resx">
       <DependentUpon>M04_barapp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M05_student_structform.resx">
+      <DependentUpon>M05_student_structform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

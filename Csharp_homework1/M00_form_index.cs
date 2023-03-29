@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M02_form_index : Form
+    public partial class M00_form_index : Form
     {
-        public M02_form_index()
+        public M00_form_index()
         {
             InitializeComponent();
         }
