@@ -57,7 +57,7 @@
     <Compile Include="M04_barapp.Designer.cs">
       <DependentUpon>M04_barapp.cs</DependentUpon>
     </Compile>
-    <Compile Include="PartialClass_of_Utility.cs" />
+    <Compile Include="Partial_Utility.cs" />
     <Compile Include="M03a_loanreport.cs">
       <SubType>Form</SubType>
     </Compile>

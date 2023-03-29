@@ -17,12 +17,7 @@ namespace Csharp_homework1
             InitializeComponent();
         }
 
-        private void button_showhelloform_Click(object sender, EventArgs e)
-        {
-            Utility.CountClicked();
-            M01_form_hello m01 = new M01_form_hello();
-            m01.Show();
-        }
+        
 
         private void btn_show_clicked_Click(object sender, EventArgs e)
         {
@@ -44,6 +39,13 @@ namespace Csharp_homework1
             MessageBox.Show( Utility.ShowDate() );
         }
 
+        private void button_showhelloform_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M01_form_hello m01 = new M01_form_hello();
+            m01.Show();
+        }
+
         private void btn_showloanform_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
@@ -56,8 +58,13 @@ namespace Csharp_homework1
             Utility.CountClicked();
             M04_barapp m04 = new M04_barapp();
             m04.Show();
+        }
 
-
+        private void btn_show_student_structform_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M05_student_structform m05 = new M05_student_structform();
+            m05.Show();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Csharp_homework1
 {
@@ -17,6 +18,83 @@ namespace Csharp_homework1
             InitializeComponent();
         }
 
-        
+
+        private string name;
+        private int chinesescore;
+        private int englishscore;
+        private int mathscore;
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            name = text_name.Text;
+            chinesescore = int.Parse(text_chinesescore.Text);
+            englishscore = int.Parse(text_englishscore.Text);
+            mathscore = int.Parse(text_mathscore.Text);
+        }
+
+        private void btn_show_saved_Click(object sender, EventArgs e)
+        {
+            string message = "姓名：" + name + "\r\n國文成績："
+                + chinesescore + "\r\n英文成績：" + englishscore + "\r\n數學成績" + mathscore ;
+            text_showdata.Text = message;
+        }
+
+        private void btn_show_minmax_Click(object sender, EventArgs e)
+        {
+            string[] subject = { "國文","英文","數學" };
+            int[] score = { chinesescore, englishscore, mathscore };
+
+            SortByScore(ref subject, ref score);            
+
+            text_minmax.Text = CreateMinMaxMessage(ref  subject, ref  score);
+
+        }
+
+        private void SortByScore(ref string[] subject, ref int[] score) 
+        {
+            for (int i = 1; i < subject.Length; i++)
+            {
+                for (int j = i; j > 0; j--)
+                {
+                    if (score[j - 1] < score[j])
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        (score[j - 1], score[j]) = (score[j], score[j - 1]);
+                        (subject[j - 1], subject[j]) = (subject[j], subject[j - 1]);
+                    }
+                }
+            }
+        }
+
+        private string CreateMinMaxMessage(ref string[] subject, ref int[] score)
+        {
+            string message = "最低成績為" + subject[0] + score[0] + "分";
+
+            int k = 0;
+            while (score[k] == score[k + 1])
+            {
+                message += "與" + subject[k + 1] + score[k + 1] + "分";
+                k++;
+                if (k > subject.Length - 2) break;
+            }
+
+            message += "\r\n最高成績為" + subject[subject.Length - 1] + score[score.Length - 1] + "分";
+
+            k = score.Length - 1;
+
+            while (score[k] == score[k - 1])
+            {
+                message += "與" + subject[k - 1] + score[k - 1] + "分";
+                k--;
+                if (k < 1) break;
+            }
+
+            return message;
+        }
+
+
     }
 }
