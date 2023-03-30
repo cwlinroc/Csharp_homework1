@@ -34,14 +34,14 @@
             this.btn_showloanform = new System.Windows.Forms.Button();
             this.btm_show_barapp = new System.Windows.Forms.Button();
             this.btn_show_student_structform = new System.Windows.Forms.Button();
+            this.btn_show_students_grade = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_showhelloform
             // 
-            this.button_showhelloform.Location = new System.Drawing.Point(67, 54);
-            this.button_showhelloform.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_showhelloform.Location = new System.Drawing.Point(50, 43);
             this.button_showhelloform.Name = "button_showhelloform";
-            this.button_showhelloform.Size = new System.Drawing.Size(225, 89);
+            this.button_showhelloform.Size = new System.Drawing.Size(169, 71);
             this.button_showhelloform.TabIndex = 0;
             this.button_showhelloform.Text = "Show Hello Form";
             this.button_showhelloform.UseVisualStyleBackColor = true;
@@ -49,10 +49,9 @@
             // 
             // btn_show_clicked
             // 
-            this.btn_show_clicked.Location = new System.Drawing.Point(861, 472);
-            this.btn_show_clicked.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_show_clicked.Location = new System.Drawing.Point(646, 378);
             this.btn_show_clicked.Name = "btn_show_clicked";
-            this.btn_show_clicked.Size = new System.Drawing.Size(161, 61);
+            this.btn_show_clicked.Size = new System.Drawing.Size(121, 49);
             this.btn_show_clicked.TabIndex = 1;
             this.btn_show_clicked.Text = "show clicked times";
             this.btn_show_clicked.UseVisualStyleBackColor = true;
@@ -60,10 +59,9 @@
             // 
             // btn_show_date
             // 
-            this.btn_show_date.Location = new System.Drawing.Point(861, 389);
-            this.btn_show_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_show_date.Location = new System.Drawing.Point(646, 311);
             this.btn_show_date.Name = "btn_show_date";
-            this.btn_show_date.Size = new System.Drawing.Size(160, 60);
+            this.btn_show_date.Size = new System.Drawing.Size(120, 48);
             this.btn_show_date.TabIndex = 2;
             this.btn_show_date.TabStop = false;
             this.btn_show_date.Text = "show date";
@@ -72,10 +70,9 @@
             // 
             // btn_showloanform
             // 
-            this.btn_showloanform.Location = new System.Drawing.Point(388, 54);
-            this.btn_showloanform.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_showloanform.Location = new System.Drawing.Point(291, 43);
             this.btn_showloanform.Name = "btn_showloanform";
-            this.btn_showloanform.Size = new System.Drawing.Size(220, 89);
+            this.btn_showloanform.Size = new System.Drawing.Size(165, 71);
             this.btn_showloanform.TabIndex = 3;
             this.btn_showloanform.Text = "Show Loan Form";
             this.btn_showloanform.UseVisualStyleBackColor = true;
@@ -83,10 +80,9 @@
             // 
             // btm_show_barapp
             // 
-            this.btm_show_barapp.Location = new System.Drawing.Point(699, 54);
-            this.btm_show_barapp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btm_show_barapp.Location = new System.Drawing.Point(524, 43);
             this.btm_show_barapp.Name = "btm_show_barapp";
-            this.btm_show_barapp.Size = new System.Drawing.Size(220, 89);
+            this.btm_show_barapp.Size = new System.Drawing.Size(165, 71);
             this.btm_show_barapp.TabIndex = 4;
             this.btm_show_barapp.Text = "Show bar app";
             this.btm_show_barapp.UseVisualStyleBackColor = true;
@@ -94,26 +90,38 @@
             // 
             // btn_show_student_structform
             // 
-            this.btn_show_student_structform.Location = new System.Drawing.Point(70, 193);
+            this.btn_show_student_structform.Location = new System.Drawing.Point(52, 154);
+            this.btn_show_student_structform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_show_student_structform.Name = "btn_show_student_structform";
-            this.btn_show_student_structform.Size = new System.Drawing.Size(221, 105);
+            this.btn_show_student_structform.Size = new System.Drawing.Size(166, 84);
             this.btn_show_student_structform.TabIndex = 5;
             this.btn_show_student_structform.Text = "Show Student Structform";
             this.btn_show_student_structform.UseVisualStyleBackColor = true;
             this.btn_show_student_structform.Click += new System.EventHandler(this.btn_show_student_structform_Click);
             // 
+            // btn_show_students_grade
+            // 
+            this.btn_show_students_grade.Location = new System.Drawing.Point(291, 154);
+            this.btn_show_students_grade.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_show_students_grade.Name = "btn_show_students_grade";
+            this.btn_show_students_grade.Size = new System.Drawing.Size(166, 84);
+            this.btn_show_students_grade.TabIndex = 6;
+            this.btn_show_students_grade.Text = "Show Students Grade";
+            this.btn_show_students_grade.UseVisualStyleBackColor = true;
+            this.btn_show_students_grade.Click += new System.EventHandler(this.btn_show_students_grade_Click);
+            // 
             // M00_form_index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_show_students_grade);
             this.Controls.Add(this.btn_show_student_structform);
             this.Controls.Add(this.btm_show_barapp);
             this.Controls.Add(this.btn_showloanform);
             this.Controls.Add(this.btn_show_date);
             this.Controls.Add(this.btn_show_clicked);
             this.Controls.Add(this.button_showhelloform);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "M00_form_index";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -128,5 +136,6 @@
         private System.Windows.Forms.Button btn_showloanform;
         private System.Windows.Forms.Button btm_show_barapp;
         private System.Windows.Forms.Button btn_show_student_structform;
+        private System.Windows.Forms.Button btn_show_students_grade;
     }
 }

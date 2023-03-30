@@ -26,17 +26,17 @@ namespace Csharp_homework1
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            name = text_name.Text;
-            chinesescore = int.Parse(text_chinesescore.Text);
-            englishscore = int.Parse(text_englishscore.Text);
-            mathscore = int.Parse(text_mathscore.Text);
+            name = textbox_name.Text;
+            chinesescore = int.Parse(textbox_chinesescore.Text);
+            englishscore = int.Parse(textbox_englishscore.Text);
+            mathscore = int.Parse(textbox_mathscore.Text);
         }
 
         private void btn_show_saved_Click(object sender, EventArgs e)
         {
             string message = "姓名：" + name + "\r\n國文成績："
-                + chinesescore + "\r\n英文成績：" + englishscore + "\r\n數學成績" + mathscore ;
-            text_showdata.Text = message;
+                + chinesescore + "\r\n英文成績：" + englishscore + "\r\n數學成績：" + mathscore ;
+            textbox_showdata.Text = message;
         }
 
         private void btn_show_minmax_Click(object sender, EventArgs e)
@@ -44,13 +44,13 @@ namespace Csharp_homework1
             string[] subject = { "國文","英文","數學" };
             int[] score = { chinesescore, englishscore, mathscore };
 
-            SortByScore(ref subject, ref score);            
+            SortByScore(subject, score);            
 
-            text_minmax.Text = CreateMinMaxMessage(ref  subject, ref  score);
+            textbox_minmax.Text = CreateMinMaxMessage(subject, score);
 
         }
 
-        private void SortByScore(ref string[] subject, ref int[] score) 
+        private void SortByScore( string[] subject, int[] score) 
         {
             for (int i = 1; i < subject.Length; i++)
             {
@@ -69,7 +69,7 @@ namespace Csharp_homework1
             }
         }
 
-        private string CreateMinMaxMessage(ref string[] subject, ref int[] score)
+        private string CreateMinMaxMessage(string[] subject, int[] score)
         {
             string message = "最低成績為" + subject[0] + score[0] + "分";
 
@@ -95,6 +95,6 @@ namespace Csharp_homework1
             return message;
         }
 
-
+        
     }
 }

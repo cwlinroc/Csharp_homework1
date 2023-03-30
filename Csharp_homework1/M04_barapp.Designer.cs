@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(M04_barapp));
-            this.text_shoppinglist = new System.Windows.Forms.TextBox();
+            this.textbox_shoppinglist = new System.Windows.Forms.TextBox();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.label_menu = new System.Windows.Forms.Label();
             this.btn_menu_wine = new System.Windows.Forms.Button();
@@ -38,7 +38,7 @@
             this.btn_menu_beer = new System.Windows.Forms.Button();
             this.panel_total_price = new System.Windows.Forms.Panel();
             this.label_total_price = new System.Windows.Forms.Label();
-            this.text_total_price = new System.Windows.Forms.TextBox();
+            this.textbox_total_price = new System.Windows.Forms.TextBox();
             this.panel_payment = new System.Windows.Forms.Panel();
             this.label_payment = new System.Windows.Forms.Label();
             this.btn_payment_creddit = new System.Windows.Forms.Button();
@@ -53,20 +53,20 @@
             this.panel_shoppinglist.SuspendLayout();
             this.SuspendLayout();
             // 
-            // text_shoppinglist
+            // textbox_shoppinglist
             // 
-            this.text_shoppinglist.AcceptsTab = true;
-            this.text_shoppinglist.BackColor = System.Drawing.Color.White;
-            this.text_shoppinglist.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_shoppinglist.Location = new System.Drawing.Point(8, 39);
-            this.text_shoppinglist.Multiline = true;
-            this.text_shoppinglist.Name = "text_shoppinglist";
-            this.text_shoppinglist.ReadOnly = true;
-            this.text_shoppinglist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.text_shoppinglist.Size = new System.Drawing.Size(262, 215);
-            this.text_shoppinglist.TabIndex = 0;
-            this.text_shoppinglist.Text = "尚未點單";
-            this.text_shoppinglist.WordWrap = false;
+            this.textbox_shoppinglist.AcceptsTab = true;
+            this.textbox_shoppinglist.BackColor = System.Drawing.Color.White;
+            this.textbox_shoppinglist.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_shoppinglist.Location = new System.Drawing.Point(8, 39);
+            this.textbox_shoppinglist.Multiline = true;
+            this.textbox_shoppinglist.Name = "textbox_shoppinglist";
+            this.textbox_shoppinglist.ReadOnly = true;
+            this.textbox_shoppinglist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textbox_shoppinglist.Size = new System.Drawing.Size(262, 215);
+            this.textbox_shoppinglist.TabIndex = 0;
+            this.textbox_shoppinglist.Text = "尚未點單";
+            this.textbox_shoppinglist.WordWrap = false;
             // 
             // panel_menu
             // 
@@ -147,7 +147,7 @@
             // 
             this.panel_total_price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_total_price.Controls.Add(this.label_total_price);
-            this.panel_total_price.Controls.Add(this.text_total_price);
+            this.panel_total_price.Controls.Add(this.textbox_total_price);
             this.panel_total_price.Location = new System.Drawing.Point(288, 47);
             this.panel_total_price.Name = "panel_total_price";
             this.panel_total_price.Size = new System.Drawing.Size(221, 89);
@@ -163,17 +163,17 @@
             this.label_total_price.TabIndex = 5;
             this.label_total_price.Text = "總金額total price";
             // 
-            // text_total_price
+            // textbox_total_price
             // 
-            this.text_total_price.BackColor = System.Drawing.SystemColors.MenuText;
-            this.text_total_price.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_total_price.ForeColor = System.Drawing.SystemColors.Window;
-            this.text_total_price.Location = new System.Drawing.Point(17, 42);
-            this.text_total_price.Name = "text_total_price";
-            this.text_total_price.ReadOnly = true;
-            this.text_total_price.Size = new System.Drawing.Size(176, 27);
-            this.text_total_price.TabIndex = 0;
-            this.text_total_price.Text = "0元";
+            this.textbox_total_price.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textbox_total_price.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_total_price.ForeColor = System.Drawing.SystemColors.Window;
+            this.textbox_total_price.Location = new System.Drawing.Point(17, 42);
+            this.textbox_total_price.Name = "textbox_total_price";
+            this.textbox_total_price.ReadOnly = true;
+            this.textbox_total_price.Size = new System.Drawing.Size(176, 27);
+            this.textbox_total_price.TabIndex = 0;
+            this.textbox_total_price.Text = "0元";
             // 
             // panel_payment
             // 
@@ -223,7 +223,7 @@
             this.panel_shoppinglist.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_shoppinglist.Controls.Add(this.label_shoppinglist);
             this.panel_shoppinglist.Controls.Add(this.btn_shoppinglist_clear);
-            this.panel_shoppinglist.Controls.Add(this.text_shoppinglist);
+            this.panel_shoppinglist.Controls.Add(this.textbox_shoppinglist);
             this.panel_shoppinglist.Location = new System.Drawing.Point(527, 47);
             this.panel_shoppinglist.Name = "panel_shoppinglist";
             this.panel_shoppinglist.Size = new System.Drawing.Size(285, 329);
@@ -287,7 +287,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox text_shoppinglist;
+        private System.Windows.Forms.TextBox textbox_shoppinglist;
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.Panel panel_total_price;
         private System.Windows.Forms.Panel panel_payment;
@@ -295,7 +295,7 @@
         private System.Windows.Forms.Button btn_menu_whisky;
         private System.Windows.Forms.Button btn_menu_tequila;
         private System.Windows.Forms.Button btn_menu_beer;
-        private System.Windows.Forms.TextBox text_total_price;
+        private System.Windows.Forms.TextBox textbox_total_price;
         private System.Windows.Forms.Button btn_payment_creddit;
         private System.Windows.Forms.Button btn_payment_cash;
         private System.Windows.Forms.Panel panel_shoppinglist;
