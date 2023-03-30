@@ -22,7 +22,6 @@ namespace Csharp_homework1
         private void btn_menu_beer_Click(object sender, EventArgs e)
         {
             shoplist.Add("Beer");
-            text_shoppinglist.Clear();
             text_shoppinglist.Text = shoplist.GetNewText();
             text_total_price.Text = shoplist.PrintTotalPrice();
             
@@ -31,7 +30,6 @@ namespace Csharp_homework1
         private void btn_menu_tequila_Click(object sender, EventArgs e)
         {
             shoplist.Add("Tequila");
-            text_shoppinglist.Clear();
             text_shoppinglist.Text = shoplist.GetNewText();
             text_total_price.Text = shoplist.PrintTotalPrice();
             
@@ -40,7 +38,6 @@ namespace Csharp_homework1
         private void btn_menu_whisky_Click(object sender, EventArgs e)
         {
             shoplist.Add("Whisky");
-            text_shoppinglist.Clear();
             text_shoppinglist.Text = shoplist.GetNewText();
             text_total_price.Text = shoplist.PrintTotalPrice();
             
@@ -49,7 +46,6 @@ namespace Csharp_homework1
         private void btn_menu_wine_Click(object sender, EventArgs e)
         {
             shoplist.Add("Wine");
-            text_shoppinglist.Clear();
             text_shoppinglist.Text = shoplist.GetNewText();
             text_total_price.Text = shoplist.PrintTotalPrice();
             
@@ -58,7 +54,6 @@ namespace Csharp_homework1
         private void btn_shoppinglist_clear_Click(object sender, EventArgs e)
         {
             shoplist.Clear();
-            text_shoppinglist.Clear();
             text_shoppinglist.Text = "尚未點單";
             text_total_price.Text = shoplist.PrintTotalPrice();
         }
