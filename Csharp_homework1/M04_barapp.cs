@@ -58,10 +58,10 @@ namespace Csharp_homework1
         private void btn_shoppinglist_clear_Click(object sender, EventArgs e)
         {
             shoplist.Clear();
-            text_shoppinglist.Text = "尚未點單";
-            text_total_price.Text = shoplist.PrintTotalPrice();
-            text_total_price.Text = shoplist.PrintTotalPrice();
-            text_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_shoppinglist.Text = "尚未點單";
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
         }
 
 
