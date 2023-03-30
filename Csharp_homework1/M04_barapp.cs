@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Csharp_homework1
 {
     public partial class M04_barapp : Form
     {
+
         
+
+
         public M04_barapp()
         {
             InitializeComponent();
@@ -22,32 +26,32 @@ namespace Csharp_homework1
         private void btn_menu_beer_Click(object sender, EventArgs e)
         {
             shoplist.Add("Beer");
-            text_shoppinglist.Text = shoplist.GetNewText();
-            text_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_shoppinglist.Text = shoplist.GetNewText();
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
             
         }
 
         private void btn_menu_tequila_Click(object sender, EventArgs e)
         {
             shoplist.Add("Tequila");
-            text_shoppinglist.Text = shoplist.GetNewText();
-            text_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_shoppinglist.Text = shoplist.GetNewText();
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
             
         }
 
         private void btn_menu_whisky_Click(object sender, EventArgs e)
         {
             shoplist.Add("Whisky");
-            text_shoppinglist.Text = shoplist.GetNewText();
-            text_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_shoppinglist.Text = shoplist.GetNewText();
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
             
         }
 
         private void btn_menu_wine_Click(object sender, EventArgs e)
         {
             shoplist.Add("Wine");
-            text_shoppinglist.Text = shoplist.GetNewText();
-            text_total_price.Text = shoplist.PrintTotalPrice();
+            textbox_shoppinglist.Text = shoplist.GetNewText();
+            textbox_total_price.Text = shoplist.PrintTotalPrice();
             
         }
 
@@ -55,6 +59,8 @@ namespace Csharp_homework1
         {
             shoplist.Clear();
             text_shoppinglist.Text = "尚未點單";
+            text_total_price.Text = shoplist.PrintTotalPrice();
+            text_total_price.Text = shoplist.PrintTotalPrice();
             text_total_price.Text = shoplist.PrintTotalPrice();
         }
 

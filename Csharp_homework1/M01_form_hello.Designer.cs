@@ -33,10 +33,10 @@
             this.label_english_name = new System.Windows.Forms.Label();
             this.label_gender = new System.Windows.Forms.Label();
             this.label_constellation = new System.Windows.Forms.Label();
-            this.text_name = new System.Windows.Forms.TextBox();
-            this.text_english_name = new System.Windows.Forms.TextBox();
-            this.text_gender = new System.Windows.Forms.TextBox();
-            this.text_constellation = new System.Windows.Forms.TextBox();
+            this.textbox_name = new System.Windows.Forms.TextBox();
+            this.textbox_english_name = new System.Windows.Forms.TextBox();
+            this.textbox_gender = new System.Windows.Forms.TextBox();
+            this.textbox_constellation = new System.Windows.Forms.TextBox();
             this.btn_say_hi = new System.Windows.Forms.Button();
             this.btn_say_hello = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -81,37 +81,37 @@
             this.label_constellation.TabIndex = 3;
             this.label_constellation.Text = "星座";
             // 
-            // text_name
+            // textbox_name
             // 
-            this.text_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_name.Location = new System.Drawing.Point(446, 63);
-            this.text_name.Name = "text_name";
-            this.text_name.Size = new System.Drawing.Size(100, 35);
-            this.text_name.TabIndex = 4;
+            this.textbox_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_name.Location = new System.Drawing.Point(446, 63);
+            this.textbox_name.Name = "textbox_name";
+            this.textbox_name.Size = new System.Drawing.Size(100, 35);
+            this.textbox_name.TabIndex = 4;
             // 
-            // text_english_name
+            // textbox_english_name
             // 
-            this.text_english_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_english_name.Location = new System.Drawing.Point(446, 126);
-            this.text_english_name.Name = "text_english_name";
-            this.text_english_name.Size = new System.Drawing.Size(100, 35);
-            this.text_english_name.TabIndex = 5;
+            this.textbox_english_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_english_name.Location = new System.Drawing.Point(446, 126);
+            this.textbox_english_name.Name = "textbox_english_name";
+            this.textbox_english_name.Size = new System.Drawing.Size(100, 35);
+            this.textbox_english_name.TabIndex = 5;
             // 
-            // text_gender
+            // textbox_gender
             // 
-            this.text_gender.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_gender.Location = new System.Drawing.Point(446, 196);
-            this.text_gender.Name = "text_gender";
-            this.text_gender.Size = new System.Drawing.Size(100, 35);
-            this.text_gender.TabIndex = 6;
+            this.textbox_gender.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_gender.Location = new System.Drawing.Point(446, 196);
+            this.textbox_gender.Name = "textbox_gender";
+            this.textbox_gender.Size = new System.Drawing.Size(100, 35);
+            this.textbox_gender.TabIndex = 6;
             // 
-            // text_constellation
+            // textbox_constellation
             // 
-            this.text_constellation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_constellation.Location = new System.Drawing.Point(446, 267);
-            this.text_constellation.Name = "text_constellation";
-            this.text_constellation.Size = new System.Drawing.Size(100, 35);
-            this.text_constellation.TabIndex = 7;
+            this.textbox_constellation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_constellation.Location = new System.Drawing.Point(446, 267);
+            this.textbox_constellation.Name = "textbox_constellation";
+            this.textbox_constellation.Size = new System.Drawing.Size(100, 35);
+            this.textbox_constellation.TabIndex = 7;
             // 
             // btn_say_hi
             // 
@@ -143,10 +143,10 @@
             this.ClientSize = new System.Drawing.Size(752, 424);
             this.Controls.Add(this.btn_say_hello);
             this.Controls.Add(this.btn_say_hi);
-            this.Controls.Add(this.text_constellation);
-            this.Controls.Add(this.text_gender);
-            this.Controls.Add(this.text_english_name);
-            this.Controls.Add(this.text_name);
+            this.Controls.Add(this.textbox_constellation);
+            this.Controls.Add(this.textbox_gender);
+            this.Controls.Add(this.textbox_english_name);
+            this.Controls.Add(this.textbox_name);
             this.Controls.Add(this.label_constellation);
             this.Controls.Add(this.label_gender);
             this.Controls.Add(this.label_english_name);
@@ -164,10 +164,10 @@
         private System.Windows.Forms.Label label_english_name;
         private System.Windows.Forms.Label label_gender;
         private System.Windows.Forms.Label label_constellation;
-        private System.Windows.Forms.TextBox text_name;
-        private System.Windows.Forms.TextBox text_english_name;
-        private System.Windows.Forms.TextBox text_gender;
-        private System.Windows.Forms.TextBox text_constellation;
+        private System.Windows.Forms.TextBox textbox_name;
+        private System.Windows.Forms.TextBox textbox_english_name;
+        private System.Windows.Forms.TextBox textbox_gender;
+        private System.Windows.Forms.TextBox textbox_constellation;
         private System.Windows.Forms.Button btn_say_hi;
         private System.Windows.Forms.Button btn_say_hello;
     }

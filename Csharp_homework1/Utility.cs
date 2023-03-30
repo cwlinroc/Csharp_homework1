@@ -13,6 +13,8 @@ namespace Csharp_homework1
             return DateTime.Now.ToString();
         }
 
+        static internal int RandSeed;
+
 
 
     }

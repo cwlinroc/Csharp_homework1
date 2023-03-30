@@ -19,10 +19,10 @@ namespace Csharp_homework1
 
         private void btn_say_hi_Click(object sender, EventArgs e)
         {
-            string name = text_name.Text;
-            string english_name = text_english_name.Text;
-            string gender = text_gender.Text;
-            string constellation=text_constellation.Text;
+            string name = textbox_name.Text;
+            string english_name = textbox_english_name.Text;
+            string gender = textbox_gender.Text;
+            string constellation=textbox_constellation.Text;
             string combined_message = "Hi," + constellation + "的" + name + "\n" + english_name + "的性別設定為" + gender;
 
             MessageBox.Show(combined_message);
@@ -32,10 +32,10 @@ namespace Csharp_homework1
 
         private void btn_say_hello_Click(object sender, EventArgs e)
         {
-            string name = text_name.Text;
-            string english_name = text_english_name.Text;
-            string gender = text_gender.Text;
-            string constellation = text_constellation.Text;
+            string name = textbox_name.Text;
+            string english_name = textbox_english_name.Text;
+            string gender = textbox_gender.Text;
+            string constellation = textbox_constellation.Text;
             string combined_message = "Hello," + constellation + "s" + name + "\n" + english_name + "s gender is set as" + gender;
 
             MessageBox.Show(combined_message);

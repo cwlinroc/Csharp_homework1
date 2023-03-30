@@ -33,11 +33,11 @@
             this.label_lending_rate_year = new System.Windows.Forms.Label();
             this.label_PMT = new System.Windows.Forms.Label();
             this.label_total_payment = new System.Windows.Forms.Label();
-            this.text_loan_amount = new System.Windows.Forms.TextBox();
-            this.text_loan_term_yaer = new System.Windows.Forms.TextBox();
-            this.text_lending_rate_year = new System.Windows.Forms.TextBox();
-            this.text_PMT = new System.Windows.Forms.TextBox();
-            this.text_total_payment = new System.Windows.Forms.TextBox();
+            this.textbox_loan_amount = new System.Windows.Forms.TextBox();
+            this.textbox_loan_term_yaer = new System.Windows.Forms.TextBox();
+            this.textbox_lending_rate_year = new System.Windows.Forms.TextBox();
+            this.textbox_PMT = new System.Windows.Forms.TextBox();
+            this.textbox_total_payment = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_loan_amount
@@ -90,66 +90,66 @@
             this.label_total_payment.TabIndex = 4;
             this.label_total_payment.Text = "總付款";
             // 
-            // text_loan_amount
+            // textbox_loan_amount
             // 
-            this.text_loan_amount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_loan_amount.Location = new System.Drawing.Point(248, 46);
-            this.text_loan_amount.MaxLength = 30000;
-            this.text_loan_amount.Name = "text_loan_amount";
-            this.text_loan_amount.ReadOnly = true;
-            this.text_loan_amount.Size = new System.Drawing.Size(137, 29);
-            this.text_loan_amount.TabIndex = 5;
+            this.textbox_loan_amount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_loan_amount.Location = new System.Drawing.Point(248, 46);
+            this.textbox_loan_amount.MaxLength = 30000;
+            this.textbox_loan_amount.Name = "textbox_loan_amount";
+            this.textbox_loan_amount.ReadOnly = true;
+            this.textbox_loan_amount.Size = new System.Drawing.Size(137, 29);
+            this.textbox_loan_amount.TabIndex = 5;
             // 
-            // text_loan_term_yaer
+            // textbox_loan_term_yaer
             // 
-            this.text_loan_term_yaer.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_loan_term_yaer.Location = new System.Drawing.Point(248, 107);
-            this.text_loan_term_yaer.MaxLength = 30000;
-            this.text_loan_term_yaer.Name = "text_loan_term_yaer";
-            this.text_loan_term_yaer.ReadOnly = true;
-            this.text_loan_term_yaer.Size = new System.Drawing.Size(137, 29);
-            this.text_loan_term_yaer.TabIndex = 6;
+            this.textbox_loan_term_yaer.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_loan_term_yaer.Location = new System.Drawing.Point(248, 107);
+            this.textbox_loan_term_yaer.MaxLength = 30000;
+            this.textbox_loan_term_yaer.Name = "textbox_loan_term_yaer";
+            this.textbox_loan_term_yaer.ReadOnly = true;
+            this.textbox_loan_term_yaer.Size = new System.Drawing.Size(137, 29);
+            this.textbox_loan_term_yaer.TabIndex = 6;
             // 
-            // text_lending_rate_year
+            // textbox_lending_rate_year
             // 
-            this.text_lending_rate_year.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_lending_rate_year.Location = new System.Drawing.Point(248, 171);
-            this.text_lending_rate_year.MaxLength = 30000;
-            this.text_lending_rate_year.Name = "text_lending_rate_year";
-            this.text_lending_rate_year.ReadOnly = true;
-            this.text_lending_rate_year.Size = new System.Drawing.Size(137, 29);
-            this.text_lending_rate_year.TabIndex = 7;
+            this.textbox_lending_rate_year.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_lending_rate_year.Location = new System.Drawing.Point(248, 171);
+            this.textbox_lending_rate_year.MaxLength = 30000;
+            this.textbox_lending_rate_year.Name = "textbox_lending_rate_year";
+            this.textbox_lending_rate_year.ReadOnly = true;
+            this.textbox_lending_rate_year.Size = new System.Drawing.Size(137, 29);
+            this.textbox_lending_rate_year.TabIndex = 7;
             // 
-            // text_PMT
+            // textbox_PMT
             // 
-            this.text_PMT.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_PMT.Location = new System.Drawing.Point(248, 239);
-            this.text_PMT.MaxLength = 30000;
-            this.text_PMT.Name = "text_PMT";
-            this.text_PMT.ReadOnly = true;
-            this.text_PMT.Size = new System.Drawing.Size(137, 29);
-            this.text_PMT.TabIndex = 8;
+            this.textbox_PMT.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_PMT.Location = new System.Drawing.Point(248, 239);
+            this.textbox_PMT.MaxLength = 30000;
+            this.textbox_PMT.Name = "textbox_PMT";
+            this.textbox_PMT.ReadOnly = true;
+            this.textbox_PMT.Size = new System.Drawing.Size(137, 29);
+            this.textbox_PMT.TabIndex = 8;
             // 
-            // text_total_payment
+            // textbox_total_payment
             // 
-            this.text_total_payment.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.text_total_payment.Location = new System.Drawing.Point(248, 303);
-            this.text_total_payment.MaxLength = 30000;
-            this.text_total_payment.Name = "text_total_payment";
-            this.text_total_payment.ReadOnly = true;
-            this.text_total_payment.Size = new System.Drawing.Size(137, 29);
-            this.text_total_payment.TabIndex = 9;
+            this.textbox_total_payment.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_total_payment.Location = new System.Drawing.Point(248, 303);
+            this.textbox_total_payment.MaxLength = 30000;
+            this.textbox_total_payment.Name = "textbox_total_payment";
+            this.textbox_total_payment.ReadOnly = true;
+            this.textbox_total_payment.Size = new System.Drawing.Size(137, 29);
+            this.textbox_total_payment.TabIndex = 9;
             // 
             // M03a_loanreport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 411);
-            this.Controls.Add(this.text_total_payment);
-            this.Controls.Add(this.text_PMT);
-            this.Controls.Add(this.text_lending_rate_year);
-            this.Controls.Add(this.text_loan_term_yaer);
-            this.Controls.Add(this.text_loan_amount);
+            this.Controls.Add(this.textbox_total_payment);
+            this.Controls.Add(this.textbox_PMT);
+            this.Controls.Add(this.textbox_lending_rate_year);
+            this.Controls.Add(this.textbox_loan_term_yaer);
+            this.Controls.Add(this.textbox_loan_amount);
             this.Controls.Add(this.label_total_payment);
             this.Controls.Add(this.label_PMT);
             this.Controls.Add(this.label_lending_rate_year);
@@ -169,10 +169,10 @@
         private System.Windows.Forms.Label label_lending_rate_year;
         private System.Windows.Forms.Label label_PMT;
         private System.Windows.Forms.Label label_total_payment;
-        private System.Windows.Forms.TextBox text_loan_amount;
-        private System.Windows.Forms.TextBox text_loan_term_yaer;
-        private System.Windows.Forms.TextBox text_lending_rate_year;
-        private System.Windows.Forms.TextBox text_PMT;
-        private System.Windows.Forms.TextBox text_total_payment;
+        private System.Windows.Forms.TextBox textbox_loan_amount;
+        private System.Windows.Forms.TextBox textbox_loan_term_yaer;
+        private System.Windows.Forms.TextBox textbox_lending_rate_year;
+        private System.Windows.Forms.TextBox textbox_PMT;
+        private System.Windows.Forms.TextBox textbox_total_payment;
     }
 }

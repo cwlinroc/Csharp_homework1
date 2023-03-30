@@ -17,11 +17,11 @@ namespace Csharp_homework1
         {
             InitializeComponent();
 
-            text_loan_amount.Text = loan_amount.ToString();
-            text_loan_term_yaer.Text = loan_term_year.ToString();
-            text_lending_rate_year.Text = (lending_rate_year*100).ToString();
-            text_PMT.Text = PMT.ToString();
-            text_total_payment.Text = (PMT* loan_term_year*12).ToString();
+            textbox_loan_amount.Text = loan_amount.ToString();
+            textbox_loan_term_yaer.Text = loan_term_year.ToString();
+            textbox_lending_rate_year.Text = (lending_rate_year*100).ToString();
+            textbox_PMT.Text = PMT.ToString();
+            textbox_total_payment.Text = (PMT* loan_term_year*12).ToString();
         }
 
         

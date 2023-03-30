@@ -66,5 +66,12 @@ namespace Csharp_homework1
             M05_student_structform m05 = new M05_student_structform();
             m05.Show();
         }
+
+        private void btn_show_students_grade_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M06_sutdents_grade m06 = new M06_sutdents_grade();
+            m06.Show();
+        }
     }
 }
