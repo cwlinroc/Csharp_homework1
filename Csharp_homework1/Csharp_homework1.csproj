@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="M07_students_gradelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M07_students_gradelist.Designer.cs">
+      <DependentUpon>M07_students_gradelist.cs</DependentUpon>
+    </Compile>
     <Compile Include="M06_sutdents_grade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="M05_student_structform.resx">
       <DependentUpon>M05_student_structform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M07_students_gradelist.resx">
+      <DependentUpon>M07_students_gradelist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="M06_sutdents_grade.resx">
       <DependentUpon>M06_sutdents_grade.cs</DependentUpon>

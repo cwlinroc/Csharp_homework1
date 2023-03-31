@@ -13,14 +13,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Csharp_homework1
 {
-    public partial class M06_sutdents_grade : Form
+    public partial class M07_students_gradelist : Form
     {
         const int subjectnumbers = 3;
         string[] subjectname = { "國文", "英文", "數學" };
 
         List<Students> studentslist = new List<Students>();
 
-        public M06_sutdents_grade()
+        public M07_students_gradelist()
         {
             InitializeComponent();
             InitialListView();
@@ -64,6 +64,7 @@ namespace Csharp_homework1
                 int mathscore = int.Parse(textBox_mathscore.Text);
 
                 AddStudent(name, chinesescore, englishscore, mathscore);
+                RenewScoreBoard();
             }
             catch (Exception ex)
             {
@@ -72,20 +73,49 @@ namespace Csharp_homework1
 
         }
 
+
+        private void btn_insert_studentdata_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CheckInput();
+
+                string name = textBox_name.Text;
+                int chinesescore = int.Parse(textBox_chinesescore.Text);
+                int englishscore = int.Parse(textBox_englishscore.Text);
+                int mathscore = int.Parse(textBox_mathscore.Text);
+
+                InsertStudent(name, chinesescore, englishscore, mathscore);
+                RenewScoreBoard();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         private void btn_add_randomdata_Click(object sender, EventArgs e)
         {
             AddStudent();
+            RenewScoreBoard();
+        }
+
+        private void btn_insertrandomdata_Click(object sender, EventArgs e)
+        {
+            InsertStudent();
+            RenewScoreBoard();
         }
 
         private void btn_add_20randomdata_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < 20; i++) AddStudent();
+            RenewScoreBoard();
         }
 
         private void btn_clearall_Click(object sender, EventArgs e)
         {
-            studentslist.Clear();
-            listview_scoreboard.Items.Clear();
+            studentslist.Clear(); 
+            RenewScoreBoard();
             listview_statistic.Items.Clear();
 
             btn_statistic.Enabled = true;
@@ -234,19 +264,25 @@ namespace Csharp_homework1
         private void AddStudent()
         {
             Students student = new Students();
-            studentslist.Add(student);
-
-            AddStudentToList(student);         
-
+            studentslist.Add(student); 
         }
 
         private void AddStudent(string name, int score1, int score2, int score3)
         {
             Students student = new Students(name,score1,score2,score3);
             studentslist.Add(student);
+        }
 
-            AddStudentToList(student);
+        private void InsertStudent()
+        {
+            Students student = new Students();
+            studentslist.Insert(0,student);
+        }
 
+        private void InsertStudent(string name, int score1, int score2, int score3)
+        {
+            Students student = new Students(name, score1, score2, score3);
+            studentslist.Insert(0, student);
         }
 
         private void AddStudentToList(Students student)
@@ -275,6 +311,20 @@ namespace Csharp_homework1
 
             listview_scoreboard.Items.Add(item);
         }
+
+        private void RenewScoreBoard()
+        {
+            listview_scoreboard.Items.Clear();
+
+            foreach (var student in studentslist) 
+            {
+                AddStudentToList(student);
+            }
+
+        }
+
+
+
 
         private void ScanAllStudents(int[] sum, double[] average, int[] highestscore, int[] lowestscore)
         {

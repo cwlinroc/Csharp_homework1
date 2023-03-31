@@ -35,6 +35,7 @@
             this.btm_show_barapp = new System.Windows.Forms.Button();
             this.btn_show_student_structform = new System.Windows.Forms.Button();
             this.btn_show_students_grade = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_showhelloform
@@ -91,7 +92,7 @@
             // btn_show_student_structform
             // 
             this.btn_show_student_structform.Location = new System.Drawing.Point(52, 154);
-            this.btn_show_student_structform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_show_student_structform.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_student_structform.Name = "btn_show_student_structform";
             this.btn_show_student_structform.Size = new System.Drawing.Size(166, 84);
             this.btn_show_student_structform.TabIndex = 5;
@@ -110,11 +111,23 @@
             this.btn_show_students_grade.UseVisualStyleBackColor = true;
             this.btn_show_students_grade.Click += new System.EventHandler(this.btn_show_students_grade_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(524, 154);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 84);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Show Students Grade List";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // M00_form_index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_show_students_grade);
             this.Controls.Add(this.btn_show_student_structform);
             this.Controls.Add(this.btm_show_barapp);
@@ -137,5 +150,6 @@
         private System.Windows.Forms.Button btm_show_barapp;
         private System.Windows.Forms.Button btn_show_student_structform;
         private System.Windows.Forms.Button btn_show_students_grade;
+        private System.Windows.Forms.Button button1;
     }
 }

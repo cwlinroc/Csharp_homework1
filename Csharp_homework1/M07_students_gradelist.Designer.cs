@@ -2,7 +2,7 @@
 
 namespace Csharp_homework1
 {
-    partial class M06_sutdents_grade
+    partial class M07_students_gradelist
     {
         /// <summary>
         /// Required designer variable.
@@ -61,7 +61,6 @@ namespace Csharp_homework1
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.listView_header = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,6 +70,10 @@ namespace Csharp_homework1
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_insertrandomdata = new System.Windows.Forms.Button();
+            this.btn_insert_studentdata = new System.Windows.Forms.Button();
+            this.btn_remove_1ststudent = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -161,9 +164,9 @@ namespace Csharp_homework1
             // 
             // btn_add_randomdata
             // 
-            this.btn_add_randomdata.Location = new System.Drawing.Point(9, 50);
+            this.btn_add_randomdata.Location = new System.Drawing.Point(401, 461);
             this.btn_add_randomdata.Name = "btn_add_randomdata";
-            this.btn_add_randomdata.Size = new System.Drawing.Size(172, 32);
+            this.btn_add_randomdata.Size = new System.Drawing.Size(107, 32);
             this.btn_add_randomdata.TabIndex = 11;
             this.btn_add_randomdata.Text = "隨機儲存資料";
             this.btn_add_randomdata.UseVisualStyleBackColor = true;
@@ -171,7 +174,7 @@ namespace Csharp_homework1
             // 
             // btn_statistic
             // 
-            this.btn_statistic.Location = new System.Drawing.Point(9, 88);
+            this.btn_statistic.Location = new System.Drawing.Point(596, 461);
             this.btn_statistic.Name = "btn_statistic";
             this.btn_statistic.Size = new System.Drawing.Size(172, 32);
             this.btn_statistic.TabIndex = 12;
@@ -181,7 +184,7 @@ namespace Csharp_homework1
             // 
             // btn_clearall
             // 
-            this.btn_clearall.Location = new System.Drawing.Point(9, 157);
+            this.btn_clearall.Location = new System.Drawing.Point(9, 147);
             this.btn_clearall.Name = "btn_clearall";
             this.btn_clearall.Size = new System.Drawing.Size(172, 32);
             this.btn_clearall.TabIndex = 13;
@@ -191,9 +194,9 @@ namespace Csharp_homework1
             // 
             // btn_add_20randomdata
             // 
-            this.btn_add_20randomdata.Location = new System.Drawing.Point(9, 195);
+            this.btn_add_20randomdata.Location = new System.Drawing.Point(268, 461);
             this.btn_add_20randomdata.Name = "btn_add_20randomdata";
-            this.btn_add_20randomdata.Size = new System.Drawing.Size(172, 32);
+            this.btn_add_20randomdata.Size = new System.Drawing.Size(114, 32);
             this.btn_add_20randomdata.TabIndex = 14;
             this.btn_add_20randomdata.Text = "隨機加入20筆資料";
             this.btn_add_20randomdata.UseVisualStyleBackColor = true;
@@ -217,10 +220,10 @@ namespace Csharp_homework1
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_add_20randomdata);
+            this.groupBox2.Controls.Add(this.btn_remove_1ststudent);
+            this.groupBox2.Controls.Add(this.btn_insert_studentdata);
+            this.groupBox2.Controls.Add(this.btn_insertrandomdata);
             this.groupBox2.Controls.Add(this.btn_clearall);
-            this.groupBox2.Controls.Add(this.btn_statistic);
-            this.groupBox2.Controls.Add(this.btn_add_randomdata);
             this.groupBox2.Controls.Add(this.btn_add_studentsdata);
             this.groupBox2.Location = new System.Drawing.Point(20, 212);
             this.groupBox2.Name = "groupBox2";
@@ -293,15 +296,6 @@ namespace Csharp_homework1
             this.panel1.Size = new System.Drawing.Size(533, 323);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.listview_statistic);
-            this.panel2.Location = new System.Drawing.Point(240, 359);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(532, 79);
-            this.panel2.TabIndex = 20;
-            // 
             // listView_header
             // 
             this.listView_header.BackColor = System.Drawing.SystemColors.Control;
@@ -365,17 +359,58 @@ namespace Csharp_homework1
             // 
             this.columnHeader12.Width = 70;
             // 
-            // M06_sutdents_grade
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.listview_statistic);
+            this.panel2.Location = new System.Drawing.Point(240, 359);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(532, 79);
+            this.panel2.TabIndex = 20;
+            // 
+            // btn_insertrandomdata
+            // 
+            this.btn_insertrandomdata.Location = new System.Drawing.Point(123, 60);
+            this.btn_insertrandomdata.Name = "btn_insertrandomdata";
+            this.btn_insertrandomdata.Size = new System.Drawing.Size(85, 32);
+            this.btn_insertrandomdata.TabIndex = 14;
+            this.btn_insertrandomdata.Text = "插入隨機資料";
+            this.btn_insertrandomdata.UseVisualStyleBackColor = true;
+            this.btn_insertrandomdata.Click += new System.EventHandler(this.btn_insertrandomdata_Click);
+            // 
+            // btn_insert_studentdata
+            // 
+            this.btn_insert_studentdata.Location = new System.Drawing.Point(9, 60);
+            this.btn_insert_studentdata.Name = "btn_insert_studentdata";
+            this.btn_insert_studentdata.Size = new System.Drawing.Size(108, 32);
+            this.btn_insert_studentdata.TabIndex = 15;
+            this.btn_insert_studentdata.Text = "插入學生資料";
+            this.btn_insert_studentdata.UseVisualStyleBackColor = true;
+            this.btn_insert_studentdata.Click += new System.EventHandler(this.btn_insert_studentdata_Click);
+            // 
+            // btn_remove_1ststudent
+            // 
+            this.btn_remove_1ststudent.Location = new System.Drawing.Point(9, 105);
+            this.btn_remove_1ststudent.Name = "btn_remove_1ststudent";
+            this.btn_remove_1ststudent.Size = new System.Drawing.Size(108, 32);
+            this.btn_remove_1ststudent.TabIndex = 16;
+            this.btn_remove_1ststudent.Text = "插入學生資料";
+            this.btn_remove_1ststudent.UseVisualStyleBackColor = true;
+            // 
+            // M07_students_gradelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.Controls.Add(this.btn_add_20randomdata);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btn_add_randomdata);
+            this.Controls.Add(this.btn_statistic);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Name = "M06_sutdents_grade";
+            this.Name = "M07_students_gradelist";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -419,5 +454,8 @@ namespace Csharp_homework1
         private ColumnHeader columnHeader10;
         private ColumnHeader columnHeader11;
         private ColumnHeader columnHeader12;
+        private Button btn_insertrandomdata;
+        private Button btn_insert_studentdata;
+        private Button btn_remove_1ststudent;
     }
 }

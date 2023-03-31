@@ -73,5 +73,12 @@ namespace Csharp_homework1
             M06_sutdents_grade m06 = new M06_sutdents_grade();
             m06.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M07_students_gradelist m07 = new M07_students_gradelist();
+            m07.Show();
+        }
     }
 }
