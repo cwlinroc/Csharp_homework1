@@ -13,14 +13,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Csharp_homework1
 {
-    public partial class M06_sutdents_grade : Form
+    public partial class M05_sutdents_grade : Form
     {
         const int subjectnumbers = 3;
         string[] subjectname = { "國文", "英文", "數學" };
 
         List<Students> studentslist = new List<Students>();
 
-        public M06_sutdents_grade()
+        public M05_sutdents_grade()
         {
             InitializeComponent();
             InitialListView();
@@ -65,9 +65,10 @@ namespace Csharp_homework1
 
                 AddStudent(name, chinesescore, englishscore, mathscore);
             }
+            catch (ListErrorException) { }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
 
         }

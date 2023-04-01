@@ -15,7 +15,5 @@ namespace Csharp_homework1
 
         static internal int RandSeed;
 
-
-
     }
 }

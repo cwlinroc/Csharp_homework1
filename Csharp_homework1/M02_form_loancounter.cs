@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M03_form_loancounter : Form
+    public partial class M02_form_loancounter : Form
     {
-        public M03_form_loancounter()
+        public M02_form_loancounter()
         {
             InitializeComponent();
         }
@@ -51,7 +51,7 @@ namespace Csharp_homework1
             initialize();
             calculate();
 
-            M03a_loanreport m03a = new M03a_loanreport(loan_amount, loan_term_year, lending_rate_year, PMT);
+            M02a_loanreport m03a = new M02a_loanreport(loan_amount, loan_term_year, lending_rate_year, PMT);
             m03a.Show();
 
         }

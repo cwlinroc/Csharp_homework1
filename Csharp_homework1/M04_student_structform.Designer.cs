@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M05_student_structform
+    partial class M04_student_structform
     {
         /// <summary>
         /// Required designer variable.

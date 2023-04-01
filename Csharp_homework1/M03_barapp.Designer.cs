@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M04_barapp
+    partial class M03_barapp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(M04_barapp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(M03_barapp));
             this.textbox_shoppinglist = new System.Windows.Forms.TextBox();
             this.panel_menu = new System.Windows.Forms.Panel();
             this.label_menu = new System.Windows.Forms.Label();

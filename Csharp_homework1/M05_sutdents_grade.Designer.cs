@@ -2,7 +2,7 @@
 
 namespace Csharp_homework1
 {
-    partial class M06_sutdents_grade
+    partial class M05_sutdents_grade
     {
         /// <summary>
         /// Required designer variable.

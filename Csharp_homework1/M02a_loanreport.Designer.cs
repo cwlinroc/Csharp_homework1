@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M03a_loanreport
+    partial class M02a_loanreport
     {
         /// <summary>
         /// Required designer variable.

@@ -49,36 +49,57 @@ namespace Csharp_homework1
         private void btn_showloanform_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
-            M03_form_loancounter m03 = new M03_form_loancounter();
-            m03.Show();
+            M02_form_loancounter m02 = new M02_form_loancounter();
+            m02.Show();
         }
 
         private void btm_show_barapp_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
-            M04_barapp m04 = new M04_barapp();
-            m04.Show();
+            M03_barapp m03 = new M03_barapp();
+            m03.Show();
         }
 
         private void btn_show_student_structform_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
-            M05_student_structform m05 = new M05_student_structform();
-            m05.Show();
+            M04_student_structform m04 = new M04_student_structform();
+            m04.Show();
         }
 
         private void btn_show_students_grade_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
-            M06_sutdents_grade m06 = new M06_sutdents_grade();
+            M05_sutdents_grade m05 = new M05_sutdents_grade();
+            m05.Show();
+        }
+
+        private void btn_show_gradelist_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M06_students_gradelist m06 = new M06_students_gradelist();
             m06.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_show_method_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
-            M07_students_gradelist m07 = new M07_students_gradelist();
+            M07_method m07 = new M07_method();
             m07.Show();
+        }
+
+        private void btn_show_mycalculator_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M08_Mycalculator m08 = new M08_Mycalculator();
+            m08.Show();
+        }
+
+        private void btn_show_tictactoe_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M10_tictactoe m10 = new M10_tictactoe();
+            m10.Show();
         }
     }
 }

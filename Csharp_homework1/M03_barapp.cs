@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M04_barapp : Form
+    public partial class M03_barapp : Form
     {
 
         
 
 
-        public M04_barapp()
+        public M03_barapp()
         {
             InitializeComponent();
             shoplist = new ShoppingList();

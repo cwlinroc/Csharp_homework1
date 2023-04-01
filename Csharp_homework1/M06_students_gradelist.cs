@@ -13,14 +13,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Csharp_homework1
 {
-    public partial class M07_students_gradelist : Form
+    public partial class M06_students_gradelist : Form
     {
         const int subjectnumbers = 3;
         string[] subjectname = { "國文", "英文", "數學" };
 
         List<Students> studentslist = new List<Students>();
 
-        public M07_students_gradelist()
+        public M06_students_gradelist()
         {
             InitializeComponent();
             InitialListView();
@@ -64,11 +64,12 @@ namespace Csharp_homework1
                 int mathscore = int.Parse(textBox_mathscore.Text);
 
                 AddStudent(name, chinesescore, englishscore, mathscore);
-                RenewScoreBoard();
+                RenewScoreBoard(studentslist);
             }
+            catch (ListErrorException) { }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -86,43 +87,45 @@ namespace Csharp_homework1
                 int mathscore = int.Parse(textBox_mathscore.Text);
 
                 InsertStudent(name, chinesescore, englishscore, mathscore);
-                RenewScoreBoard();
+                RenewScoreBoard(studentslist);
             }
+            catch (ListErrorException) { }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btn_add_randomdata_Click(object sender, EventArgs e)
         {
             AddStudent();
-            RenewScoreBoard();
+            RenewScoreBoard(studentslist);
         }
 
         private void btn_insertrandomdata_Click(object sender, EventArgs e)
         {
             InsertStudent();
-            RenewScoreBoard();
+            RenewScoreBoard(studentslist);
         }
 
         private void btn_add_20randomdata_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < 20; i++) AddStudent();
-            RenewScoreBoard();
+            RenewScoreBoard(studentslist);
+        }
+
+
+        private void btn_remove_1ststudent_Click(object sender, EventArgs e)
+        {
+            RemoveStudent(0);
+            RenewScoreBoard(studentslist);
         }
 
         private void btn_clearall_Click(object sender, EventArgs e)
         {
             studentslist.Clear(); 
-            RenewScoreBoard();
+            RenewScoreBoard(studentslist);
             listview_statistic.Items.Clear();
-
-            btn_statistic.Enabled = true;
-            btn_add_randomdata.Enabled = true;
-            btn_add_20randomdata.Enabled = true;
-            btn_add_studentsdata.Enabled = true;
-
         }
 
         private void btn_statistic_Click(object sender, EventArgs e)
@@ -137,12 +140,20 @@ namespace Csharp_homework1
             ScanAllStudents(sum, average, highestscore, lowestscore);
 
             PrintResault(sum, average, highestscore, lowestscore);
+        }
 
-            btn_statistic.Enabled = false;
-            btn_add_randomdata.Enabled = false;
-            btn_add_20randomdata.Enabled = false;
-            btn_add_studentsdata.Enabled = false;
-
+        private void btn_findstudentinrange_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CheckBoundExist();
+                FindStudent(int.Parse(textbox_lowbound.Text), int.Parse(textbox_highbound.Text));
+            }
+            catch (ListErrorException) { }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -254,6 +265,15 @@ namespace Csharp_homework1
 
         }
 
+        private void CheckBoundExist()
+        {
+            if (textbox_lowbound.Text == "" || textbox_highbound.Text =="")
+            {
+                throw new ListErrorException("請輸入成績範圍");
+                return;
+            }
+        }
+
         public class ListErrorException : Exception 
         {
             public ListErrorException(string message) : base(message)
@@ -285,11 +305,38 @@ namespace Csharp_homework1
             studentslist.Insert(0, student);
         }
 
+        private void RemoveStudent(int placement)
+        {
+            if (studentslist.Count>placement)
+            {
+                studentslist.RemoveAt(placement);
+            }
+        }
+
+        private void FindStudent(int lowbound, int highbound)
+        {
+            List<Students> matchedlist = studentslist.FindAll(x => x.score[0] >= lowbound && x.score[0] <= highbound);
+
+            RenewScoreBoard(matchedlist);
+        }
+
+
+        private void RenewScoreBoard(List<Students> inputlist)
+        {
+            listview_scoreboard.Items.Clear();
+
+            foreach (var student in inputlist) 
+            {
+                AddStudentToList(student);
+            }
+        }
+
+        
         private void AddStudentToList(Students student)
         {
             var item = new ListViewItem(student.name);
 
-            int sum = 0 ;
+            int sum = 0;
 
             for (int i = 0; i < subjectnumbers; i++)
             {
@@ -298,32 +345,19 @@ namespace Csharp_homework1
             }//各科
 
             item.SubItems.Add(sum.ToString());//總分
-            item.SubItems.Add(((double)sum/subjectnumbers).ToString("0.0"));//平均
+            item.SubItems.Add(((double)sum / subjectnumbers).ToString("0.0"));//平均
 
             student.FindMinMax();
 
             item.SubItems.Add(subjectname[student.lowestsubjectpointer]
                 + student.score[student.lowestsubjectpointer].ToString());//最低
 
-            item.SubItems.Add(subjectname[student.highestsubjectpointer] 
+            item.SubItems.Add(subjectname[student.highestsubjectpointer]
                 + student.score[student.highestsubjectpointer].ToString());//最高
-            
+
 
             listview_scoreboard.Items.Add(item);
         }
-
-        private void RenewScoreBoard()
-        {
-            listview_scoreboard.Items.Clear();
-
-            foreach (var student in studentslist) 
-            {
-                AddStudentToList(student);
-            }
-
-        }
-
-
 
 
         private void ScanAllStudents(int[] sum, double[] average, int[] highestscore, int[] lowestscore)
