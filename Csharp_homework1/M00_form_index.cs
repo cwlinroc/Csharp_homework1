@@ -95,11 +95,41 @@ namespace Csharp_homework1
             m08.Show();
         }
 
+        private void btn_show_methodmk2_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M09_methodmk2 m09 = new M09_methodmk2();
+            m09.Show();
+        }
+
         private void btn_show_tictactoe_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
             M10_tictactoe m10 = new M10_tictactoe();
             m10.Show();
         }
+
+        private void btn_show_screensaver_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M11_screensaver m11 = new M11_screensaver();
+            m11.Show();
+        }
+
+        private void btn_show_notepad_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M12_notepad m12 = new M12_notepad();
+            m12.Show();
+        }
+
+        private void btn_show_guess_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M15_guess m15 = new M15_guess();
+            m15.Show();
+        }
+
+        
     }
 }

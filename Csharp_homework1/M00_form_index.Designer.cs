@@ -39,6 +39,10 @@
             this.btn_show_method = new System.Windows.Forms.Button();
             this.btn_show_mycalculator = new System.Windows.Forms.Button();
             this.btn_show_tictactoe = new System.Windows.Forms.Button();
+            this.btn_show_methodmk2 = new System.Windows.Forms.Button();
+            this.btn_show_guess = new System.Windows.Forms.Button();
+            this.btn_show_screensaver = new System.Windows.Forms.Button();
+            this.btn_show_notepad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_showhelloform
@@ -54,7 +58,7 @@
             // 
             // btn_show_clicked
             // 
-            this.btn_show_clicked.Location = new System.Drawing.Point(861, 472);
+            this.btn_show_clicked.Location = new System.Drawing.Point(876, 488);
             this.btn_show_clicked.Margin = new System.Windows.Forms.Padding(4);
             this.btn_show_clicked.Name = "btn_show_clicked";
             this.btn_show_clicked.Size = new System.Drawing.Size(161, 61);
@@ -65,7 +69,7 @@
             // 
             // btn_show_date
             // 
-            this.btn_show_date.Location = new System.Drawing.Point(861, 389);
+            this.btn_show_date.Location = new System.Drawing.Point(876, 420);
             this.btn_show_date.Margin = new System.Windows.Forms.Padding(4);
             this.btn_show_date.Name = "btn_show_date";
             this.btn_show_date.Size = new System.Drawing.Size(160, 60);
@@ -163,11 +167,59 @@
             this.btn_show_tictactoe.UseVisualStyleBackColor = true;
             this.btn_show_tictactoe.Click += new System.EventHandler(this.btn_show_tictactoe_Click);
             // 
+            // btn_show_methodmk2
+            // 
+            this.btn_show_methodmk2.Location = new System.Drawing.Point(698, 231);
+            this.btn_show_methodmk2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_methodmk2.Name = "btn_show_methodmk2";
+            this.btn_show_methodmk2.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_methodmk2.TabIndex = 11;
+            this.btn_show_methodmk2.Text = "Show Method MkII";
+            this.btn_show_methodmk2.UseVisualStyleBackColor = true;
+            this.btn_show_methodmk2.Click += new System.EventHandler(this.btn_show_methodmk2_Click);
+            // 
+            // btn_show_guess
+            // 
+            this.btn_show_guess.Location = new System.Drawing.Point(71, 472);
+            this.btn_show_guess.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_guess.Name = "btn_show_guess";
+            this.btn_show_guess.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_guess.TabIndex = 12;
+            this.btn_show_guess.Text = "Show Guess";
+            this.btn_show_guess.UseVisualStyleBackColor = true;
+            this.btn_show_guess.Click += new System.EventHandler(this.btn_show_guess_Click);
+            // 
+            // btn_show_screensaver
+            // 
+            this.btn_show_screensaver.Location = new System.Drawing.Point(388, 334);
+            this.btn_show_screensaver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_screensaver.Name = "btn_show_screensaver";
+            this.btn_show_screensaver.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_screensaver.TabIndex = 13;
+            this.btn_show_screensaver.Text = "Show Screen Saver";
+            this.btn_show_screensaver.UseVisualStyleBackColor = true;
+            this.btn_show_screensaver.Click += new System.EventHandler(this.btn_show_screensaver_Click);
+            // 
+            // btn_show_notepad
+            // 
+            this.btn_show_notepad.Location = new System.Drawing.Point(699, 334);
+            this.btn_show_notepad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_notepad.Name = "btn_show_notepad";
+            this.btn_show_notepad.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_notepad.TabIndex = 14;
+            this.btn_show_notepad.Text = "Show NotePad";
+            this.btn_show_notepad.UseVisualStyleBackColor = true;
+            this.btn_show_notepad.Click += new System.EventHandler(this.btn_show_notepad_Click);
+            // 
             // M00_form_index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.Controls.Add(this.btn_show_notepad);
+            this.Controls.Add(this.btn_show_screensaver);
+            this.Controls.Add(this.btn_show_guess);
+            this.Controls.Add(this.btn_show_methodmk2);
             this.Controls.Add(this.btn_show_tictactoe);
             this.Controls.Add(this.btn_show_mycalculator);
             this.Controls.Add(this.btn_show_method);
@@ -199,5 +251,9 @@
         private System.Windows.Forms.Button btn_show_method;
         private System.Windows.Forms.Button btn_show_mycalculator;
         private System.Windows.Forms.Button btn_show_tictactoe;
+        private System.Windows.Forms.Button btn_show_methodmk2;
+        private System.Windows.Forms.Button btn_show_guess;
+        private System.Windows.Forms.Button btn_show_screensaver;
+        private System.Windows.Forms.Button btn_show_notepad;
     }
 }
