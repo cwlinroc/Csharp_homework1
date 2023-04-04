@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="M16_alarmclock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M16_alarmclock.Designer.cs">
+      <DependentUpon>M16_alarmclock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M14a_showimage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M14a_showimage.Designer.cs">
+      <DependentUpon>M14a_showimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M14_pictureviewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M14_pictureviewer.Designer.cs">
+      <DependentUpon>M14_pictureviewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M13_paint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M13_paint.Designer.cs">
+      <DependentUpon>M13_paint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M12a_notepad_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M12a_notepad_about.Designer.cs">
+      <DependentUpon>M12a_notepad_about.cs</DependentUpon>
+    </Compile>
     <Compile Include="M12_notepad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +176,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="M12a_notepad_about.resx">
+      <DependentUpon>M12a_notepad_about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="M12_notepad.resx">
       <DependentUpon>M12_notepad.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,11 +221,23 @@
     <EmbeddedResource Include="M11_screensaver.resx">
       <DependentUpon>M11_screensaver.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="M13_paint.resx">
+      <DependentUpon>M13_paint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M14a_showimage.resx">
+      <DependentUpon>M14a_showimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M14_pictureviewer.resx">
+      <DependentUpon>M14_pictureviewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="M15a_inputbox.resx">
       <DependentUpon>M15a_inputbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="M15_guess.resx">
       <DependentUpon>M15_guess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M16_alarmclock.resx">
+      <DependentUpon>M16_alarmclock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -202,6 +247,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -215,6 +261,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\Runick_Fountain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\Dimensional_Fissure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\Gozen_Match.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\Rivalry_of_Warlords.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\There_Can_Be_Only_One.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\Skill_Drain.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

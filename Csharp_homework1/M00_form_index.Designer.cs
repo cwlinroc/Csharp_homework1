@@ -43,6 +43,9 @@
             this.btn_show_guess = new System.Windows.Forms.Button();
             this.btn_show_screensaver = new System.Windows.Forms.Button();
             this.btn_show_notepad = new System.Windows.Forms.Button();
+            this.btn_show_paint = new System.Windows.Forms.Button();
+            this.btn_show_pictureviewer = new System.Windows.Forms.Button();
+            this.btn_show_alarm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_showhelloform
@@ -58,7 +61,7 @@
             // 
             // btn_show_clicked
             // 
-            this.btn_show_clicked.Location = new System.Drawing.Point(876, 488);
+            this.btn_show_clicked.Location = new System.Drawing.Point(953, 482);
             this.btn_show_clicked.Margin = new System.Windows.Forms.Padding(4);
             this.btn_show_clicked.Name = "btn_show_clicked";
             this.btn_show_clicked.Size = new System.Drawing.Size(161, 61);
@@ -69,7 +72,7 @@
             // 
             // btn_show_date
             // 
-            this.btn_show_date.Location = new System.Drawing.Point(876, 420);
+            this.btn_show_date.Location = new System.Drawing.Point(954, 392);
             this.btn_show_date.Margin = new System.Windows.Forms.Padding(4);
             this.btn_show_date.Name = "btn_show_date";
             this.btn_show_date.Size = new System.Drawing.Size(160, 60);
@@ -158,7 +161,7 @@
             // 
             // btn_show_tictactoe
             // 
-            this.btn_show_tictactoe.Location = new System.Drawing.Point(71, 334);
+            this.btn_show_tictactoe.Location = new System.Drawing.Point(71, 323);
             this.btn_show_tictactoe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_show_tictactoe.Name = "btn_show_tictactoe";
             this.btn_show_tictactoe.Size = new System.Drawing.Size(221, 60);
@@ -180,7 +183,7 @@
             // 
             // btn_show_guess
             // 
-            this.btn_show_guess.Location = new System.Drawing.Point(71, 472);
+            this.btn_show_guess.Location = new System.Drawing.Point(699, 408);
             this.btn_show_guess.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_show_guess.Name = "btn_show_guess";
             this.btn_show_guess.Size = new System.Drawing.Size(221, 60);
@@ -191,7 +194,7 @@
             // 
             // btn_show_screensaver
             // 
-            this.btn_show_screensaver.Location = new System.Drawing.Point(388, 334);
+            this.btn_show_screensaver.Location = new System.Drawing.Point(388, 323);
             this.btn_show_screensaver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_show_screensaver.Name = "btn_show_screensaver";
             this.btn_show_screensaver.Size = new System.Drawing.Size(221, 60);
@@ -202,7 +205,7 @@
             // 
             // btn_show_notepad
             // 
-            this.btn_show_notepad.Location = new System.Drawing.Point(699, 334);
+            this.btn_show_notepad.Location = new System.Drawing.Point(698, 323);
             this.btn_show_notepad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_show_notepad.Name = "btn_show_notepad";
             this.btn_show_notepad.Size = new System.Drawing.Size(221, 60);
@@ -211,11 +214,47 @@
             this.btn_show_notepad.UseVisualStyleBackColor = true;
             this.btn_show_notepad.Click += new System.EventHandler(this.btn_show_notepad_Click);
             // 
+            // btn_show_paint
+            // 
+            this.btn_show_paint.Location = new System.Drawing.Point(71, 408);
+            this.btn_show_paint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_paint.Name = "btn_show_paint";
+            this.btn_show_paint.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_paint.TabIndex = 15;
+            this.btn_show_paint.Text = "Show Paint";
+            this.btn_show_paint.UseVisualStyleBackColor = true;
+            this.btn_show_paint.Click += new System.EventHandler(this.btn_show_paint_Click);
+            // 
+            // btn_show_pictureviewer
+            // 
+            this.btn_show_pictureviewer.Location = new System.Drawing.Point(387, 408);
+            this.btn_show_pictureviewer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_pictureviewer.Name = "btn_show_pictureviewer";
+            this.btn_show_pictureviewer.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_pictureviewer.TabIndex = 16;
+            this.btn_show_pictureviewer.Text = "Show Picture Viewer";
+            this.btn_show_pictureviewer.UseVisualStyleBackColor = true;
+            this.btn_show_pictureviewer.Click += new System.EventHandler(this.btn_show_pictureviewer_Click);
+            // 
+            // btn_show_alarm
+            // 
+            this.btn_show_alarm.Location = new System.Drawing.Point(71, 495);
+            this.btn_show_alarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_alarm.Name = "btn_show_alarm";
+            this.btn_show_alarm.Size = new System.Drawing.Size(221, 60);
+            this.btn_show_alarm.TabIndex = 17;
+            this.btn_show_alarm.Text = "Show Alarm Clock";
+            this.btn_show_alarm.UseVisualStyleBackColor = true;
+            this.btn_show_alarm.Click += new System.EventHandler(this.btn_show_alarm_Click);
+            // 
             // M00_form_index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.ClientSize = new System.Drawing.Size(1140, 566);
+            this.Controls.Add(this.btn_show_alarm);
+            this.Controls.Add(this.btn_show_pictureviewer);
+            this.Controls.Add(this.btn_show_paint);
             this.Controls.Add(this.btn_show_notepad);
             this.Controls.Add(this.btn_show_screensaver);
             this.Controls.Add(this.btn_show_guess);
@@ -255,5 +294,8 @@
         private System.Windows.Forms.Button btn_show_guess;
         private System.Windows.Forms.Button btn_show_screensaver;
         private System.Windows.Forms.Button btn_show_notepad;
+        private System.Windows.Forms.Button btn_show_paint;
+        private System.Windows.Forms.Button btn_show_pictureviewer;
+        private System.Windows.Forms.Button btn_show_alarm;
     }
 }

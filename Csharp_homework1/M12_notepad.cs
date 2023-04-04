@@ -16,6 +16,7 @@ namespace Csharp_homework1
         public M12_notepad()
         {
             InitializeComponent();
+            RefreshClock();
         }
 
         private void 開啟OToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,7 +115,9 @@ namespace Csharp_homework1
 
         private void 說明LToolStripButton_Click(object sender, EventArgs e)
         {
+            M12a_notepad_about m12a = new M12a_notepad_about();
 
+            m12a.ShowDialog();
         }
 
         private void 顏色CToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,7 +175,35 @@ namespace Csharp_homework1
 
         private void 關於AToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            說明LToolStripButton.PerformClick();
+        }
+
+        private void timer_clock_Tick(object sender, EventArgs e)
+        {
+            RefreshClock();
+        }
+
+        private void RefreshClock()
+        {
+            string message;
+
+            if (DateTime.Now.Hour < 12)
+            {
+                message = $"上午  {DateTime.Now.Hour.ToString("D2")}" +
+                    $":{DateTime.Now.Minute.ToString("D2")}:{DateTime.Now.Second.ToString("D2")}";
+            }
+            else if (DateTime.Now.Hour == 12)
+            {
+                message = $"下午  {DateTime.Now.Hour.ToString("D2")}" +
+                    $":{DateTime.Now.Minute.ToString("D2")}:{DateTime.Now.Second.ToString("D2")}";
+            }
+            else
+            {
+                message = $"下午  {(DateTime.Now.Hour - 12).ToString("D2")}" +
+                    $":{DateTime.Now.Minute.ToString("D2")}:{DateTime.Now.Second.ToString("D2")}";
+            }
+
+            toolstriplabel_clock.Text = message;
         }
     }
 }

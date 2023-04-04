@@ -123,6 +123,20 @@ namespace Csharp_homework1
             m12.Show();
         }
 
+        private void btn_show_paint_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M13_paint m13 = new M13_paint();
+            m13.Show();
+        }
+
+        private void btn_show_pictureviewer_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M14_pictureviewer m14 = new M14_pictureviewer();
+            m14.Show();
+        }
+
         private void btn_show_guess_Click(object sender, EventArgs e)
         {
             Utility.CountClicked();
@@ -130,6 +144,11 @@ namespace Csharp_homework1
             m15.Show();
         }
 
-        
+        private void btn_show_alarm_Click(object sender, EventArgs e)
+        {
+            Utility.CountClicked();
+            M16_alarmclock m16 = new M16_alarmclock();
+            m16.Show();
+        }
     }
 }
