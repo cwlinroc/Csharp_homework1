@@ -74,7 +74,7 @@
             this.Controls.Add(this.btn_guess);
             this.Controls.Add(this.label_resault);
             this.Name = "M15_guess";
-            this.Text = "guess";
+            this.Text = "Guess";
             this.ResumeLayout(false);
             this.PerformLayout();
 

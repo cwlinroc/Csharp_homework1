@@ -48,9 +48,10 @@
             // 
             this.label_name.AutoSize = true;
             this.label_name.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_name.Location = new System.Drawing.Point(97, 86);
+            this.label_name.Location = new System.Drawing.Point(129, 108);
+            this.label_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(48, 24);
+            this.label_name.Size = new System.Drawing.Size(62, 31);
             this.label_name.TabIndex = 0;
             this.label_name.Text = "姓名";
             // 
@@ -58,9 +59,10 @@
             // 
             this.label_chinese.AutoSize = true;
             this.label_chinese.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_chinese.Location = new System.Drawing.Point(97, 135);
+            this.label_chinese.Location = new System.Drawing.Point(129, 169);
+            this.label_chinese.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_chinese.Name = "label_chinese";
-            this.label_chinese.Size = new System.Drawing.Size(48, 24);
+            this.label_chinese.Size = new System.Drawing.Size(62, 31);
             this.label_chinese.TabIndex = 1;
             this.label_chinese.Text = "國文";
             // 
@@ -68,9 +70,10 @@
             // 
             this.label_english.AutoSize = true;
             this.label_english.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_english.Location = new System.Drawing.Point(97, 191);
+            this.label_english.Location = new System.Drawing.Point(129, 239);
+            this.label_english.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_english.Name = "label_english";
-            this.label_english.Size = new System.Drawing.Size(48, 24);
+            this.label_english.Size = new System.Drawing.Size(62, 31);
             this.label_english.TabIndex = 2;
             this.label_english.Text = "英文";
             // 
@@ -78,53 +81,59 @@
             // 
             this.label_math.AutoSize = true;
             this.label_math.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_math.Location = new System.Drawing.Point(97, 247);
+            this.label_math.Location = new System.Drawing.Point(129, 309);
+            this.label_math.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_math.Name = "label_math";
-            this.label_math.Size = new System.Drawing.Size(48, 24);
+            this.label_math.Size = new System.Drawing.Size(62, 31);
             this.label_math.TabIndex = 3;
             this.label_math.Text = "數學";
             // 
             // textbox_name
             // 
             this.textbox_name.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_name.Location = new System.Drawing.Point(207, 83);
+            this.textbox_name.Location = new System.Drawing.Point(276, 104);
+            this.textbox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_name.Name = "textbox_name";
-            this.textbox_name.Size = new System.Drawing.Size(157, 33);
+            this.textbox_name.Size = new System.Drawing.Size(208, 39);
             this.textbox_name.TabIndex = 4;
             // 
             // textbox_chinesescore
             // 
             this.textbox_chinesescore.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_chinesescore.Location = new System.Drawing.Point(207, 132);
+            this.textbox_chinesescore.Location = new System.Drawing.Point(276, 165);
+            this.textbox_chinesescore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_chinesescore.Name = "textbox_chinesescore";
-            this.textbox_chinesescore.Size = new System.Drawing.Size(157, 33);
+            this.textbox_chinesescore.Size = new System.Drawing.Size(208, 39);
             this.textbox_chinesescore.TabIndex = 5;
             this.textbox_chinesescore.Text = "0";
             // 
             // textbox_englishscore
             // 
             this.textbox_englishscore.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_englishscore.Location = new System.Drawing.Point(207, 188);
+            this.textbox_englishscore.Location = new System.Drawing.Point(276, 235);
+            this.textbox_englishscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_englishscore.Name = "textbox_englishscore";
-            this.textbox_englishscore.Size = new System.Drawing.Size(157, 33);
+            this.textbox_englishscore.Size = new System.Drawing.Size(208, 39);
             this.textbox_englishscore.TabIndex = 6;
             this.textbox_englishscore.Text = "0";
             // 
             // textbox_mathscore
             // 
             this.textbox_mathscore.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_mathscore.Location = new System.Drawing.Point(207, 244);
+            this.textbox_mathscore.Location = new System.Drawing.Point(276, 305);
+            this.textbox_mathscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_mathscore.Name = "textbox_mathscore";
-            this.textbox_mathscore.Size = new System.Drawing.Size(157, 33);
+            this.textbox_mathscore.Size = new System.Drawing.Size(208, 39);
             this.textbox_mathscore.TabIndex = 7;
             this.textbox_mathscore.Text = "0";
             // 
             // btn_save
             // 
             this.btn_save.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_save.Location = new System.Drawing.Point(109, 335);
+            this.btn_save.Location = new System.Drawing.Point(145, 419);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(105, 54);
+            this.btn_save.Size = new System.Drawing.Size(140, 68);
             this.btn_save.TabIndex = 8;
             this.btn_save.Text = "儲存";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -133,9 +142,10 @@
             // btn_show_saved
             // 
             this.btn_show_saved.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_show_saved.Location = new System.Drawing.Point(259, 335);
+            this.btn_show_saved.Location = new System.Drawing.Point(345, 419);
+            this.btn_show_saved.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_show_saved.Name = "btn_show_saved";
-            this.btn_show_saved.Size = new System.Drawing.Size(105, 54);
+            this.btn_show_saved.Size = new System.Drawing.Size(140, 68);
             this.btn_show_saved.TabIndex = 9;
             this.btn_show_saved.Text = "顯示儲存內容";
             this.btn_show_saved.UseVisualStyleBackColor = true;
@@ -144,9 +154,10 @@
             // btn_show_minmax
             // 
             this.btn_show_minmax.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_show_minmax.Location = new System.Drawing.Point(560, 358);
+            this.btn_show_minmax.Location = new System.Drawing.Point(747, 448);
+            this.btn_show_minmax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_show_minmax.Name = "btn_show_minmax";
-            this.btn_show_minmax.Size = new System.Drawing.Size(133, 54);
+            this.btn_show_minmax.Size = new System.Drawing.Size(177, 68);
             this.btn_show_minmax.TabIndex = 10;
             this.btn_show_minmax.Text = "最低分/最高分科目";
             this.btn_show_minmax.UseVisualStyleBackColor = true;
@@ -155,38 +166,41 @@
             // textbox_showdata
             // 
             this.textbox_showdata.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_showdata.Location = new System.Drawing.Point(479, 83);
+            this.textbox_showdata.Location = new System.Drawing.Point(639, 104);
+            this.textbox_showdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_showdata.Multiline = true;
             this.textbox_showdata.Name = "textbox_showdata";
             this.textbox_showdata.ReadOnly = true;
-            this.textbox_showdata.Size = new System.Drawing.Size(214, 118);
+            this.textbox_showdata.Size = new System.Drawing.Size(284, 146);
             this.textbox_showdata.TabIndex = 11;
             // 
             // textbox_minmax
             // 
             this.textbox_minmax.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_minmax.Location = new System.Drawing.Point(479, 207);
+            this.textbox_minmax.Location = new System.Drawing.Point(639, 259);
+            this.textbox_minmax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_minmax.Multiline = true;
             this.textbox_minmax.Name = "textbox_minmax";
             this.textbox_minmax.ReadOnly = true;
-            this.textbox_minmax.Size = new System.Drawing.Size(214, 104);
+            this.textbox_minmax.Size = new System.Drawing.Size(284, 129);
             this.textbox_minmax.TabIndex = 12;
             // 
             // label_grade
             // 
             this.label_grade.AutoSize = true;
             this.label_grade.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_grade.Location = new System.Drawing.Point(475, 48);
+            this.label_grade.Location = new System.Drawing.Point(633, 60);
+            this.label_grade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_grade.Name = "label_grade";
-            this.label_grade.Size = new System.Drawing.Size(54, 21);
+            this.label_grade.Size = new System.Drawing.Size(68, 27);
             this.label_grade.TabIndex = 13;
             this.label_grade.Text = "成績";
             // 
-            // M05_student_structform
+            // M04_student_structform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 562);
             this.Controls.Add(this.label_grade);
             this.Controls.Add(this.textbox_minmax);
             this.Controls.Add(this.textbox_showdata);
@@ -201,8 +215,9 @@
             this.Controls.Add(this.label_english);
             this.Controls.Add(this.label_chinese);
             this.Controls.Add(this.label_name);
-            this.Name = "M05_student_structform";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "M04_student_structform";
+            this.Text = "成績系統1.0";
             this.ResumeLayout(false);
             this.PerformLayout();
 

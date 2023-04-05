@@ -183,7 +183,7 @@
             this.Controls.Add(this.btn_block0);
             this.KeyPreview = true;
             this.Name = "M10_tictactoe";
-            this.Text = "Form1";
+            this.Text = "OX小遊戲";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.M10_tictactoe_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();

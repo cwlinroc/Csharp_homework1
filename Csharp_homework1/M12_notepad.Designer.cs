@@ -72,6 +72,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolstriplabel_clock = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.新增NToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.開啟OToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -83,7 +84,6 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.說明LToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.toolstriplabel_clock = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer_clock = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -428,6 +428,11 @@
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // toolstriplabel_clock
+            // 
+            this.toolstriplabel_clock.Name = "toolstriplabel_clock";
+            this.toolstriplabel_clock.Size = new System.Drawing.Size(0, 16);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -527,11 +532,6 @@
             this.說明LToolStripButton.Text = "說明(&L)";
             this.說明LToolStripButton.Click += new System.EventHandler(this.說明LToolStripButton_Click);
             // 
-            // toolstriplabel_clock
-            // 
-            this.toolstriplabel_clock.Name = "toolstriplabel_clock";
-            this.toolstriplabel_clock.Size = new System.Drawing.Size(0, 18);
-            // 
             // timer_clock
             // 
             this.timer_clock.Enabled = true;
@@ -549,7 +549,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "M12_notepad";
-            this.Text = "Form1";
+            this.Text = "Notepad";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

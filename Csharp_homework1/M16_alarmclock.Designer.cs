@@ -111,7 +111,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "M16_alarmclock";
-            this.Text = "Form1";
+            this.Text = "Alarm Clock";
             this.ResumeLayout(false);
             this.PerformLayout();
 

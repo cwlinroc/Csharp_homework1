@@ -102,7 +102,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.Name = "M13_paint";
-            this.Text = "Form1";
+            this.Text = "Paint";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_penwidth)).EndInit();
             this.ResumeLayout(false);

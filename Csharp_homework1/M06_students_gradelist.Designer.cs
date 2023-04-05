@@ -54,6 +54,11 @@ namespace Csharp_homework1
             this.btn_add_20randomdata = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label_tilde = new System.Windows.Forms.Label();
+            this.label_findstudentinrange = new System.Windows.Forms.Label();
+            this.btn_findstudentinrange = new System.Windows.Forms.Button();
+            this.textbox_highbound = new System.Windows.Forms.TextBox();
+            this.textbox_lowbound = new System.Windows.Forms.TextBox();
             this.btn_remove_1ststudent = new System.Windows.Forms.Button();
             this.btn_insert_studentdata = new System.Windows.Forms.Button();
             this.btn_insertrandomdata = new System.Windows.Forms.Button();
@@ -74,11 +79,6 @@ namespace Csharp_homework1
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textbox_lowbound = new System.Windows.Forms.TextBox();
-            this.textbox_highbound = new System.Windows.Forms.TextBox();
-            this.btn_findstudentinrange = new System.Windows.Forms.Button();
-            this.label_findstudentinrange = new System.Windows.Forms.Label();
-            this.label_tilde = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -133,7 +133,7 @@ namespace Csharp_homework1
             // 
             this.textBox_name.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_name.Location = new System.Drawing.Point(92, 15);
-            this.textBox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(127, 31);
             this.textBox_name.TabIndex = 6;
@@ -142,7 +142,7 @@ namespace Csharp_homework1
             // 
             this.textBox_chinesescore.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_chinesescore.Location = new System.Drawing.Point(92, 66);
-            this.textBox_chinesescore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_chinesescore.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_chinesescore.Name = "textBox_chinesescore";
             this.textBox_chinesescore.Size = new System.Drawing.Size(127, 31);
             this.textBox_chinesescore.TabIndex = 7;
@@ -151,7 +151,7 @@ namespace Csharp_homework1
             // 
             this.textBox_englishscore.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_englishscore.Location = new System.Drawing.Point(92, 119);
-            this.textBox_englishscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_englishscore.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_englishscore.Name = "textBox_englishscore";
             this.textBox_englishscore.Size = new System.Drawing.Size(127, 31);
             this.textBox_englishscore.TabIndex = 8;
@@ -160,7 +160,7 @@ namespace Csharp_homework1
             // 
             this.textBox_mathscore.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_mathscore.Location = new System.Drawing.Point(92, 170);
-            this.textBox_mathscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_mathscore.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_mathscore.Name = "textBox_mathscore";
             this.textBox_mathscore.Size = new System.Drawing.Size(127, 31);
             this.textBox_mathscore.TabIndex = 9;
@@ -168,7 +168,7 @@ namespace Csharp_homework1
             // btn_add_studentsdata
             // 
             this.btn_add_studentsdata.Location = new System.Drawing.Point(12, 14);
-            this.btn_add_studentsdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_studentsdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_studentsdata.Name = "btn_add_studentsdata";
             this.btn_add_studentsdata.Size = new System.Drawing.Size(144, 40);
             this.btn_add_studentsdata.TabIndex = 10;
@@ -179,7 +179,7 @@ namespace Csharp_homework1
             // btn_add_randomdata
             // 
             this.btn_add_randomdata.Location = new System.Drawing.Point(164, 14);
-            this.btn_add_randomdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_randomdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_randomdata.Name = "btn_add_randomdata";
             this.btn_add_randomdata.Size = new System.Drawing.Size(113, 40);
             this.btn_add_randomdata.TabIndex = 11;
@@ -190,7 +190,7 @@ namespace Csharp_homework1
             // btn_statistic
             // 
             this.btn_statistic.Location = new System.Drawing.Point(795, 576);
-            this.btn_statistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_statistic.Margin = new System.Windows.Forms.Padding(4);
             this.btn_statistic.Name = "btn_statistic";
             this.btn_statistic.Size = new System.Drawing.Size(229, 40);
             this.btn_statistic.TabIndex = 12;
@@ -201,7 +201,7 @@ namespace Csharp_homework1
             // btn_clearall
             // 
             this.btn_clearall.Location = new System.Drawing.Point(12, 184);
-            this.btn_clearall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clearall.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clearall.Name = "btn_clearall";
             this.btn_clearall.Size = new System.Drawing.Size(229, 40);
             this.btn_clearall.TabIndex = 13;
@@ -212,7 +212,7 @@ namespace Csharp_homework1
             // btn_add_20randomdata
             // 
             this.btn_add_20randomdata.Location = new System.Drawing.Point(341, 576);
-            this.btn_add_20randomdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_20randomdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_20randomdata.Name = "btn_add_20randomdata";
             this.btn_add_20randomdata.Size = new System.Drawing.Size(207, 40);
             this.btn_add_20randomdata.TabIndex = 14;
@@ -231,9 +231,9 @@ namespace Csharp_homework1
             this.groupBox1.Controls.Add(this.label_chinesescore);
             this.groupBox1.Controls.Add(this.label_name);
             this.groupBox1.Location = new System.Drawing.Point(27, 38);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(248, 219);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -252,17 +252,64 @@ namespace Csharp_homework1
             this.groupBox2.Controls.Add(this.btn_clearall);
             this.groupBox2.Controls.Add(this.btn_add_studentsdata);
             this.groupBox2.Location = new System.Drawing.Point(27, 265);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(285, 362);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             // 
+            // label_tilde
+            // 
+            this.label_tilde.AutoSize = true;
+            this.label_tilde.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label_tilde.Location = new System.Drawing.Point(117, 276);
+            this.label_tilde.Name = "label_tilde";
+            this.label_tilde.Size = new System.Drawing.Size(19, 20);
+            this.label_tilde.TabIndex = 21;
+            this.label_tilde.Text = "~";
+            // 
+            // label_findstudentinrange
+            // 
+            this.label_findstudentinrange.AutoSize = true;
+            this.label_findstudentinrange.Font = new System.Drawing.Font("新細明體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label_findstudentinrange.Location = new System.Drawing.Point(58, 243);
+            this.label_findstudentinrange.Name = "label_findstudentinrange";
+            this.label_findstudentinrange.Size = new System.Drawing.Size(161, 17);
+            this.label_findstudentinrange.TabIndex = 20;
+            this.label_findstudentinrange.Text = "搜尋國文成績範圍：";
+            // 
+            // btn_findstudentinrange
+            // 
+            this.btn_findstudentinrange.Location = new System.Drawing.Point(12, 311);
+            this.btn_findstudentinrange.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_findstudentinrange.Name = "btn_findstudentinrange";
+            this.btn_findstudentinrange.Size = new System.Drawing.Size(229, 40);
+            this.btn_findstudentinrange.TabIndex = 19;
+            this.btn_findstudentinrange.Text = "找出範圍內的學生";
+            this.btn_findstudentinrange.UseVisualStyleBackColor = true;
+            this.btn_findstudentinrange.Click += new System.EventHandler(this.btn_findstudentinrange_Click);
+            // 
+            // textbox_highbound
+            // 
+            this.textbox_highbound.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_highbound.Location = new System.Drawing.Point(157, 273);
+            this.textbox_highbound.Name = "textbox_highbound";
+            this.textbox_highbound.Size = new System.Drawing.Size(84, 31);
+            this.textbox_highbound.TabIndex = 18;
+            // 
+            // textbox_lowbound
+            // 
+            this.textbox_lowbound.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textbox_lowbound.Location = new System.Drawing.Point(12, 273);
+            this.textbox_lowbound.Name = "textbox_lowbound";
+            this.textbox_lowbound.Size = new System.Drawing.Size(84, 31);
+            this.textbox_lowbound.TabIndex = 17;
+            // 
             // btn_remove_1ststudent
             // 
             this.btn_remove_1ststudent.Location = new System.Drawing.Point(12, 131);
-            this.btn_remove_1ststudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_remove_1ststudent.Margin = new System.Windows.Forms.Padding(4);
             this.btn_remove_1ststudent.Name = "btn_remove_1ststudent";
             this.btn_remove_1ststudent.Size = new System.Drawing.Size(229, 40);
             this.btn_remove_1ststudent.TabIndex = 16;
@@ -273,7 +320,7 @@ namespace Csharp_homework1
             // btn_insert_studentdata
             // 
             this.btn_insert_studentdata.Location = new System.Drawing.Point(12, 75);
-            this.btn_insert_studentdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_insert_studentdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_insert_studentdata.Name = "btn_insert_studentdata";
             this.btn_insert_studentdata.Size = new System.Drawing.Size(144, 40);
             this.btn_insert_studentdata.TabIndex = 15;
@@ -284,7 +331,7 @@ namespace Csharp_homework1
             // btn_insertrandomdata
             // 
             this.btn_insertrandomdata.Location = new System.Drawing.Point(164, 75);
-            this.btn_insertrandomdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_insertrandomdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_insertrandomdata.Name = "btn_insertrandomdata";
             this.btn_insertrandomdata.Size = new System.Drawing.Size(113, 40);
             this.btn_insertrandomdata.TabIndex = 14;
@@ -300,7 +347,7 @@ namespace Csharp_homework1
             this.listview_scoreboard.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listview_scoreboard.HideSelection = false;
             this.listview_scoreboard.Location = new System.Drawing.Point(4, 34);
-            this.listview_scoreboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listview_scoreboard.Margin = new System.Windows.Forms.Padding(4);
             this.listview_scoreboard.Name = "listview_scoreboard";
             this.listview_scoreboard.ShowGroups = false;
             this.listview_scoreboard.Size = new System.Drawing.Size(696, 366);
@@ -322,7 +369,7 @@ namespace Csharp_homework1
             this.listview_statistic.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listview_statistic.HideSelection = false;
             this.listview_statistic.Location = new System.Drawing.Point(4, 4);
-            this.listview_statistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listview_statistic.Margin = new System.Windows.Forms.Padding(4);
             this.listview_statistic.Name = "listview_statistic";
             this.listview_statistic.Size = new System.Drawing.Size(696, 96);
             this.listview_statistic.TabIndex = 19;
@@ -355,7 +402,7 @@ namespace Csharp_homework1
             this.panel1.Controls.Add(this.listView_header);
             this.panel1.Controls.Add(this.listview_scoreboard);
             this.panel1.Location = new System.Drawing.Point(320, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 403);
             this.panel1.TabIndex = 1;
@@ -380,7 +427,7 @@ namespace Csharp_homework1
             this.listView_header.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listView_header.Location = new System.Drawing.Point(4, 4);
-            this.listView_header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView_header.Margin = new System.Windows.Forms.Padding(4);
             this.listView_header.Name = "listView_header";
             this.listView_header.ShowGroups = false;
             this.listView_header.Size = new System.Drawing.Size(697, 22);
@@ -429,57 +476,10 @@ namespace Csharp_homework1
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.listview_statistic);
             this.panel2.Location = new System.Drawing.Point(320, 449);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(708, 98);
             this.panel2.TabIndex = 20;
-            // 
-            // textbox_lowbound
-            // 
-            this.textbox_lowbound.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_lowbound.Location = new System.Drawing.Point(12, 273);
-            this.textbox_lowbound.Name = "textbox_lowbound";
-            this.textbox_lowbound.Size = new System.Drawing.Size(84, 31);
-            this.textbox_lowbound.TabIndex = 17;
-            // 
-            // textbox_highbound
-            // 
-            this.textbox_highbound.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_highbound.Location = new System.Drawing.Point(157, 273);
-            this.textbox_highbound.Name = "textbox_highbound";
-            this.textbox_highbound.Size = new System.Drawing.Size(84, 31);
-            this.textbox_highbound.TabIndex = 18;
-            // 
-            // btn_findstudentinrange
-            // 
-            this.btn_findstudentinrange.Location = new System.Drawing.Point(12, 311);
-            this.btn_findstudentinrange.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_findstudentinrange.Name = "btn_findstudentinrange";
-            this.btn_findstudentinrange.Size = new System.Drawing.Size(229, 40);
-            this.btn_findstudentinrange.TabIndex = 19;
-            this.btn_findstudentinrange.Text = "找出範圍內的學生";
-            this.btn_findstudentinrange.UseVisualStyleBackColor = true;
-            this.btn_findstudentinrange.Click += new System.EventHandler(this.btn_findstudentinrange_Click);
-            // 
-            // label_findstudentinrange
-            // 
-            this.label_findstudentinrange.AutoSize = true;
-            this.label_findstudentinrange.Font = new System.Drawing.Font("新細明體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_findstudentinrange.Location = new System.Drawing.Point(58, 243);
-            this.label_findstudentinrange.Name = "label_findstudentinrange";
-            this.label_findstudentinrange.Size = new System.Drawing.Size(161, 17);
-            this.label_findstudentinrange.TabIndex = 20;
-            this.label_findstudentinrange.Text = "搜尋國文成績範圍：";
-            // 
-            // label_tilde
-            // 
-            this.label_tilde.AutoSize = true;
-            this.label_tilde.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_tilde.Location = new System.Drawing.Point(117, 276);
-            this.label_tilde.Name = "label_tilde";
-            this.label_tilde.Size = new System.Drawing.Size(19, 20);
-            this.label_tilde.TabIndex = 21;
-            this.label_tilde.Text = "~";
             // 
             // M06_students_gradelist
             // 
@@ -493,9 +493,9 @@ namespace Csharp_homework1
             this.Controls.Add(this.btn_statistic);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "M06_students_gradelist";
-            this.Text = "Form1";
+            this.Text = "成績系統2.1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

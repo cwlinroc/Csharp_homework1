@@ -230,7 +230,7 @@
             this.Controls.Add(this.textbox_resault);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "M07_method";
-            this.Text = "Form1";
+            this.Text = "Method";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -167,7 +167,7 @@
             this.Controls.Add(this.textbox_num2);
             this.Controls.Add(this.textbox_num1);
             this.Name = "M08_Mycalculator";
-            this.Text = "Form1";
+            this.Text = "My Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
