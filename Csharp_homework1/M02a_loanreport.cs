@@ -13,7 +13,7 @@ namespace Csharp_homework1
     public partial class M02a_loanreport : Form
     {
         
-        public M02a_loanreport(int loan_amount, int loan_term_year, double lending_rate_year, int PMT)
+        public M02a_loanreport(int loan_amount, int loan_term_year, decimal lending_rate_year, int PMT)
         {
             InitializeComponent();
 

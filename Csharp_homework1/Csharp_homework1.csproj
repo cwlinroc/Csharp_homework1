@@ -148,7 +148,6 @@
     <Compile Include="M03_barapp.Designer.cs">
       <DependentUpon>M03_barapp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Partial_Utility.cs" />
     <Compile Include="M02a_loanreport.cs">
       <SubType>Form</SubType>
     </Compile>

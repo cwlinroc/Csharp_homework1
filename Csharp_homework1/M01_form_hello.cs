@@ -36,7 +36,7 @@ namespace Csharp_homework1
             string english_name = textbox_english_name.Text;
             string gender = textbox_gender.Text;
             string constellation = textbox_constellation.Text;
-            string combined_message = "Hello," + constellation + "s" + name + "\n" + english_name + "s gender is set as" + gender;
+            string combined_message = "Hello," + constellation + "的" + name + "\n" + english_name + "的性別設定為" + gender;
 
             MessageBox.Show(combined_message);
         }

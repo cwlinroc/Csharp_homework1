@@ -19,10 +19,10 @@ namespace Csharp_homework1
        
         Bitmap[] bitmapgroup;
 
-        private int x = 0;
-        private int y = 0;
-        private int last_x;
-        private int last_y;
+        private int bitmap_x = 0;
+        private int bitmap_y = 0;
+        private int mouse_last_x;
+        private int mouse_last_y;
 
         private int rotation = 0;
 
@@ -45,7 +45,11 @@ namespace Csharp_homework1
                 bitmapgroup[i] = new Bitmap(filepaths[i]);
             }
 
-            y = screenHeight - bitmapgroup[0].Height;
+            bitmap_y = screenHeight - bitmapgroup[0].Height;
+
+
+            mouse_last_x = Cursor.Position.X;
+            mouse_last_y = Cursor.Position.Y;
 
         }
 
@@ -72,7 +76,7 @@ namespace Csharp_homework1
 
         private void M11_screensaver_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(bitmapgroup[rotation], x, y, bitmapgroup[rotation].Width, bitmapgroup[rotation].Height);
+            e.Graphics.DrawImage(bitmapgroup[rotation], bitmap_x, bitmap_y, bitmapgroup[rotation].Width, bitmapgroup[rotation].Height);
         }
 
 
@@ -82,19 +86,25 @@ namespace Csharp_homework1
         }
         private void ChangePosition(Bitmap bitmap)
         {
-            x += 50;
-            y -= 100;
+            bitmap_x += 50;
+            bitmap_y -= 100;
 
-            if (x  > screenWidth)
+            if (bitmap_x  > screenWidth)
             {
-                x = -bitmap.Width;
+                bitmap_x = -bitmap.Width;
             }
-            if (y  < - bitmap.Height )
+            if (bitmap_y  < - bitmap.Height )
             {
-                y = screenHeight ;
+                bitmap_y = screenHeight ;
             }
         }
 
-        
+        private void M11_screensaver_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(  Math.Abs(mouse_last_x-e.X)>10 || Math.Abs(mouse_last_y-e.Y)>10)
+            {
+                this.Close ();
+            }
+        }
     }
 }

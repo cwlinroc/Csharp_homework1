@@ -73,16 +73,6 @@ namespace Csharp_homework1.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap Gozen_Match {
-            get {
-                object obj = ResourceManager.GetObject("Gozen_Match", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
         internal static System.Drawing.Bitmap Rivalry_of_Warlords {
             get {
                 object obj = ResourceManager.GetObject("Rivalry_of_Warlords", resourceCulture);

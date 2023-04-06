@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Csharp_homework1
 {
@@ -25,6 +27,7 @@ namespace Csharp_homework1
             {
                 textbox_main.Text = File.ReadAllText(openFileDialog1.FileName);
             }
+            RefreshUndoRedo();
         }
 
         private void 另存新檔AToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace Csharp_homework1
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllText(saveFileDialog1.FileName,textbox_main.Text,Encoding.Default);
-                openFileDialog1.FileName = saveFileDialog1.FileName;
+                openFileDialog1.FileName = saveFileDialog1.FileName; 
             }
         }
 
@@ -56,6 +59,7 @@ namespace Csharp_homework1
         {
             openFileDialog1.FileName = "";
             textbox_main.Clear();
+            RefreshUndoRedo();
         }
 
         private void 結束XToolStripMenuItem_Click(object sender, EventArgs e)
@@ -205,5 +209,245 @@ namespace Csharp_homework1
 
             toolstriplabel_clock.Text = message;
         }
+
+
+        /****Undo Redo****/
+
+        // copy all solution(waste of memory)
+        /**
+        private Stack<string> edit_history = new Stack<string>();
+        private Stack<string> undo_history = new Stack<string>();
+
+
+        private bool canUndo = false;
+        private bool canRedo = false;
+
+        private void textbox_main_TextChanged(object sender, EventArgs e)
+        {
+            if (textbox_main.Modified)
+            {
+                RecordEdit();
+            }
+        }
+        private void 復原UToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(canUndo)
+            {
+                ImplementUndo();
+            }
+        }
+
+        private void 取消復原RToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(canRedo)
+            {
+                ImplementRedo();
+            }
+        }
+
+
+        private void RecordEdit()
+        {
+            edit_history.Push(textbox_main.Text);
+            canUndo = true;
+            undo_history.Clear();
+            canRedo = false;
+        }
+
+        private void ImplementUndo()
+        {
+            undo_history.Push(edit_history.Pop());
+            canRedo = true;
+            textbox_main.Text = edit_history.Peek();
+            canUndo = edit_history.Count > 1;
+        }
+
+
+        private void ImplementRedo()
+        {
+            edit_history.Push(undo_history.Pop());
+            canRedo = undo_history.Count > 0;
+            textbox_main.Text = edit_history.Peek();
+            canUndo = true ;
+        }
+        **/
+        
+
+
+        
+        private string lastContent="";
+
+        private Stack<EditRecord> edit_history = new Stack<EditRecord>();
+        private Stack<EditRecord> undo_history = new Stack<EditRecord>();
+
+
+        private bool canUndo = false;
+        private bool canRedo = false;
+
+
+        private struct EditRecord
+        {
+            public bool isInsertion;
+            public int editLength;
+            public string editString;
+            public int selecstart;
+        }
+
+
+        private void textbox_main_TextChanged(object sender, EventArgs e)
+        {
+            if (textbox_main.Modified)
+            {
+                RecordEdit();
+            }
+        }
+
+        private void 復原UToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (canUndo)
+            {
+                ImplementUndo();
+            }
+        }
+
+        private void 取消復原RToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (canRedo)
+            {
+                ImplementRedo();
+            }
+        }
+
+        private void RecordEdit()
+        {
+            EditRecord newedit = new EditRecord();
+
+            newedit.isInsertion = IsInsertion(textbox_main, lastContent);
+
+            newedit.editLength = GetEditLength(textbox_main, lastContent);
+
+            int editlocation = GetEditLocation(textbox_main, newedit.isInsertion, newedit.editLength);
+
+            newedit.editString = GetEditString(textbox_main.Text, lastContent, newedit.isInsertion, editlocation, newedit.editLength);
+
+            newedit.selecstart = textbox_main.SelectionStart;
+
+
+            edit_history.Push(newedit);            
+            undo_history.Clear();
+
+            canUndo = true;
+            canRedo = false;
+
+            復原UToolStripMenuItem.Enabled = canUndo;
+            取消復原RToolStripMenuItem.Enabled = canRedo;
+
+            lastContent = textbox_main.Text;
+
+            
+        }
+
+        private void ImplementUndo()
+        {
+            undo_history.Push(edit_history.Pop());
+
+            canRedo = true;
+
+            EditRecord record = undo_history.Peek();
+
+            if(record.isInsertion)
+            {
+                textbox_main.Text = textbox_main.Text.Remove(record.selecstart -record.editLength , record.editLength);
+            }
+            else
+            {
+                textbox_main.Text = textbox_main.Text.Insert(record.selecstart , record.editString);
+            }
+
+            canUndo = edit_history.Count > 1;
+
+            復原UToolStripMenuItem.Enabled = canUndo;
+            取消復原RToolStripMenuItem.Enabled = canRedo;
+
+        }
+
+        
+        private void ImplementRedo()
+        {
+                        
+            edit_history.Push(undo_history.Pop());
+
+            canRedo = undo_history.Count > 0;
+
+            EditRecord record = edit_history.Peek();
+
+            if (record.isInsertion)
+            {
+                textbox_main.Text = textbox_main.Text.Insert(record.selecstart - record.editLength , record.editString);
+            }
+            else
+            {
+                textbox_main.Text = textbox_main.Text.Remove(record.selecstart  , record.editLength);
+            }
+
+            canUndo = true;
+
+            復原UToolStripMenuItem.Enabled = canUndo;
+            取消復原RToolStripMenuItem.Enabled = canRedo;
+        }
+
+               
+
+        private bool IsInsertion(TextBox editor,string last_content)
+        {
+            return editor.TextLength > last_content.Length;
+        }
+
+        private int GetEditLength(TextBox editor, string last_content)
+        {
+            return Math.Abs(editor.TextLength - last_content.Length);
+        }
+
+        private int GetEditLocation(TextBox editor, bool isInsertion , int length)
+        {
+            if(isInsertion) 
+            {
+                return editor.SelectionStart - length;
+            }
+            else
+            {
+                return editor.SelectionStart;
+            }
+
+        }
+
+        private string GetEditString(string content , string last_content, bool isInsertion , int editLocation , int len) 
+        {
+            if (isInsertion) 
+            {
+                return content.Substring(editLocation, len);
+            }
+            else
+            {
+                return last_content.Substring(editLocation, len);
+            }
+        }
+
+
+        private void RefreshUndoRedo()
+        {
+            lastContent = textbox_main.Text;
+            edit_history.Clear();
+            undo_history.Clear();
+
+            復原UToolStripMenuItem.Enabled = false;
+            取消復原RToolStripMenuItem.Enabled = false;
+
+            canUndo = false;
+            canRedo = false;
+        }
+
+        
+
     }
 }

@@ -44,7 +44,7 @@
             this.datetimepicker_alarmtime.Location = new System.Drawing.Point(64, 71);
             this.datetimepicker_alarmtime.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.datetimepicker_alarmtime.Name = "datetimepicker_alarmtime";
-            this.datetimepicker_alarmtime.Size = new System.Drawing.Size(116, 31);
+            this.datetimepicker_alarmtime.Size = new System.Drawing.Size(116, 27);
             this.datetimepicker_alarmtime.TabIndex = 0;
             // 
             // btn_start
@@ -76,7 +76,7 @@
             this.label_clock.Location = new System.Drawing.Point(48, 21);
             this.label_clock.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_clock.Name = "label_clock";
-            this.label_clock.Size = new System.Drawing.Size(107, 35);
+            this.label_clock.Size = new System.Drawing.Size(84, 28);
             this.label_clock.TabIndex = 3;
             this.label_clock.Text = "default";
             // 
@@ -87,7 +87,7 @@
             this.label_status.Location = new System.Drawing.Point(83, 108);
             this.label_status.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_status.Name = "label_status";
-            this.label_status.Size = new System.Drawing.Size(82, 29);
+            this.label_status.Size = new System.Drawing.Size(67, 24);
             this.label_status.TabIndex = 4;
             this.label_status.Text = "未啟動";
             // 
@@ -99,7 +99,7 @@
             // 
             // M16_alarmclock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 217);
             this.Controls.Add(this.label_status);
@@ -111,6 +111,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "M16_alarmclock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alarm Clock";
             this.ResumeLayout(false);
             this.PerformLayout();

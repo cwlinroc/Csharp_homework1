@@ -8,12 +8,6 @@ namespace Csharp_homework1
 {
     static internal partial class Utility
     {
-        static internal string ShowDate ()
-        {
-            return DateTime.Now.ToString();
-        }
-
         static internal int RandSeed;
-
     }
 }

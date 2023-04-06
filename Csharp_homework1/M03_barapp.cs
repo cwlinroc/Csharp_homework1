@@ -15,8 +15,6 @@ namespace Csharp_homework1
     {
 
         
-
-
         public M03_barapp()
         {
             InitializeComponent();

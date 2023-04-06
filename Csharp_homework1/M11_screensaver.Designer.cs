@@ -40,12 +40,13 @@
             // 
             // M11_screensaver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(857, 494);
+            this.ClientSize = new System.Drawing.Size(643, 395);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "M11_screensaver";
             this.Text = "screen saver";
             this.TopMost = true;
@@ -53,6 +54,7 @@
             this.Click += new System.EventHandler(this.M11_screensaver_Click);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.M11_screensaver_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.M11_screensaver_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.M11_screensaver_MouseMove);
             this.ResumeLayout(false);
 
         }
