@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M04_student_structform
+    partial class form_M04_student_structform
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             // 
             this.textbox_name.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_name.Location = new System.Drawing.Point(276, 104);
-            this.textbox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_name.Name = "textbox_name";
             this.textbox_name.Size = new System.Drawing.Size(208, 39);
             this.textbox_name.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.textbox_chinesescore.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_chinesescore.Location = new System.Drawing.Point(276, 165);
-            this.textbox_chinesescore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_chinesescore.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_chinesescore.Name = "textbox_chinesescore";
             this.textbox_chinesescore.Size = new System.Drawing.Size(208, 39);
             this.textbox_chinesescore.TabIndex = 5;
@@ -111,7 +111,7 @@
             // 
             this.textbox_englishscore.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_englishscore.Location = new System.Drawing.Point(276, 235);
-            this.textbox_englishscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_englishscore.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_englishscore.Name = "textbox_englishscore";
             this.textbox_englishscore.Size = new System.Drawing.Size(208, 39);
             this.textbox_englishscore.TabIndex = 6;
@@ -121,7 +121,7 @@
             // 
             this.textbox_mathscore.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_mathscore.Location = new System.Drawing.Point(276, 305);
-            this.textbox_mathscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_mathscore.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_mathscore.Name = "textbox_mathscore";
             this.textbox_mathscore.Size = new System.Drawing.Size(208, 39);
             this.textbox_mathscore.TabIndex = 7;
@@ -131,7 +131,7 @@
             // 
             this.btn_save.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_save.Location = new System.Drawing.Point(145, 419);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(140, 68);
             this.btn_save.TabIndex = 8;
@@ -143,7 +143,7 @@
             // 
             this.btn_show_saved.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_show_saved.Location = new System.Drawing.Point(345, 419);
-            this.btn_show_saved.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_show_saved.Margin = new System.Windows.Forms.Padding(4);
             this.btn_show_saved.Name = "btn_show_saved";
             this.btn_show_saved.Size = new System.Drawing.Size(140, 68);
             this.btn_show_saved.TabIndex = 9;
@@ -155,7 +155,7 @@
             // 
             this.btn_show_minmax.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_show_minmax.Location = new System.Drawing.Point(747, 448);
-            this.btn_show_minmax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_show_minmax.Margin = new System.Windows.Forms.Padding(4);
             this.btn_show_minmax.Name = "btn_show_minmax";
             this.btn_show_minmax.Size = new System.Drawing.Size(177, 68);
             this.btn_show_minmax.TabIndex = 10;
@@ -167,7 +167,7 @@
             // 
             this.textbox_showdata.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_showdata.Location = new System.Drawing.Point(639, 104);
-            this.textbox_showdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_showdata.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_showdata.Multiline = true;
             this.textbox_showdata.Name = "textbox_showdata";
             this.textbox_showdata.ReadOnly = true;
@@ -178,7 +178,7 @@
             // 
             this.textbox_minmax.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_minmax.Location = new System.Drawing.Point(639, 259);
-            this.textbox_minmax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_minmax.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_minmax.Multiline = true;
             this.textbox_minmax.Name = "textbox_minmax";
             this.textbox_minmax.ReadOnly = true;
@@ -196,7 +196,7 @@
             this.label_grade.TabIndex = 13;
             this.label_grade.Text = "成績";
             // 
-            // M04_student_structform
+            // form_M04_student_structform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,8 +215,8 @@
             this.Controls.Add(this.label_english);
             this.Controls.Add(this.label_chinese);
             this.Controls.Add(this.label_name);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "M04_student_structform";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "form_M04_student_structform";
             this.Text = "成績系統1.0";
             this.ResumeLayout(false);
             this.PerformLayout();

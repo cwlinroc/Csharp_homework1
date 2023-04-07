@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M02a_loanreport : Form
+    public partial class form_M02a_loanreport : Form
     {
         
-        public M02a_loanreport(int loan_amount, int loan_term_year, decimal lending_rate_year, int PMT)
+        public form_M02a_loanreport(int loan_amount, int loan_term_year, decimal lending_rate_year, int PMT)
         {
             InitializeComponent();
 

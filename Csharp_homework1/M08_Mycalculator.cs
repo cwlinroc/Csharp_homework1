@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M08_Mycalculator : Form
+    public partial class form_M08_Mycalculator : Form
     {
-        public M08_Mycalculator()
+        public form_M08_Mycalculator()
         {
             InitializeComponent();
         }

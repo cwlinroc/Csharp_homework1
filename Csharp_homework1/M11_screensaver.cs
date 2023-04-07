@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Csharp_homework1
 {
     
-    public partial class M11_screensaver : Form
+    public partial class form_M11_screensaver : Form
     {
 
         private readonly int screenWidth;
@@ -26,7 +26,7 @@ namespace Csharp_homework1
 
         private int rotation = 0;
 
-        public M11_screensaver()
+        public form_M11_screensaver()
         {
             InitializeComponent();
 

@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M14_pictureviewer
+    partial class form_M14_pictureviewer
     {
         /// <summary>
         /// Required designer variable.
@@ -95,7 +95,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // M14_pictureviewer
+            // form_M14_pictureviewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "M14_pictureviewer";
+            this.Name = "form_M14_pictureviewer";
             this.Text = "Picture Viewer";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

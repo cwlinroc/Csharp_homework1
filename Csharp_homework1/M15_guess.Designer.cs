@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M15_guess
+    partial class form_M15_guess
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             this.btn_showanswer.UseVisualStyleBackColor = true;
             this.btn_showanswer.Click += new System.EventHandler(this.btn_showanswer_Click);
             // 
-            // M15_guess
+            // form_M15_guess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.btn_showanswer);
             this.Controls.Add(this.btn_guess);
             this.Controls.Add(this.label_resault);
-            this.Name = "M15_guess";
+            this.Name = "form_M15_guess";
             this.Text = "Guess";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M11_screensaver
+    partial class form_M11_screensaver
     {
         /// <summary>
         /// Required designer variable.
@@ -38,16 +38,16 @@
             this.timer1.Interval = 200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // M11_screensaver
+            // form_M11_screensaver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(643, 395);
+            this.ClientSize = new System.Drawing.Size(857, 494);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "M11_screensaver";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "form_M11_screensaver";
             this.Text = "screen saver";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M02a_loanreport
+    partial class form_M02a_loanreport
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@
             // 
             this.textbox_loan_amount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_loan_amount.Location = new System.Drawing.Point(331, 58);
-            this.textbox_loan_amount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_loan_amount.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_loan_amount.MaxLength = 30000;
             this.textbox_loan_amount.Name = "textbox_loan_amount";
             this.textbox_loan_amount.ReadOnly = true;
@@ -110,7 +110,7 @@
             // 
             this.textbox_loan_term_yaer.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_loan_term_yaer.Location = new System.Drawing.Point(331, 134);
-            this.textbox_loan_term_yaer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_loan_term_yaer.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_loan_term_yaer.MaxLength = 30000;
             this.textbox_loan_term_yaer.Name = "textbox_loan_term_yaer";
             this.textbox_loan_term_yaer.ReadOnly = true;
@@ -121,7 +121,7 @@
             // 
             this.textbox_lending_rate_year.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_lending_rate_year.Location = new System.Drawing.Point(331, 214);
-            this.textbox_lending_rate_year.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_lending_rate_year.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_lending_rate_year.MaxLength = 30000;
             this.textbox_lending_rate_year.Name = "textbox_lending_rate_year";
             this.textbox_lending_rate_year.ReadOnly = true;
@@ -132,7 +132,7 @@
             // 
             this.textbox_PMT.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_PMT.Location = new System.Drawing.Point(331, 299);
-            this.textbox_PMT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_PMT.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_PMT.MaxLength = 30000;
             this.textbox_PMT.Name = "textbox_PMT";
             this.textbox_PMT.ReadOnly = true;
@@ -143,14 +143,14 @@
             // 
             this.textbox_total_payment.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textbox_total_payment.Location = new System.Drawing.Point(331, 379);
-            this.textbox_total_payment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textbox_total_payment.Margin = new System.Windows.Forms.Padding(4);
             this.textbox_total_payment.MaxLength = 30000;
             this.textbox_total_payment.Name = "textbox_total_payment";
             this.textbox_total_payment.ReadOnly = true;
             this.textbox_total_payment.Size = new System.Drawing.Size(181, 34);
             this.textbox_total_payment.TabIndex = 9;
             // 
-            // M02a_loanreport
+            // form_M02a_loanreport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -165,8 +165,8 @@
             this.Controls.Add(this.label_lending_rate_year);
             this.Controls.Add(this.label_loan_term_year);
             this.Controls.Add(this.label_loan_amount);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "M02a_loanreport";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "form_M02a_loanreport";
             this.Text = "Report";
             this.ResumeLayout(false);
             this.PerformLayout();

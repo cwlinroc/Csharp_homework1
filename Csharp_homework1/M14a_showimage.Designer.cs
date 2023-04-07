@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M14a_showimage
+    partial class form_M14a_showimage
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // M14a_showimage
+            // form_M14a_showimage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(272, 182);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "M14a_showimage";
+            this.Name = "form_M14a_showimage";
             this.ShowIcon = false;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

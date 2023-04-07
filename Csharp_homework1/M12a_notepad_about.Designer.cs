@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M12a_notepad_about
+    partial class form_M12a_notepad_about
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.label_text.TabIndex = 1;
             this.label_text.Text = "窩不知道";
             // 
-            // M12a_notepad_about
+            // form_M12a_notepad_about
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -62,7 +62,7 @@
             this.MaximumSize = new System.Drawing.Size(300, 180);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 180);
-            this.Name = "M12a_notepad_about";
+            this.Name = "form_M12a_notepad_about";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "關於";

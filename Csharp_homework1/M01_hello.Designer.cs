@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M01_form_hello
+    partial class form_M01_hello
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(M01_form_hello));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_M01_hello));
             this.label_name = new System.Windows.Forms.Label();
             this.label_english_name = new System.Windows.Forms.Label();
             this.label_gender = new System.Windows.Forms.Label();
@@ -45,9 +45,10 @@
             // 
             this.label_name.AutoSize = true;
             this.label_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_name.Location = new System.Drawing.Point(143, 66);
+            this.label_name.Location = new System.Drawing.Point(191, 82);
+            this.label_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(54, 27);
+            this.label_name.Size = new System.Drawing.Size(69, 34);
             this.label_name.TabIndex = 0;
             this.label_name.Text = "姓名";
             // 
@@ -55,9 +56,10 @@
             // 
             this.label_english_name.AutoSize = true;
             this.label_english_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_english_name.Location = new System.Drawing.Point(143, 134);
+            this.label_english_name.Location = new System.Drawing.Point(191, 168);
+            this.label_english_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_english_name.Name = "label_english_name";
-            this.label_english_name.Size = new System.Drawing.Size(96, 27);
+            this.label_english_name.Size = new System.Drawing.Size(123, 34);
             this.label_english_name.TabIndex = 1;
             this.label_english_name.Text = "英文名字";
             // 
@@ -65,9 +67,10 @@
             // 
             this.label_gender.AutoSize = true;
             this.label_gender.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_gender.Location = new System.Drawing.Point(143, 204);
+            this.label_gender.Location = new System.Drawing.Point(191, 255);
+            this.label_gender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_gender.Name = "label_gender";
-            this.label_gender.Size = new System.Drawing.Size(54, 27);
+            this.label_gender.Size = new System.Drawing.Size(69, 34);
             this.label_gender.TabIndex = 2;
             this.label_gender.Text = "性別";
             // 
@@ -75,50 +78,56 @@
             // 
             this.label_constellation.AutoSize = true;
             this.label_constellation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_constellation.Location = new System.Drawing.Point(143, 275);
+            this.label_constellation.Location = new System.Drawing.Point(191, 344);
+            this.label_constellation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_constellation.Name = "label_constellation";
-            this.label_constellation.Size = new System.Drawing.Size(54, 27);
+            this.label_constellation.Size = new System.Drawing.Size(69, 34);
             this.label_constellation.TabIndex = 3;
             this.label_constellation.Text = "星座";
             // 
             // textbox_name
             // 
             this.textbox_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_name.Location = new System.Drawing.Point(446, 63);
+            this.textbox_name.Location = new System.Drawing.Point(595, 79);
+            this.textbox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_name.Name = "textbox_name";
-            this.textbox_name.Size = new System.Drawing.Size(100, 35);
+            this.textbox_name.Size = new System.Drawing.Size(132, 42);
             this.textbox_name.TabIndex = 4;
             // 
             // textbox_english_name
             // 
             this.textbox_english_name.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_english_name.Location = new System.Drawing.Point(446, 126);
+            this.textbox_english_name.Location = new System.Drawing.Point(595, 158);
+            this.textbox_english_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_english_name.Name = "textbox_english_name";
-            this.textbox_english_name.Size = new System.Drawing.Size(100, 35);
+            this.textbox_english_name.Size = new System.Drawing.Size(132, 42);
             this.textbox_english_name.TabIndex = 5;
             // 
             // textbox_gender
             // 
             this.textbox_gender.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_gender.Location = new System.Drawing.Point(446, 196);
+            this.textbox_gender.Location = new System.Drawing.Point(595, 245);
+            this.textbox_gender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_gender.Name = "textbox_gender";
-            this.textbox_gender.Size = new System.Drawing.Size(100, 35);
+            this.textbox_gender.Size = new System.Drawing.Size(132, 42);
             this.textbox_gender.TabIndex = 6;
             // 
             // textbox_constellation
             // 
             this.textbox_constellation.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textbox_constellation.Location = new System.Drawing.Point(446, 267);
+            this.textbox_constellation.Location = new System.Drawing.Point(595, 334);
+            this.textbox_constellation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_constellation.Name = "textbox_constellation";
-            this.textbox_constellation.Size = new System.Drawing.Size(100, 35);
+            this.textbox_constellation.Size = new System.Drawing.Size(132, 42);
             this.textbox_constellation.TabIndex = 7;
             // 
             // btn_say_hi
             // 
             this.btn_say_hi.Font = new System.Drawing.Font("新細明體-ExtB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_say_hi.Location = new System.Drawing.Point(148, 357);
+            this.btn_say_hi.Location = new System.Drawing.Point(197, 446);
+            this.btn_say_hi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_say_hi.Name = "btn_say_hi";
-            this.btn_say_hi.Size = new System.Drawing.Size(150, 42);
+            this.btn_say_hi.Size = new System.Drawing.Size(200, 52);
             this.btn_say_hi.TabIndex = 8;
             this.btn_say_hi.Text = "說 Hi";
             this.btn_say_hi.UseVisualStyleBackColor = true;
@@ -127,20 +136,21 @@
             // btn_say_hello
             // 
             this.btn_say_hello.Font = new System.Drawing.Font("新細明體-ExtB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_say_hello.Location = new System.Drawing.Point(446, 357);
+            this.btn_say_hello.Location = new System.Drawing.Point(595, 446);
+            this.btn_say_hello.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_say_hello.Name = "btn_say_hello";
-            this.btn_say_hello.Size = new System.Drawing.Size(150, 42);
+            this.btn_say_hello.Size = new System.Drawing.Size(200, 52);
             this.btn_say_hello.TabIndex = 9;
             this.btn_say_hello.Text = "Say Hello";
             this.btn_say_hello.UseVisualStyleBackColor = true;
             this.btn_say_hello.Click += new System.EventHandler(this.btn_say_hello_Click);
             // 
-            // M01_form_hello
+            // form_M01_hello
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(752, 424);
+            this.ClientSize = new System.Drawing.Size(1003, 530);
             this.Controls.Add(this.btn_say_hello);
             this.Controls.Add(this.btn_say_hi);
             this.Controls.Add(this.textbox_constellation);
@@ -151,7 +161,8 @@
             this.Controls.Add(this.label_gender);
             this.Controls.Add(this.label_english_name);
             this.Controls.Add(this.label_name);
-            this.Name = "M01_form_hello";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "form_M01_hello";
             this.Text = "Hello Form";
             this.ResumeLayout(false);
             this.PerformLayout();

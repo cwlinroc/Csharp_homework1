@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M07_method
+    partial class form_M07_method
     {
         /// <summary>
         /// Required designer variable.
@@ -208,7 +208,7 @@
             this.btn_clearresualt.UseVisualStyleBackColor = true;
             this.btn_clearresualt.Click += new System.EventHandler(this.btn_clearresualt_Click);
             // 
-            // M07_method
+            // form_M07_method
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,7 +229,7 @@
             this.Controls.Add(this.btn_oddoreven);
             this.Controls.Add(this.textbox_resault);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "M07_method";
+            this.Name = "form_M07_method";
             this.Text = "Method";
             this.ResumeLayout(false);
             this.PerformLayout();

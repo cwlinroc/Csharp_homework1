@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="tic_optional_play.cs" />
+    <Compile Include="tic_optimal_play.cs" />
     <Compile Include="M16_alarmclock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,23 +156,23 @@
       <DependentUpon>M02a_loanreport.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
-    <Compile Include="M02_form_loancounter.cs">
+    <Compile Include="M02_loancounter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="M02_form_loancounter.Designer.cs">
-      <DependentUpon>M02_form_loancounter.cs</DependentUpon>
+    <Compile Include="M02_loancounter.Designer.cs">
+      <DependentUpon>M02_loancounter.cs</DependentUpon>
     </Compile>
-    <Compile Include="M01_form_hello.cs">
+    <Compile Include="M01_hello.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="M01_form_hello.Designer.cs">
-      <DependentUpon>M01_form_hello.cs</DependentUpon>
+    <Compile Include="M01_hello.Designer.cs">
+      <DependentUpon>M01_hello.cs</DependentUpon>
     </Compile>
-    <Compile Include="M00_form_index.cs">
+    <Compile Include="M00_index.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="M00_form_index.Designer.cs">
-      <DependentUpon>M00_form_index.cs</DependentUpon>
+    <Compile Include="M00_index.Designer.cs">
+      <DependentUpon>M00_index.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,14 +185,14 @@
     <EmbeddedResource Include="M02a_loanreport.resx">
       <DependentUpon>M02a_loanreport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="M02_form_loancounter.resx">
-      <DependentUpon>M02_form_loancounter.cs</DependentUpon>
+    <EmbeddedResource Include="M02_loancounter.resx">
+      <DependentUpon>M02_loancounter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="M01_form_hello.resx">
-      <DependentUpon>M01_form_hello.cs</DependentUpon>
+    <EmbeddedResource Include="M01_hello.resx">
+      <DependentUpon>M01_hello.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="M00_form_index.resx">
-      <DependentUpon>M00_form_index.cs</DependentUpon>
+    <EmbeddedResource Include="M00_index.resx">
+      <DependentUpon>M00_index.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="M03_barapp.resx">
       <DependentUpon>M03_barapp.cs</DependentUpon>

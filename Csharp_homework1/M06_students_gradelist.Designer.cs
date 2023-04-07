@@ -2,7 +2,7 @@
 
 namespace Csharp_homework1
 {
-    partial class M06_students_gradelist
+    partial class form_M06_students_gradelist
     {
         /// <summary>
         /// Required designer variable.
@@ -481,7 +481,7 @@ namespace Csharp_homework1
             this.panel2.Size = new System.Drawing.Size(708, 98);
             this.panel2.TabIndex = 20;
             // 
-            // M06_students_gradelist
+            // form_M06_students_gradelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -494,7 +494,7 @@ namespace Csharp_homework1
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "M06_students_gradelist";
+            this.Name = "form_M06_students_gradelist";
             this.Text = "成績系統2.1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

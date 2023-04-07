@@ -11,22 +11,22 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M15_guess : Form
+    public partial class form_M15_guess : Form
     {
         private int answer = 0;
         private int upperbound = 100;
         private int lowerbound = 0;
-        private M15a_inputbox guessform;
+        private form_M15a_inputbox guessform;
         
         
-        public M15_guess()
+        public form_M15_guess()
         {
             InitializeComponent();
         }
 
         private void btn_guess_Click(object sender, EventArgs e)
         {
-            guessform = new M15a_inputbox();
+            guessform = new form_M15a_inputbox();
 
             guessform.portevent += this.GuessAnswer;
 

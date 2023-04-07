@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M15a_inputbox
+    partial class form_M15a_inputbox
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,7 @@
             this.textbox_inputnumber.Size = new System.Drawing.Size(249, 25);
             this.textbox_inputnumber.TabIndex = 3;
             // 
-            // M15a_inputbox
+            // form_M15a_inputbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.btn_enter);
             this.Controls.Add(this.label_title);
             this.KeyPreview = true;
-            this.Name = "M15a_inputbox";
+            this.Name = "form_M15a_inputbox";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

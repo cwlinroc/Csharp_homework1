@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M08_Mycalculator
+    partial class form_M08_Mycalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -150,7 +150,7 @@
             this.label_equalline.TabIndex = 10;
             this.label_equalline.Text = "= = = = = = = = = = = = = = = = ";
             // 
-            // M08_Mycalculator
+            // form_M08_Mycalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +166,7 @@
             this.Controls.Add(this.textbox_answer);
             this.Controls.Add(this.textbox_num2);
             this.Controls.Add(this.textbox_num1);
-            this.Name = "M08_Mycalculator";
+            this.Name = "form_M08_Mycalculator";
             this.Text = "My Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M02_form_loancounter : Form
+    public partial class form_M02_loancounter : Form
     {
-        public M02_form_loancounter()
+        public form_M02_loancounter()
         {
             InitializeComponent();
         }
@@ -51,21 +51,21 @@ namespace Csharp_homework1
             Initialize();
             Calculate();
 
-            M02a_loanreport m03a = new M02a_loanreport(loan_amount, loan_term_year, lending_rate_year, PMT);
+            form_M02a_loanreport m03a = new form_M02a_loanreport(loan_amount, loan_term_year, lending_rate_year, PMT);
             m03a.Show();
 
         }
 
         private void Initialize()
         {
-            loan_term_year = Convert.ToInt32(text_loan_term_year.Text);
+            loan_term_year = Convert.ToInt32(textbox_loan_term_year.Text);
             loan_term_month = loan_term_year * 12;
 
-            lending_rate_year = ((decimal)Convert.ToInt32(text_lending_rate_year.Text)) / 100;
+            lending_rate_year = ((decimal)Convert.ToInt32(textbox_lending_rate_year.Text)) / 100;
             lending_rate_month = lending_rate_year / 12;
 
-            loan_amount = Convert.ToInt32(text_loan_amount.Text);
-            down_payment = Convert.ToInt32(text_down_payment.Text);
+            loan_amount = Convert.ToInt32(textbox_loan_amount.Text);
+            down_payment = Convert.ToInt32(textbox_down_payment.Text);
         }
 
         private void Calculate()

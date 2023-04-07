@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M10_tictactoe
+    partial class form_M10_tictactoe
     {
         /// <summary>
         /// Required designer variable.
@@ -41,15 +41,16 @@
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_switchMode = new System.Windows.Forms.Button();
+            this.btn_computerStep = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_block0
             // 
             this.btn_block0.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block0.Location = new System.Drawing.Point(141, 107);
-            this.btn_block0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block0.Location = new System.Drawing.Point(188, 134);
+            this.btn_block0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block0.Name = "btn_block0";
-            this.btn_block0.Size = new System.Drawing.Size(68, 67);
+            this.btn_block0.Size = new System.Drawing.Size(91, 84);
             this.btn_block0.TabIndex = 0;
             this.btn_block0.UseVisualStyleBackColor = true;
             this.btn_block0.Click += new System.EventHandler(this.btn_block0_Click);
@@ -57,10 +58,10 @@
             // btn_block1
             // 
             this.btn_block1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block1.Location = new System.Drawing.Point(229, 107);
-            this.btn_block1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block1.Location = new System.Drawing.Point(305, 134);
+            this.btn_block1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block1.Name = "btn_block1";
-            this.btn_block1.Size = new System.Drawing.Size(68, 67);
+            this.btn_block1.Size = new System.Drawing.Size(91, 84);
             this.btn_block1.TabIndex = 1;
             this.btn_block1.UseVisualStyleBackColor = true;
             this.btn_block1.Click += new System.EventHandler(this.btn_block1_Click);
@@ -68,10 +69,10 @@
             // btn_block2
             // 
             this.btn_block2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block2.Location = new System.Drawing.Point(320, 107);
-            this.btn_block2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block2.Location = new System.Drawing.Point(427, 134);
+            this.btn_block2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block2.Name = "btn_block2";
-            this.btn_block2.Size = new System.Drawing.Size(68, 67);
+            this.btn_block2.Size = new System.Drawing.Size(91, 84);
             this.btn_block2.TabIndex = 2;
             this.btn_block2.UseVisualStyleBackColor = true;
             this.btn_block2.Click += new System.EventHandler(this.btn_block2_Click);
@@ -79,10 +80,10 @@
             // btn_block3
             // 
             this.btn_block3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block3.Location = new System.Drawing.Point(141, 192);
-            this.btn_block3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block3.Location = new System.Drawing.Point(188, 240);
+            this.btn_block3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block3.Name = "btn_block3";
-            this.btn_block3.Size = new System.Drawing.Size(68, 67);
+            this.btn_block3.Size = new System.Drawing.Size(91, 84);
             this.btn_block3.TabIndex = 3;
             this.btn_block3.UseVisualStyleBackColor = true;
             this.btn_block3.Click += new System.EventHandler(this.btn_block3_Click);
@@ -90,10 +91,10 @@
             // btn_block4
             // 
             this.btn_block4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block4.Location = new System.Drawing.Point(229, 192);
-            this.btn_block4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block4.Location = new System.Drawing.Point(305, 240);
+            this.btn_block4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block4.Name = "btn_block4";
-            this.btn_block4.Size = new System.Drawing.Size(68, 67);
+            this.btn_block4.Size = new System.Drawing.Size(91, 84);
             this.btn_block4.TabIndex = 4;
             this.btn_block4.UseVisualStyleBackColor = true;
             this.btn_block4.Click += new System.EventHandler(this.btn_block4_Click);
@@ -101,10 +102,10 @@
             // btn_block5
             // 
             this.btn_block5.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block5.Location = new System.Drawing.Point(320, 192);
-            this.btn_block5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block5.Location = new System.Drawing.Point(427, 240);
+            this.btn_block5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block5.Name = "btn_block5";
-            this.btn_block5.Size = new System.Drawing.Size(68, 67);
+            this.btn_block5.Size = new System.Drawing.Size(91, 84);
             this.btn_block5.TabIndex = 5;
             this.btn_block5.UseVisualStyleBackColor = true;
             this.btn_block5.Click += new System.EventHandler(this.btn_block5_Click);
@@ -112,10 +113,10 @@
             // btn_block6
             // 
             this.btn_block6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block6.Location = new System.Drawing.Point(141, 278);
-            this.btn_block6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block6.Location = new System.Drawing.Point(188, 348);
+            this.btn_block6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block6.Name = "btn_block6";
-            this.btn_block6.Size = new System.Drawing.Size(68, 67);
+            this.btn_block6.Size = new System.Drawing.Size(91, 84);
             this.btn_block6.TabIndex = 6;
             this.btn_block6.UseVisualStyleBackColor = true;
             this.btn_block6.Click += new System.EventHandler(this.btn_block6_Click);
@@ -123,10 +124,10 @@
             // btn_block7
             // 
             this.btn_block7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block7.Location = new System.Drawing.Point(229, 278);
-            this.btn_block7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block7.Location = new System.Drawing.Point(305, 348);
+            this.btn_block7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block7.Name = "btn_block7";
-            this.btn_block7.Size = new System.Drawing.Size(68, 67);
+            this.btn_block7.Size = new System.Drawing.Size(91, 84);
             this.btn_block7.TabIndex = 7;
             this.btn_block7.UseVisualStyleBackColor = true;
             this.btn_block7.Click += new System.EventHandler(this.btn_block7_Click);
@@ -134,10 +135,10 @@
             // btn_block8
             // 
             this.btn_block8.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_block8.Location = new System.Drawing.Point(320, 278);
-            this.btn_block8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_block8.Location = new System.Drawing.Point(427, 348);
+            this.btn_block8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_block8.Name = "btn_block8";
-            this.btn_block8.Size = new System.Drawing.Size(68, 67);
+            this.btn_block8.Size = new System.Drawing.Size(91, 84);
             this.btn_block8.TabIndex = 8;
             this.btn_block8.UseVisualStyleBackColor = true;
             this.btn_block8.Click += new System.EventHandler(this.btn_block8_Click);
@@ -146,20 +147,19 @@
             // 
             this.label_title.AutoSize = true;
             this.label_title.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_title.Location = new System.Drawing.Point(208, 45);
-            this.label_title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_title.Location = new System.Drawing.Point(277, 56);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(119, 24);
+            this.label_title.Size = new System.Drawing.Size(148, 30);
             this.label_title.TabIndex = 9;
             this.label_title.Text = "OX小遊戲";
             // 
             // btn_reset
             // 
             this.btn_reset.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_reset.Location = new System.Drawing.Point(121, 397);
-            this.btn_reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_reset.Location = new System.Drawing.Point(161, 496);
+            this.btn_reset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(117, 48);
+            this.btn_reset.Size = new System.Drawing.Size(156, 60);
             this.btn_reset.TabIndex = 10;
             this.btn_reset.Text = "Reset(R)";
             this.btn_reset.UseVisualStyleBackColor = true;
@@ -168,10 +168,10 @@
             // btn_exit
             // 
             this.btn_exit.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_exit.Location = new System.Drawing.Point(292, 397);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_exit.Location = new System.Drawing.Point(389, 496);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(117, 48);
+            this.btn_exit.Size = new System.Drawing.Size(156, 60);
             this.btn_exit.TabIndex = 11;
             this.btn_exit.Text = "Exit(Esc)";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -180,20 +180,33 @@
             // btn_switchMode
             // 
             this.btn_switchMode.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_switchMode.Location = new System.Drawing.Point(425, 21);
-            this.btn_switchMode.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_switchMode.Location = new System.Drawing.Point(567, 26);
+            this.btn_switchMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_switchMode.Name = "btn_switchMode";
-            this.btn_switchMode.Size = new System.Drawing.Size(117, 48);
+            this.btn_switchMode.Size = new System.Drawing.Size(156, 60);
             this.btn_switchMode.TabIndex = 12;
             this.btn_switchMode.Text = "Two Players";
             this.btn_switchMode.UseVisualStyleBackColor = true;
             this.btn_switchMode.Click += new System.EventHandler(this.btn_switchMode_Click);
             // 
-            // M10_tictactoe
+            // btn_computerStep
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.btn_computerStep.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_computerStep.Location = new System.Drawing.Point(567, 114);
+            this.btn_computerStep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_computerStep.Name = "btn_computerStep";
+            this.btn_computerStep.Size = new System.Drawing.Size(156, 60);
+            this.btn_computerStep.TabIndex = 13;
+            this.btn_computerStep.Text = "AI go next";
+            this.btn_computerStep.UseVisualStyleBackColor = true;
+            this.btn_computerStep.Click += new System.EventHandler(this.btn_computerStep_Click);
+            // 
+            // form_M10_tictactoe
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 499);
+            this.ClientSize = new System.Drawing.Size(752, 624);
+            this.Controls.Add(this.btn_computerStep);
             this.Controls.Add(this.btn_switchMode);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_reset);
@@ -208,8 +221,8 @@
             this.Controls.Add(this.btn_block1);
             this.Controls.Add(this.btn_block0);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "M10_tictactoe";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "form_M10_tictactoe";
             this.Text = "OX小遊戲";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.M10_tictactoe_KeyDown);
             this.ResumeLayout(false);
@@ -232,5 +245,6 @@
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Button btn_switchMode;
+        private System.Windows.Forms.Button btn_computerStep;
     }
 }

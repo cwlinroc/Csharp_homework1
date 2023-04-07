@@ -9,41 +9,15 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    internal class tic_optional_play
+    internal class tic_optimal_play
     {
         private int[] board ;
         private int step_count = 0;
 
-        
-        public tic_optional_play(int[] board)
+        public tic_optimal_play()
         {
             this.board = new int[9];
-
-            for (int i = 0; i < 9; i++)
-            {
-                this.board[i] = board[i];
-            }
-
-            foreach(int block in this.board)
-            {
-                if(block != 0)
-                {
-                    step_count++;
-                }
-            }
-
         }
-
-        public tic_optional_play()
-        {
-            this.board = new int[9];
-
-            for (int i = 0; i < 9; i++)
-            {
-                this.board[i] = 0;
-            }
-        }
-
 
         public void SetBoard( int[] board )
         {
@@ -62,19 +36,17 @@ namespace Csharp_homework1
                     step_count++;
                 }
             }
-
         }
 
-        public int GetOptionalMove() 
+        public int GetOptimalMove() 
         {
 
             int best_result;
             int beststep = -1;
 
-
             if (step_count % 2 != 0)
             {
-                best_result = 1;
+                best_result = 100;
 
                 for (int i = 0; i < 9; i++)
                 {
@@ -82,18 +54,13 @@ namespace Csharp_homework1
                     {
                         board[i] = -1;
 
-                        //TestMesssage(board, i, best_result, step_count);//待刪
+                        int estimateresult = WinEstimate(board, step_count + 1);                        
 
-                        int estimateresult = WinEstimate(board, step_count + 1);
-                        
-
-                        if (estimateresult <= best_result)
+                        if (estimateresult < best_result)
                         {
                             best_result = estimateresult;
                             beststep = i;
                         }
-
-                        //TestMesssage(board, i, best_result, step_count);//待刪
 
                         board[i] = 0;
 
@@ -101,15 +68,13 @@ namespace Csharp_homework1
                         {
                             return i;
                         }
-
                     }
                 }
 
             }
             else
             {
-
-                best_result = -1;
+                best_result = -100;
 
                 for (int i = 0; i < 9; i++)
                 {
@@ -117,17 +82,13 @@ namespace Csharp_homework1
                     {
                         board[i] = 1;
 
-                        //TestMesssage(board, i, best_result, step_count);//待刪
-
                         int estimateresult = WinEstimate(board, step_count + 1);
 
-                        if (estimateresult >= best_result)
+                        if (estimateresult > best_result)
                         {
                             best_result = estimateresult;
                             beststep = i;
                         }
-
-                        //TestMesssage(board, i, best_result, step_count);//待刪
 
                         board[i] = 0;
 
@@ -136,11 +97,9 @@ namespace Csharp_homework1
                             return i;
                         }
                     }
-                }
-                
+                }              
                 
             }
-
 
             return beststep;
 
@@ -162,11 +121,10 @@ namespace Csharp_homework1
             }
 
             int best_result;
-
             
             if (step % 2 != 0)
             {
-                best_result = 1;
+                best_result = 100;
 
                 for (int i = 0; i < 9; i++)
                 {
@@ -174,16 +132,12 @@ namespace Csharp_homework1
                     {
                         board[i] = -1;
 
-                        //TestMesssage(board, i, best_result, step_count);//待刪
-
                         int estimateresult = WinEstimate(board, step + 1);
 
                         if (estimateresult < best_result)
                         {
                             best_result = estimateresult;
                         }
-
-                        //TestMesssage(board, i, best_result, step);//待刪
 
                         board[i] = 0;
 
@@ -197,7 +151,7 @@ namespace Csharp_homework1
             }
             else
             {
-                best_result = 1;
+                best_result = -100;
 
                 for (int i = 0; i < 9; i++)
                 {
@@ -205,16 +159,12 @@ namespace Csharp_homework1
                     {
                         board[i] = 1;
 
-                        //TestMesssage(board, i, best_result, step_count);//待刪
-
                         int estimateresult = WinEstimate(board, step + 1);
 
                         if (estimateresult > best_result)
                         {
                             best_result = estimateresult;
                         }
-
-                        //TestMesssage(board, i, best_result ,step);//待刪
 
                         board[i] = 0;
 
@@ -240,13 +190,9 @@ namespace Csharp_homework1
             {
                 linesum = board[i] + board[i + 1] + board[i + 2];
 
-                if (linesum == 3)
+                if (Math.Abs(linesum) == 3)
                 {
-                    return 1;
-                }
-                else if(linesum == -3 )
-                {
-                    return -1;
+                    return linesum / 3;
                 }
             }
             
@@ -254,55 +200,29 @@ namespace Csharp_homework1
             {
                 linesum = board[i] + board[i+3] + board[i+6];
 
-                if (linesum == 3)
+                if (Math.Abs(linesum) == 3)
                 {
-                    return 1;
-                }
-                else if (linesum == -3)
-                {
-                    return -1;
+                    return linesum / 3;
                 }
             }
 
             linesum = board[0] + board[4] + board[8] ;
 
-            if (linesum == 3)
+            if (Math.Abs(linesum) == 3)
             {
-                return 1;
-            }
-            else if (linesum == -3)
-            {
-                return -1;
+                return linesum / 3;
             }
 
             linesum = board[2] + board[4] + board[6] ;
 
-            if (linesum == 3)
+            if (Math.Abs(linesum) == 3)
             {
-                return 1;
-            }
-            else if (linesum == -3)
-            {
-                return -1;
+                return linesum / 3;
             }
 
             return 0;
         }
 
-        private void TestMesssage(int[]board , int i , int bestresault ,int step) //測試用函式
-        {
-            string message = "";
-            
-            foreach(int num in board)
-            {
-                message += num + " ";
-            }
-
-            message += $"\n i={i}   best result ={bestresault}  at step {step}\n";
-
-
-            MessageBox.Show(message);
-        }
 
     }
 

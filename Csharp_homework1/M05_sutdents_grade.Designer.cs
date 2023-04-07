@@ -2,7 +2,7 @@
 
 namespace Csharp_homework1
 {
-    partial class M05_sutdents_grade
+    partial class form_M05_sutdents_grade
     {
         /// <summary>
         /// Required designer variable.
@@ -125,7 +125,7 @@ namespace Csharp_homework1
             // 
             this.textBox_name.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_name.Location = new System.Drawing.Point(92, 15);
-            this.textBox_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_name.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(127, 31);
             this.textBox_name.TabIndex = 6;
@@ -134,7 +134,7 @@ namespace Csharp_homework1
             // 
             this.textBox_chinesescore.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_chinesescore.Location = new System.Drawing.Point(92, 66);
-            this.textBox_chinesescore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_chinesescore.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_chinesescore.Name = "textBox_chinesescore";
             this.textBox_chinesescore.Size = new System.Drawing.Size(127, 31);
             this.textBox_chinesescore.TabIndex = 7;
@@ -143,7 +143,7 @@ namespace Csharp_homework1
             // 
             this.textBox_englishscore.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_englishscore.Location = new System.Drawing.Point(92, 119);
-            this.textBox_englishscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_englishscore.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_englishscore.Name = "textBox_englishscore";
             this.textBox_englishscore.Size = new System.Drawing.Size(127, 31);
             this.textBox_englishscore.TabIndex = 8;
@@ -152,7 +152,7 @@ namespace Csharp_homework1
             // 
             this.textBox_mathscore.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox_mathscore.Location = new System.Drawing.Point(92, 170);
-            this.textBox_mathscore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_mathscore.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_mathscore.Name = "textBox_mathscore";
             this.textBox_mathscore.Size = new System.Drawing.Size(127, 31);
             this.textBox_mathscore.TabIndex = 9;
@@ -160,7 +160,7 @@ namespace Csharp_homework1
             // btn_add_studentsdata
             // 
             this.btn_add_studentsdata.Location = new System.Drawing.Point(12, 14);
-            this.btn_add_studentsdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_studentsdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_studentsdata.Name = "btn_add_studentsdata";
             this.btn_add_studentsdata.Size = new System.Drawing.Size(229, 40);
             this.btn_add_studentsdata.TabIndex = 10;
@@ -171,7 +171,7 @@ namespace Csharp_homework1
             // btn_add_randomdata
             // 
             this.btn_add_randomdata.Location = new System.Drawing.Point(12, 62);
-            this.btn_add_randomdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_randomdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_randomdata.Name = "btn_add_randomdata";
             this.btn_add_randomdata.Size = new System.Drawing.Size(229, 40);
             this.btn_add_randomdata.TabIndex = 11;
@@ -182,7 +182,7 @@ namespace Csharp_homework1
             // btn_statistic
             // 
             this.btn_statistic.Location = new System.Drawing.Point(12, 110);
-            this.btn_statistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_statistic.Margin = new System.Windows.Forms.Padding(4);
             this.btn_statistic.Name = "btn_statistic";
             this.btn_statistic.Size = new System.Drawing.Size(229, 40);
             this.btn_statistic.TabIndex = 12;
@@ -193,7 +193,7 @@ namespace Csharp_homework1
             // btn_clearall
             // 
             this.btn_clearall.Location = new System.Drawing.Point(12, 196);
-            this.btn_clearall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clearall.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clearall.Name = "btn_clearall";
             this.btn_clearall.Size = new System.Drawing.Size(229, 40);
             this.btn_clearall.TabIndex = 13;
@@ -204,7 +204,7 @@ namespace Csharp_homework1
             // btn_add_20randomdata
             // 
             this.btn_add_20randomdata.Location = new System.Drawing.Point(12, 244);
-            this.btn_add_20randomdata.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_20randomdata.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_20randomdata.Name = "btn_add_20randomdata";
             this.btn_add_20randomdata.Size = new System.Drawing.Size(229, 40);
             this.btn_add_20randomdata.TabIndex = 14;
@@ -223,9 +223,9 @@ namespace Csharp_homework1
             this.groupBox1.Controls.Add(this.label_chinesescore);
             this.groupBox1.Controls.Add(this.label_name);
             this.groupBox1.Location = new System.Drawing.Point(27, 38);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(248, 219);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -238,9 +238,9 @@ namespace Csharp_homework1
             this.groupBox2.Controls.Add(this.btn_add_randomdata);
             this.groupBox2.Controls.Add(this.btn_add_studentsdata);
             this.groupBox2.Location = new System.Drawing.Point(27, 265);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(285, 292);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
@@ -253,7 +253,7 @@ namespace Csharp_homework1
             this.listview_scoreboard.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listview_scoreboard.HideSelection = false;
             this.listview_scoreboard.Location = new System.Drawing.Point(4, 34);
-            this.listview_scoreboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listview_scoreboard.Margin = new System.Windows.Forms.Padding(4);
             this.listview_scoreboard.Name = "listview_scoreboard";
             this.listview_scoreboard.ShowGroups = false;
             this.listview_scoreboard.Size = new System.Drawing.Size(696, 366);
@@ -275,7 +275,7 @@ namespace Csharp_homework1
             this.listview_statistic.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listview_statistic.HideSelection = false;
             this.listview_statistic.Location = new System.Drawing.Point(4, 4);
-            this.listview_statistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listview_statistic.Margin = new System.Windows.Forms.Padding(4);
             this.listview_statistic.Name = "listview_statistic";
             this.listview_statistic.Size = new System.Drawing.Size(696, 96);
             this.listview_statistic.TabIndex = 19;
@@ -308,7 +308,7 @@ namespace Csharp_homework1
             this.panel1.Controls.Add(this.listView_header);
             this.panel1.Controls.Add(this.listview_scoreboard);
             this.panel1.Location = new System.Drawing.Point(320, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 403);
             this.panel1.TabIndex = 1;
@@ -333,7 +333,7 @@ namespace Csharp_homework1
             this.listView_header.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listView_header.Location = new System.Drawing.Point(4, 4);
-            this.listView_header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView_header.Margin = new System.Windows.Forms.Padding(4);
             this.listView_header.Name = "listView_header";
             this.listView_header.ShowGroups = false;
             this.listView_header.Size = new System.Drawing.Size(697, 22);
@@ -382,12 +382,12 @@ namespace Csharp_homework1
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.listview_statistic);
             this.panel2.Location = new System.Drawing.Point(320, 449);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(708, 98);
             this.panel2.TabIndex = 20;
             // 
-            // M05_sutdents_grade
+            // form_M05_sutdents_grade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -397,8 +397,8 @@ namespace Csharp_homework1
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "M05_sutdents_grade";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "form_M05_sutdents_grade";
             this.Text = "成績系統2.0";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

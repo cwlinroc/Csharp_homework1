@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M16_alarmclock : Form
+    public partial class form_M16_alarmclock : Form
     {
 
 
         bool alarmswitch = false;
-        public M16_alarmclock()
+        public form_M16_alarmclock()
         {
             InitializeComponent();
             RefreshClockMessage();

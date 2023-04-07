@@ -11,9 +11,9 @@ using System.Xml.Linq;
 
 namespace Csharp_homework1
 {
-    public partial class M04_student_structform : Form
+    public partial class form_M04_student_structform : Form
     {
-        public M04_student_structform()
+        public form_M04_student_structform()
         {
             InitializeComponent();
         }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M13_paint : Form
+    public partial class form_M13_paint : Form
     {
         
         private int x0, y0;
@@ -19,7 +19,7 @@ namespace Csharp_homework1
 
         
         
-        public M13_paint()
+        public form_M13_paint()
         {
             InitializeComponent();
 

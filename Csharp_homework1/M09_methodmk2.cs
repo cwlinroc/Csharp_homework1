@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M09_methodmk2: Form
+    public partial class form_M09_methodmk2: Form
     {
-        public M09_methodmk2()
+        public form_M09_methodmk2()
         {
             InitializeComponent();
         }

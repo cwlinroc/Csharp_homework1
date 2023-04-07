@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M09_methodmk2
+    partial class form_M09_methodmk2
     {
         /// <summary>
         /// Required designer variable.
@@ -367,7 +367,7 @@
             this.btn_do.UseVisualStyleBackColor = true;
             this.btn_do.Click += new System.EventHandler(this.btn_do_Click);
             // 
-            // M09_methodmk2
+            // form_M09_methodmk2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -403,7 +403,7 @@
             this.Controls.Add(this.btn_oddoreven);
             this.Controls.Add(this.textbox_resault);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "M09_methodmk2";
+            this.Name = "form_M09_methodmk2";
             this.Text = "Method MKII";
             this.ResumeLayout(false);
             this.PerformLayout();

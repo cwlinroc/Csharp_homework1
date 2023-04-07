@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M15a_inputbox : Form
+    public partial class form_M15a_inputbox : Form
     {
-        public M15a_inputbox()
+        public form_M15a_inputbox()
         {
             InitializeComponent();
             this.ActiveControl = textbox_inputnumber;

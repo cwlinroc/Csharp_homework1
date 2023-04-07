@@ -13,9 +13,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Csharp_homework1
 {
-    public partial class M12_notepad : Form
+    public partial class form_M12_notepad : Form
     {
-        public M12_notepad()
+        public form_M12_notepad()
         {
             InitializeComponent();
             RefreshClock();
@@ -119,7 +119,7 @@ namespace Csharp_homework1
 
         private void 說明LToolStripButton_Click(object sender, EventArgs e)
         {
-            M12a_notepad_about m12a = new M12a_notepad_about();
+            form_M12a_notepad_about m12a = new form_M12a_notepad_about();
 
             m12a.ShowDialog();
         }
@@ -272,14 +272,11 @@ namespace Csharp_homework1
         }
         **/
         
-
-
         
         private string lastContent="";
 
         private Stack<EditRecord> edit_history = new Stack<EditRecord>();
         private Stack<EditRecord> undo_history = new Stack<EditRecord>();
-
 
         private bool canUndo = false;
         private bool canRedo = false;
@@ -326,13 +323,11 @@ namespace Csharp_homework1
 
             newedit.editLength = GetEditLength(textbox_main, lastContent);
 
-            int editlocation = GetEditLocation(textbox_main, newedit.isInsertion, newedit.editLength);
-
-            newedit.editString = GetEditString(textbox_main.Text, lastContent, newedit.isInsertion, editlocation, newedit.editLength);
-
             newedit.selecstart = textbox_main.SelectionStart;
 
+            newedit.editString = GetEditString(textbox_main.Text, lastContent, newedit.isInsertion, newedit.selecstart, newedit.editLength);
 
+            
             edit_history.Push(newedit);            
             undo_history.Clear();
 
@@ -343,15 +338,12 @@ namespace Csharp_homework1
             取消復原RToolStripMenuItem.Enabled = canRedo;
 
             lastContent = textbox_main.Text;
-
             
         }
 
         private void ImplementUndo()
         {
             undo_history.Push(edit_history.Pop());
-
-            canRedo = true;
 
             EditRecord record = undo_history.Peek();
 
@@ -364,6 +356,7 @@ namespace Csharp_homework1
                 textbox_main.Text = textbox_main.Text.Insert(record.selecstart , record.editString);
             }
 
+            canRedo = true;
             canUndo = edit_history.Count > 1;
 
             復原UToolStripMenuItem.Enabled = canUndo;
@@ -377,8 +370,6 @@ namespace Csharp_homework1
                         
             edit_history.Push(undo_history.Pop());
 
-            canRedo = undo_history.Count > 0;
-
             EditRecord record = edit_history.Peek();
 
             if (record.isInsertion)
@@ -390,6 +381,7 @@ namespace Csharp_homework1
                 textbox_main.Text = textbox_main.Text.Remove(record.selecstart  , record.editLength);
             }
 
+            canRedo = undo_history.Count > 0;
             canUndo = true;
 
             復原UToolStripMenuItem.Enabled = canUndo;
@@ -408,28 +400,15 @@ namespace Csharp_homework1
             return Math.Abs(editor.TextLength - last_content.Length);
         }
 
-        private int GetEditLocation(TextBox editor, bool isInsertion , int length)
-        {
-            if(isInsertion) 
-            {
-                return editor.SelectionStart - length;
-            }
-            else
-            {
-                return editor.SelectionStart;
-            }
-
-        }
-
-        private string GetEditString(string content , string last_content, bool isInsertion , int editLocation , int len) 
+        private string GetEditString(string content , string last_content, bool isInsertion , int selecstart , int len) 
         {
             if (isInsertion) 
             {
-                return content.Substring(editLocation, len);
+                return content.Substring(selecstart-len, len);
             }
             else
             {
-                return last_content.Substring(editLocation, len);
+                return last_content.Substring(selecstart, len);
             }
         }
 
@@ -437,6 +416,7 @@ namespace Csharp_homework1
         private void RefreshUndoRedo()
         {
             lastContent = textbox_main.Text;
+
             edit_history.Clear();
             undo_history.Clear();
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M12a_notepad_about : Form
+    public partial class form_M12a_notepad_about : Form
     {
-        public M12a_notepad_about()
+        public form_M12a_notepad_about()
         {
             InitializeComponent();
         }

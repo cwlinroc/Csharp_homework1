@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_homework1
 {
-    public partial class M14a_showimage : Form
+    public partial class form_M14a_showimage : Form
     {
-        public M14a_showimage(Image image)
+        public form_M14a_showimage(Image image)
         {
             InitializeComponent();
             pictureBox1.Image = image;

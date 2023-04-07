@@ -1,6 +1,6 @@
 ﻿namespace Csharp_homework1
 {
-    partial class M13_paint
+    partial class form_M13_paint
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.label_trackbarvalue.TabIndex = 5;
             this.label_trackbarvalue.Text = "1";
             // 
-            // M13_paint
+            // form_M13_paint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.btn_changecolor);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.Name = "M13_paint";
+            this.Name = "form_M13_paint";
             this.Text = "Paint";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_penwidth)).EndInit();
