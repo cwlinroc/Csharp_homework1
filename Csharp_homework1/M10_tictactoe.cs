@@ -16,7 +16,7 @@ namespace Csharp_homework1
     {
 
         private int[] boardstatus = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-        private string [] mark = { "", "O", "X" };
+        private string [] mark = { "X", "", "O" };
         private int turnplayer = 1;
         private int stepcount = 0;
 
@@ -28,45 +28,54 @@ namespace Csharp_homework1
         private void btn_block0_Click(object sender, EventArgs e)
         {
             ImplementStep(0, btn_block0);
+            ComputerStep();
         }
         private void btn_block1_Click(object sender, EventArgs e)
         {
             ImplementStep(1, btn_block1);
+            ComputerStep();
         }
 
         private void btn_block2_Click(object sender, EventArgs e)
         {
             ImplementStep(2, btn_block2);
+            ComputerStep();
         }
 
         private void btn_block3_Click(object sender, EventArgs e)
         {
             ImplementStep(3, btn_block3);
+            ComputerStep();
         }
 
         private void btn_block4_Click(object sender, EventArgs e)
         {
             ImplementStep(4, btn_block4);
+            ComputerStep();
         }
 
         private void btn_block5_Click(object sender, EventArgs e)
         {
             ImplementStep(5, btn_block5);
+            ComputerStep();
         }
 
         private void btn_block6_Click(object sender, EventArgs e)
         {
             ImplementStep(6, btn_block6);
+            ComputerStep();
         }
 
         private void btn_block7_Click(object sender, EventArgs e)
         {
             ImplementStep(7, btn_block7);
+            ComputerStep();
         }
 
         private void btn_block8_Click(object sender, EventArgs e)
         {
             ImplementStep(8, btn_block8);
+            ComputerStep();
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
@@ -115,13 +124,12 @@ namespace Csharp_homework1
         private void ChangeButtonStatus(Button btn)
         {
             btn.Enabled= false;
-            btn.Text = mark[turnplayer];
+            btn.Text = mark[turnplayer+1];
         }
 
         private void ChangeTurnPlayer()
         {
-            turnplayer %= 2;
-            turnplayer += 1;
+            turnplayer *= -1 ;
         }
 
         private int CheckWhoWins()
@@ -162,7 +170,7 @@ namespace Csharp_homework1
 
         private void ShowWinner(int winner)
         {
-            MessageBox.Show($"{mark[winner]}手獲勝!", "完局");
+            MessageBox.Show($"{mark[winner+1]}手獲勝!", "完局");
             ResetBoard();
         }
 
@@ -202,6 +210,77 @@ namespace Csharp_homework1
             btn.Text = "";
         }
 
-        
+
+        /***自動下棋***/
+
+
+        private tic_optional_play optional = new tic_optional_play();
+
+        private bool playWithComputer = false;
+        private void btn_switchMode_Click(object sender, EventArgs e)
+        {
+            playWithComputer = !playWithComputer;
+
+            if(playWithComputer) 
+            {
+                btn_switchMode.Text = "vs Computer";
+            }
+            else
+            {
+                btn_switchMode.Text = "2 Players";
+            }
+        }
+
+        private void ComputerStep()
+        {
+            if(playWithComputer&& stepcount!= 0)
+            {
+                optional.SetBoard(boardstatus);
+
+                int step = optional.GetOptionalMove();
+
+                switch (step)
+                {
+                    case 0:
+                        ImplementStep(0, btn_block0);
+                        break;
+
+                    case 1:
+                        ImplementStep(1, btn_block1);
+                        break;
+
+                    case 2:
+                        ImplementStep(2, btn_block2);
+                        break;
+
+                    case 3:
+                        ImplementStep(3, btn_block3);
+                        break;
+
+                    case 4:
+                        ImplementStep(4, btn_block4);
+                        break;
+
+                    case 5:
+                        ImplementStep(5, btn_block5);
+                        break;
+
+                    case 6:
+                        ImplementStep(6, btn_block6);
+                        break;
+
+                    case 7:
+                        ImplementStep(7, btn_block7);
+                        break;
+
+                    case 8:
+                        ImplementStep(8, btn_block8);
+                        break;
+                }
+            }
+            
+        }
+
+
     }
 }
