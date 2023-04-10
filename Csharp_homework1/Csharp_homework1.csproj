@@ -280,5 +280,26 @@
   <ItemGroup>
     <None Include="bin\Debug\resource\Skill_Drain.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch0a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch0b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\punch5.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

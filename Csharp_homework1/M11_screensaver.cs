@@ -33,20 +33,18 @@ namespace Csharp_homework1
             Rectangle rect = Screen.PrimaryScreen.Bounds;
             screenWidth = rect.Width;
             screenHeight = rect.Height;
-
             
             bitmapgroup = new Bitmap[7];
-            
-            string[] filepaths = { @"resource\punch0a.jpg" , @"resource\punch0b.jpg" , @"resource\punch1.jpg",
-            @"resource\punch2.jpg",@"resource\punch3.jpg",@"resource\punch4.jpg",@"resource\punch5.jpg"};
-            
-            for(int i = 0; i < filepaths.Length; i++) 
-            {
-                bitmapgroup[i] = new Bitmap(filepaths[i]);
-            }
+
+            bitmapgroup[0] = Properties.Resources.punch0a;
+            bitmapgroup[1] = Properties.Resources.punch0b;
+            bitmapgroup[2] = Properties.Resources.punch1;
+            bitmapgroup[3] = Properties.Resources.punch2;
+            bitmapgroup[4] = Properties.Resources.punch3;
+            bitmapgroup[5] = Properties.Resources.punch4;
+            bitmapgroup[6] = Properties.Resources.punch5;
 
             bitmap_y = screenHeight - bitmapgroup[0].Height;
-
 
             mouse_last_x = Cursor.Position.X;
             mouse_last_y = Cursor.Position.Y;
