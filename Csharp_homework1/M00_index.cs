@@ -15,16 +15,31 @@ namespace Csharp_homework1
     {
 
         private Form current_form;
-        
+
+        private int X, Y;
+        private bool isLoaded = false;
+
         public form_M00_index()
         {
             InitializeComponent();
-            panel_left.BackColor = Color.FromArgb(0, Color.Black);
-            panel_up.BackColor = Color.FromArgb(0, Color.White);
-            panel_right.BackColor = Color.FromArgb(0, Color.White);
+
+            splitContainer_all.BackColor = Color.FromArgb(0, Color.Black);
+            splitContainer_bottom.BackColor = Color.FromArgb(0, Color.Black);
         }
 
-        
+
+        private void form_M00_index_Load(object sender, EventArgs e)
+        {
+            X = this.Width; 
+            Y = this.Height;
+            isLoaded = true;
+            SetTag(this);
+        }
+
+        private void form_M00_index_Resize(object sender, EventArgs e)
+        {
+            ResizeAll();
+        }
 
         private void button_showhelloform_Click(object sender, EventArgs e)
         {
@@ -125,13 +140,14 @@ namespace Csharp_homework1
 
         private void OpenFromInLabel(Form newform)
         {
-            if(current_form!=null)current_form.Close();
+            if (current_form != null) current_form.Close();
             current_form = newform;
 
             newform.TopLevel = false;
-            panel_right.Controls.Add(newform);
+            splitContainer_bottom.Panel2.Controls.Add(newform);
             newform.Show();
         }
+
 
         private void OpenForm(Form newform)
         {
@@ -140,6 +156,80 @@ namespace Csharp_homework1
             newform.Show();
         }
 
-        
+        private void ResizeAll()
+        {
+            if(isLoaded)
+            {
+                double newx, newy;
+                GetNewXY(out newx, out newy);
+                SetControls(newx, newy, this);
+            }
+        }
+
+        private void GetNewXY(out double newx, out double newy)
+        {
+            newx = (double)this.Width / (double)X;
+            newy = (double)this.Height / (double)Y;
+
+        }
+
+        private void SetTag(Control inputcon)  
+        {
+            foreach (Control con in inputcon.Controls)
+            {
+                con.Tag += ":" + con.Width + ":" + con.Height + ":" + con.Left + ":" + con.Top;
+
+                if (con.Controls.Count > 0)
+                {
+                    SetTag(con);  
+                }
+            }
+        }
+
+
+        private void SetControls(double newx, double newy, Control inputcon)
+        {
+
+            foreach (Control con in inputcon.Controls)
+            {
+
+                string[] mytag = con.Tag.ToString().Split(new char[] { ':' });
+
+                if (mytag[0] == "all")
+                {
+                    int width = (int)(int.Parse(mytag[1]) * newx);
+                    con.Width = width;
+
+                    int height = (int)(int.Parse(mytag[2]) * newx);
+                    con.Height = height;
+
+                    int left = (int)(int.Parse(mytag[3]) * newx);
+                    con.Left = left;
+
+                    int top = (int)(int.Parse(mytag[4]) * newx);
+                    con.Top = top;
+
+
+                }
+                else if (mytag[0] == "width")
+                {
+                    int width = (int)(int.Parse(mytag[1]) * newx);
+                    con.Width = width;
+
+                    int left = (int)(int.Parse(mytag[3]) * newx);
+                    con.Left = left;
+
+                }
+
+
+                if (con.Controls.Count > 0)
+                {
+                    SetControls(newx, newy, con);
+
+                }
+            }      
+
+        }
+
     }
 }
