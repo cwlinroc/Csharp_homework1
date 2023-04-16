@@ -22,25 +22,18 @@ namespace Csharp_homework1
         public void SetBoard( int[] board )
         {
 
-            for (int i = 0; i < 9; i++)
-            {
-                this.board[i] = board[i];
-            }
+            for (int i = 0; i < 9; i++)  this.board[i] = board[i];
 
             step_count = 0;
 
             foreach (int block in this.board)
             {
-                if (block != 0)
-                {
-                    step_count++;
-                }
+                if (block != 0) step_count++;
             }
         }
 
         public int GetOptimalMove() 
         {
-
             int best_result;
             int beststep = -1;
 
@@ -64,10 +57,7 @@ namespace Csharp_homework1
 
                         board[i] = 0;
 
-                        if (estimateresult == -1)
-                        {
-                            return i;
-                        }
+                        if (estimateresult == -1) return i;
                     }
                 }
 
@@ -92,17 +82,11 @@ namespace Csharp_homework1
 
                         board[i] = 0;
 
-                        if (best_result == 1)
-                        {
-                            return i;
-                        }
+                        if (best_result == 1) return i;
                     }
-                }              
-                
+                }
             }
-
             return beststep;
-
         }
 
 
@@ -141,13 +125,9 @@ namespace Csharp_homework1
 
                         board[i] = 0;
 
-                        if (best_result == -1)
-                        {
-                            return -1;
-                        }
+                        if (best_result == -1) return -1;
                     }
                 }
-
             }
             else
             {
@@ -168,16 +148,11 @@ namespace Csharp_homework1
 
                         board[i] = 0;
 
-                        if (best_result == 1)
-                        {
-                            return 1;
-                        }
+                        if (best_result == 1) return 1;
                     }
                 }
             }
-
             return best_result;
-
         }
 
 
@@ -190,35 +165,23 @@ namespace Csharp_homework1
             {
                 linesum = board[i] + board[i + 1] + board[i + 2];
 
-                if (Math.Abs(linesum) == 3)
-                {
-                    return linesum / 3;
-                }
+                if (Math.Abs(linesum) == 3) return linesum / 3;
             }
             
             for(int i =0 ; i <3 ; i++ )
             {
                 linesum = board[i] + board[i+3] + board[i+6];
 
-                if (Math.Abs(linesum) == 3)
-                {
-                    return linesum / 3;
-                }
+                if (Math.Abs(linesum) == 3) return linesum / 3;
             }
 
             linesum = board[0] + board[4] + board[8] ;
 
-            if (Math.Abs(linesum) == 3)
-            {
-                return linesum / 3;
-            }
+            if (Math.Abs(linesum) == 3) return linesum / 3;
 
             linesum = board[2] + board[4] + board[6] ;
 
-            if (Math.Abs(linesum) == 3)
-            {
-                return linesum / 3;
-            }
+            if (Math.Abs(linesum) == 3) return linesum / 3;
 
             return 0;
         }

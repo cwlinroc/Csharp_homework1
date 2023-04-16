@@ -15,9 +15,9 @@ namespace Csharp_homework1
     public partial class form_M10_tictactoe : Form
     {
 
-        private int[] boardstatus = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private int[] boardstatus = { 0, 0, 0, 0, 0, 0, 0, 0, 0 }; 
         private string [] mark = { "X", "", "O" };
-        private int turnplayer = 1;
+        private int turnplayer = 1; // 1 or -1
         private int stepcount = 0;
 
         public form_M10_tictactoe()
@@ -25,6 +25,7 @@ namespace Csharp_homework1
             InitializeComponent();
         }
 
+        #region -- buttons --
         private void btn_block0_Click(object sender, EventArgs e)
         {
             ImplementStep(0, btn_block0);
@@ -82,12 +83,14 @@ namespace Csharp_homework1
         {
             ResetBoard();
         }
-        
+
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } 
+        #endregion
+        
         private void M10_tictactoe_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.R) 
@@ -101,9 +104,9 @@ namespace Csharp_homework1
             }
         }
 
+        #region -- methods --
 
-
-        private void ImplementStep(int step ,Button btn)
+        private void ImplementStep(int step, Button btn)
         {
             boardstatus[step] = turnplayer;
             stepcount++;
@@ -123,60 +126,48 @@ namespace Csharp_homework1
 
         private void ChangeButtonStatus(Button btn)
         {
-            btn.Enabled= false;
-            btn.Text = mark[turnplayer+1];
+            btn.Enabled = false;
+            btn.Text = mark[turnplayer + 1];
         }
 
         private void ChangeTurnPlayer()
         {
-            turnplayer *= -1 ;
+            turnplayer *= -1;
         }
 
         private int CheckWhoWins()
         {
 
-            for(int i = 0; i<9 ; i+=3)
+            for (int i = 0; i < 9; i += 3)
             {
                 if (boardstatus[i] == boardstatus[i + 1] && boardstatus[i + 1] == boardstatus[i + 2]
-                        && boardstatus[i] != 0)
-                {
-                    return boardstatus[i];
-                }
+                        && boardstatus[i] != 0) return boardstatus[i];
             }
 
             for (int i = 0; i < 3; i++)
             {
                 if (boardstatus[i] == boardstatus[i + 3] && boardstatus[i + 3] == boardstatus[i + 6]
-                        && boardstatus[i] != 0)
-                {
-                    return boardstatus[i];
-                }
+                        && boardstatus[i] != 0) return boardstatus[i];
             }
 
             if (boardstatus[0] == boardstatus[4] && boardstatus[4] == boardstatus[8]
-                        && boardstatus[0] != 0)
-            {
-                return boardstatus[0];
-            }
+                        && boardstatus[0] != 0) return boardstatus[0];
 
             if (boardstatus[2] == boardstatus[4] && boardstatus[4] == boardstatus[6]
-                        && boardstatus[2] != 0)
-            {
-                return boardstatus[2];
-            }
+                        && boardstatus[2] != 0) return boardstatus[2];
 
             return 0;
         }
 
         private void ShowWinner(int winner)
         {
-            MessageBox.Show($"{mark[winner+1]}手獲勝!", "完局");
+            MessageBox.Show($"{mark[winner + 1]}手獲勝!", "完局");
             ResetBoard();
         }
 
         private void CheckDraw()
         {
-            if(stepcount == 9)
+            if (stepcount == 9)
             {
                 MessageBox.Show("平手!按下確定重新開始", "完局");
                 ResetBoard();
@@ -185,7 +176,7 @@ namespace Csharp_homework1
 
         private void ResetBoard()
         {
-            for(int i=0; i <9 ; i++)
+            for (int i = 0; i < 9; i++)
             {
                 boardstatus[i] = 0;
             }
@@ -210,9 +201,13 @@ namespace Csharp_homework1
             btn.Text = "";
         }
 
+        #endregion
 
         /***自動下棋***/
 
+        #region -- vs Computer --
+
+        // using tic_optimal_play.cs 
 
         private tic_optimal_play optimal = new tic_optimal_play();
 
@@ -221,7 +216,7 @@ namespace Csharp_homework1
         {
             playWithComputer = !playWithComputer;
 
-            if(playWithComputer) 
+            if (playWithComputer)
             {
                 btn_switchMode.Text = "vs Computer";
             }
@@ -238,10 +233,10 @@ namespace Csharp_homework1
 
         private void CheckAI()
         {
-            if(playWithComputer&& stepcount!= 0)
+            if (playWithComputer && stepcount != 0)
             {
                 ComputerStep();
-            }            
+            }
         }
 
         private void ComputerStep()
@@ -288,9 +283,9 @@ namespace Csharp_homework1
                     ImplementStep(8, btn_block8);
                     break;
             }
+        } 
 
-        }
+        #endregion
 
-        
     }
 }

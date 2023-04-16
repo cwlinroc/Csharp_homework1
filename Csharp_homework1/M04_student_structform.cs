@@ -47,7 +47,6 @@ namespace Csharp_homework1
             SortByScore(subject, score);            
 
             textbox_minmax.Text = CreateMinMaxMessage(subject, score);
-
         }
 
         private void SortByScore( string[] subject, int[] score) 
@@ -93,8 +92,6 @@ namespace Csharp_homework1
             }
 
             return message;
-        }
-
-        
+        }        
     }
 }

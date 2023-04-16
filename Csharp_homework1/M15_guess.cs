@@ -23,6 +23,7 @@ namespace Csharp_homework1
         {
             InitializeComponent();
         }
+        #region -- buttons --
 
         private void btn_guess_Click(object sender, EventArgs e)
         {
@@ -40,6 +41,9 @@ namespace Csharp_homework1
             MessageBox.Show($"Answer：{answer}");
         }
 
+        #endregion
+
+        #region -- methods --
         private void RefreshAnswer()
         {
             Random rng = new Random(Guid.NewGuid().GetHashCode());
@@ -56,24 +60,24 @@ namespace Csharp_homework1
                 int guess = Convert.ToInt32(portin);
                 CheckValid(guess);
 
-                if(guess == answer) 
+                if (guess == answer)
                 {
                     Congrats();
                 }
-                else 
+                else
                 {
                     ShowHint(guess);
-                }                
+                }
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 MessageBox.Show($"請輸入{lowerbound}~{upperbound}之間的數字");
-            } 
+            }
         }
 
-        private void CheckValid(int guess) 
+        private void CheckValid(int guess)
         {
-            if (guess < lowerbound)  throw new Exception();
+            if (guess < lowerbound) throw new Exception();
             if (guess > upperbound) throw new Exception();
         }
 
@@ -86,7 +90,7 @@ namespace Csharp_homework1
 
         private void ShowHint(int guess)
         {
-            if(guess > answer)
+            if (guess > answer)
             {
                 upperbound = guess;
 
@@ -98,7 +102,8 @@ namespace Csharp_homework1
 
                 label_resault.Text = $"Too Small!! \n Between {lowerbound} and {upperbound}";
             }
+        } 
 
-        }
+        #endregion
     }
 }

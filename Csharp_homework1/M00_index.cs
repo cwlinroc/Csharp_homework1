@@ -23,23 +23,11 @@ namespace Csharp_homework1
         {
             InitializeComponent();
 
-            splitContainer_all.BackColor = Color.FromArgb(0, Color.Black);
-            splitContainer_bottom.BackColor = Color.FromArgb(0, Color.Black);
+            splitContainer_all.BackColor = Color.Transparent;
+            splitContainer_bottom.BackColor = Color.Transparent;
         }
 
-
-        private void form_M00_index_Load(object sender, EventArgs e)
-        {
-            X = this.Width; 
-            Y = this.Height;
-            isLoaded = true;
-            SetTag(this);
-        }
-
-        private void form_M00_index_Resize(object sender, EventArgs e)
-        {
-            ResizeAll();
-        }
+        #region -- buttons --
 
         private void button_showhelloform_Click(object sender, EventArgs e)
         {
@@ -137,6 +125,7 @@ namespace Csharp_homework1
             OpenFromInLabel(m16);
         }
 
+        #endregion
 
         private void OpenFromInLabel(Form newform)
         {
@@ -156,9 +145,27 @@ namespace Csharp_homework1
             newform.Show();
         }
 
+
+        #region -- resize UI(forbidden) --
+
+        /*
+        private void form_M00_index_Load(object sender, EventArgs e)
+        {
+            X = this.Width;
+            Y = this.Height;
+            isLoaded = true;
+            SetTag(this);
+            this.WindowState = FormWindowState.Maximized;
+        }
+       
+        private void form_M00_index_Resize(object sender, EventArgs e)
+        {
+            ResizeAll();
+        }
+        
         private void ResizeAll()
         {
-            if(isLoaded)
+            if (isLoaded)
             {
                 double newx, newy;
                 GetNewXY(out newx, out newy);
@@ -173,7 +180,7 @@ namespace Csharp_homework1
 
         }
 
-        private void SetTag(Control inputcon)  
+        private void SetTag(Control inputcon)
         {
             foreach (Control con in inputcon.Controls)
             {
@@ -181,11 +188,10 @@ namespace Csharp_homework1
 
                 if (con.Controls.Count > 0)
                 {
-                    SetTag(con);  
+                    SetTag(con);
                 }
             }
         }
-
 
         private void SetControls(double newx, double newy, Control inputcon)
         {
@@ -208,8 +214,6 @@ namespace Csharp_homework1
 
                     int top = (int)(int.Parse(mytag[4]) * newx);
                     con.Top = top;
-
-
                 }
                 else if (mytag[0] == "width")
                 {
@@ -218,18 +222,19 @@ namespace Csharp_homework1
 
                     int left = (int)(int.Parse(mytag[3]) * newx);
                     con.Left = left;
-
                 }
-
 
                 if (con.Controls.Count > 0)
                 {
                     SetControls(newx, newy, con);
 
                 }
-            }      
+            }
+        } 
 
-        }
+        */
+
+        #endregion
 
     }
 }

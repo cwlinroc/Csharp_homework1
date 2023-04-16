@@ -16,8 +16,7 @@ namespace Csharp_homework1
         private int x0, y0;
         private Color pencolor = Color.Black;
         private int pensize = 1; 
-
-        
+               
         
         public form_M13_paint()
         {
@@ -29,7 +28,6 @@ namespace Csharp_homework1
         }
 
         
-
         private void trackBar_penwidth_ValueChanged(object sender, EventArgs e)
         {
             label_trackbarvalue.Text = trackBar_penwidth.Value.ToString();

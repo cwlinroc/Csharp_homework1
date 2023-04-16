@@ -13,20 +13,21 @@ namespace Csharp_homework1
 {
     public partial class form_M03_barapp : Form
     {
-
         
+        private ShoppingList shoplist;
         public form_M03_barapp()
         {
             InitializeComponent();
             shoplist = new ShoppingList();
         }
 
+        #region -- buttons --
         private void btn_menu_beer_Click(object sender, EventArgs e)
         {
             shoplist.Add("Beer");
             textbox_shoppinglist.Text = shoplist.GetNewText();
             textbox_total_price.Text = shoplist.PrintTotalPrice();
-            
+
         }
 
         private void btn_menu_tequila_Click(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace Csharp_homework1
             shoplist.Add("Tequila");
             textbox_shoppinglist.Text = shoplist.GetNewText();
             textbox_total_price.Text = shoplist.PrintTotalPrice();
-            
+
         }
 
         private void btn_menu_whisky_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace Csharp_homework1
             shoplist.Add("Whisky");
             textbox_shoppinglist.Text = shoplist.GetNewText();
             textbox_total_price.Text = shoplist.PrintTotalPrice();
-            
+
         }
 
         private void btn_menu_wine_Click(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace Csharp_homework1
             shoplist.Add("Wine");
             textbox_shoppinglist.Text = shoplist.GetNewText();
             textbox_total_price.Text = shoplist.PrintTotalPrice();
-            
+
         }
 
         private void btn_shoppinglist_clear_Click(object sender, EventArgs e)
@@ -65,22 +66,23 @@ namespace Csharp_homework1
 
         private void btn_payment_cash_Click(object sender, EventArgs e)
         {
-            string text="總金額： $" + shoplist.totalprice ;
-            string caption="確認付款";
+            string text = "總金額： $" + shoplist.totalprice;
+            string caption = "確認付款";
 
             MessageBox.Show(text, caption, MessageBoxButtons.OKCancel);
         }
 
         private void btn_payment_creddit_Click(object sender, EventArgs e)
         {
-            string text = "總金額： $" + shoplist.totalprice + "\n折扣後金額： $" 
-                + (int)( shoplist.totalprice * 0.87) ;
+            string text = "總金額： $" + shoplist.totalprice + "\n折扣後金額： $"
+                + (int)(shoplist.totalprice * 0.87);
             string caption = "確認付款";
 
             MessageBox.Show(text, caption, MessageBoxButtons.OKCancel);
         }
 
-        private ShoppingList shoplist;
+        #endregion
+
         private class ShoppingList
         {
             private Alcohol[] listboard ;
@@ -112,7 +114,6 @@ namespace Csharp_homework1
             {
                 switch(alcohol)
                 {
-
                     case "Beer":
                         listboard[0].Numbers++;
                         totalprice += listboard[0].Price;
@@ -132,7 +133,6 @@ namespace Csharp_homework1
                         listboard[3].Numbers++;
                         totalprice += listboard[3].Price;
                         break;
-
                 }
             }
 
@@ -142,9 +142,7 @@ namespace Csharp_homework1
                 {
                     listboard[i].Numbers = 0;
                 }
-
                 totalprice = 0;
-
             }
 
             public string GetNewText() 
@@ -159,26 +157,22 @@ namespace Csharp_homework1
                             + ", 共 NT"+listboard[i].Price*listboard[i].Numbers + "元\r\n";
                     }
                 }
-
                 return message;
             }
 
             public string PrintTotalPrice()
             {               
                 return totalprice.ToString()+"元";
-            }
-
-
-            
+            }            
         }
 
         private struct Alcohol
         {
             public string Name;
-            public int Price;            
+            public int Price;
             public int Numbers;
         }
 
-        
+
     }
 }

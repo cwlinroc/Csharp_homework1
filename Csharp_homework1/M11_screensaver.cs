@@ -51,6 +51,7 @@ namespace Csharp_homework1
 
         }
 
+        #region -- end form events --
         private void M11_screensaver_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -60,8 +61,17 @@ namespace Csharp_homework1
         {
             this.Close();
         }
+        private void M11_screensaver_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Math.Abs(mouse_last_x - e.X) > 10 || Math.Abs(mouse_last_y - e.Y) > 10)
+            {
+                this.Close();
+            }
+        }
 
-        
+        #endregion
+
+        #region -- movable image --
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -69,7 +79,7 @@ namespace Csharp_homework1
             ChangePosition(bitmapgroup[rotation]);
 
             this.Invalidate();
-            
+
         }
 
         private void M11_screensaver_Paint(object sender, PaintEventArgs e)
@@ -80,29 +90,24 @@ namespace Csharp_homework1
 
         private void ChangeRotation()
         {
-            rotation = rotation>=6 ?  2 : rotation+1 ;            
+            rotation = rotation >= 6 ? 2 : rotation + 1;
         }
         private void ChangePosition(Bitmap bitmap)
         {
             bitmap_x += 50;
             bitmap_y -= 100;
 
-            if (bitmap_x  > screenWidth)
+            if (bitmap_x > screenWidth)
             {
                 bitmap_x = -bitmap.Width;
             }
-            if (bitmap_y  < - bitmap.Height )
+            if (bitmap_y < -bitmap.Height)
             {
-                bitmap_y = screenHeight ;
+                bitmap_y = screenHeight;
             }
         }
 
-        private void M11_screensaver_MouseMove(object sender, MouseEventArgs e)
-        {
-            if(  Math.Abs(mouse_last_x-e.X)>10 || Math.Abs(mouse_last_y-e.Y)>10)
-            {
-                this.Close ();
-            }
-        }
+        #endregion
+
     }
 }

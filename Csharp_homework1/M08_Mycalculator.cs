@@ -17,8 +17,8 @@ namespace Csharp_homework1
             InitializeComponent();
         }
 
-        
 
+        #region -- buttons --
         private void btn_addition_Click(object sender, EventArgs e)
         {
             try
@@ -28,11 +28,10 @@ namespace Csharp_homework1
                 PrintAnswer(double.Parse(textbox_num1.Text) + double.Parse(textbox_num2.Text));
             }
             catch (ListErrorException) { }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }           
-
+            }
         }
 
         private void btn_subtraction_Click(object sender, EventArgs e)
@@ -78,7 +77,8 @@ namespace Csharp_homework1
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        } 
+        #endregion
 
 
         private void CheckInput()

@@ -24,9 +24,7 @@ namespace Csharp_homework1
         {
             InitializeComponent();
             InitialListView();
-            ReFreshSeed();
         }
-
 
         private void InitialListView()
         {
@@ -39,19 +37,9 @@ namespace Csharp_homework1
             listview_scoreboard.Columns.Add("平均", 60, HorizontalAlignment.Right);
             listview_scoreboard.Columns.Add("最低", 70, HorizontalAlignment.Left);
             listview_scoreboard.Columns.Add("最高", 70, HorizontalAlignment.Left);
-
-            
-
-            //listview_scoreboard.Columns[0]
         }
 
-        private void ReFreshSeed()
-        {
-            Random rng = new Random();
-            Utility.RandSeed = rng.Next();
-        }
-
-
+        #region -- buttons --
         private void btn_add_studentsdata_Click(object sender, EventArgs e)
         {
             try
@@ -71,7 +59,6 @@ namespace Csharp_homework1
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
 
@@ -123,7 +110,7 @@ namespace Csharp_homework1
 
         private void btn_clearall_Click(object sender, EventArgs e)
         {
-            studentslist.Clear(); 
+            studentslist.Clear();
             RenewScoreBoard(studentslist);
             listview_statistic.Items.Clear();
         }
@@ -150,11 +137,13 @@ namespace Csharp_homework1
                 FindStudent(int.Parse(textbox_lowbound.Text), int.Parse(textbox_highbound.Text));
             }
             catch (ListErrorException) { }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        #endregion
 
 
         private class Students
@@ -167,7 +156,7 @@ namespace Csharp_homework1
 
             public Students()
             {
-                Random rng = new Random(Utility.RandSeed);
+                Random rng = new Random(Guid.NewGuid().GetHashCode());
 
                 name = "";
                 name += (char)('A' + (rng.Next() % 26)); ;
@@ -183,8 +172,6 @@ namespace Csharp_homework1
                 {
                     score[i] = rng.Next() % 100;
                 }
-
-                Utility.RandSeed = rng.Next();
             }
 
             public Students(string name, params int[] score)
@@ -217,12 +204,11 @@ namespace Csharp_homework1
                         lowestsubjectpointer = i;
                     }
                 }
-
             }
-
-
         }
 
+
+        #region -- methods: check input --
         private void CheckInput()
         {
             if (textBox_name.Text == "")
@@ -248,7 +234,7 @@ namespace Csharp_homework1
                 return;
             }
 
-            if(int.Parse(textBox_chinesescore.Text)<0 || int.Parse(textBox_englishscore.Text) < 0
+            if (int.Parse(textBox_chinesescore.Text) < 0 || int.Parse(textBox_englishscore.Text) < 0
                 || int.Parse(textBox_mathscore.Text) < 0)
             {
                 throw new ListErrorException("你跟這位同學有仇嗎");
@@ -256,47 +242,50 @@ namespace Csharp_homework1
             }
 
             if (int.Parse(textBox_chinesescore.Text) > 100 || int.Parse(textBox_englishscore.Text) > 100
-                || int.Parse(textBox_mathscore.Text) > 100 )
+                || int.Parse(textBox_mathscore.Text) > 100)
             {
                 throw new ListErrorException("滿分是100，謝大哥");
                 return;
             }
-
-
         }
 
         private void CheckBoundExist()
         {
-            if (textbox_lowbound.Text == "" || textbox_highbound.Text =="")
+            if (textbox_lowbound.Text == "" || textbox_highbound.Text == "")
             {
                 throw new ListErrorException("請輸入成績範圍");
                 return;
             }
         }
 
-        public class ListErrorException : Exception 
+        public class ListErrorException : Exception
         {
             public ListErrorException(string message) : base(message)
             {
                 MessageBox.Show(message);
             }
         }
+
+        #endregion
+
+
+        #region -- methods: add&remove student --
         private void AddStudent()
         {
             Students student = new Students();
-            studentslist.Add(student); 
+            studentslist.Add(student);
         }
 
         private void AddStudent(string name, int score1, int score2, int score3)
         {
-            Students student = new Students(name,score1,score2,score3);
+            Students student = new Students(name, score1, score2, score3);
             studentslist.Add(student);
         }
 
         private void InsertStudent()
         {
             Students student = new Students();
-            studentslist.Insert(0,student);
+            studentslist.Insert(0, student);
         }
 
         private void InsertStudent(string name, int score1, int score2, int score3)
@@ -307,12 +296,16 @@ namespace Csharp_homework1
 
         private void RemoveStudent(int placement)
         {
-            if (studentslist.Count>placement)
+            if (studentslist.Count > placement)
             {
                 studentslist.RemoveAt(placement);
             }
         }
 
+        #endregion
+
+
+        #region -- methods: others --
         private void FindStudent(int lowbound, int highbound)
         {
             List<Students> matchedlist = studentslist.FindAll(x => x.score[0] >= lowbound && x.score[0] <= highbound);
@@ -325,14 +318,14 @@ namespace Csharp_homework1
         {
             listview_scoreboard.Items.Clear();
 
-            foreach (var student in inputlist) 
+            foreach (var student in inputlist)
             {
-                AddStudentToList(student);
+                AddToScoreboard(student);
             }
         }
 
-        
-        private void AddStudentToList(Students student)
+
+        private void AddToScoreboard(Students student)
         {
             var item = new ListViewItem(student.name);
 
@@ -383,7 +376,7 @@ namespace Csharp_homework1
         {
             var item_sum = new ListViewItem("總分");
 
-            foreach(int score in sum)
+            foreach (int score in sum)
             {
                 item_sum.SubItems.Add(score.ToString());
             }
@@ -416,10 +409,10 @@ namespace Csharp_homework1
             }
 
             listview_statistic.Items.Add(item_low);
-
         }
 
-        
+        #endregion
+
     }
 
 

@@ -46,7 +46,6 @@ namespace Csharp_homework1
             {
                 TriggerAlarm();
             }
-
         }
 
         private void RefreshClockMessage()
@@ -70,7 +69,6 @@ namespace Csharp_homework1
             }
 
             label_clock.Text = message;
-
         }
 
         private void TriggerAlarm()

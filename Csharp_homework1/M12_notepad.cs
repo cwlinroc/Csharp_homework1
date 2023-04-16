@@ -21,27 +21,28 @@ namespace Csharp_homework1
             RefreshClock();
         }
 
+        #region -- menu_strip bottons --
+
+        //復原, 取消復原在undo redo
         private void 開啟OToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 textbox_main.Text = File.ReadAllText(openFileDialog1.FileName);
             }
             RefreshUndoRedo();
         }
-
         private void 另存新檔AToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllText(saveFileDialog1.FileName,textbox_main.Text,Encoding.Default);
-                openFileDialog1.FileName = saveFileDialog1.FileName; 
+                File.WriteAllText(saveFileDialog1.FileName, textbox_main.Text, Encoding.Default);
+                openFileDialog1.FileName = saveFileDialog1.FileName;
             }
         }
-
         private void 儲存SToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(openFileDialog1.FileName == "")
+            if (openFileDialog1.FileName == "")
             {
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
@@ -87,47 +88,10 @@ namespace Csharp_homework1
             textbox_main.SelectAll();
         }
 
-        private void 新增NToolStripButton_Click(object sender, EventArgs e)
-        {
-            新增NToolStripMenuItem.PerformClick();
-        }
-
-        private void 開啟OToolStripButton_Click(object sender, EventArgs e)
-        {
-            開啟OToolStripMenuItem.PerformClick();
-        }
-
-        private void 儲存SToolStripButton_Click(object sender, EventArgs e)
-        {
-            儲存SToolStripMenuItem.PerformClick();
-        }
-
-        private void 剪下UToolStripButton_Click(object sender, EventArgs e)
-        {
-            剪下TToolStripMenuItem.PerformClick();
-        }
-
-        private void 複製CToolStripButton_Click(object sender, EventArgs e)
-        {
-            複製CToolStripMenuItem.PerformClick();
-        }
-
-        private void 貼上PToolStripButton_Click(object sender, EventArgs e)
-        {
-            貼上PToolStripMenuItem.PerformClick();
-        }
-
-        private void 說明LToolStripButton_Click(object sender, EventArgs e)
-        {
-            form_M12a_notepad_about m12a = new form_M12a_notepad_about();
-
-            m12a.ShowDialog();
-        }
-
         private void 顏色CToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog colorDialog = new ColorDialog();
-            if(colorDialog.ShowDialog() == DialogResult.OK)
+            if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 textbox_main.ForeColor = colorDialog.Color;
             }
@@ -136,7 +100,7 @@ namespace Csharp_homework1
         private void 字形VToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FontDialog fontDialog = new FontDialog();
-            if (fontDialog.ShowDialog(this)== DialogResult.OK)
+            if (fontDialog.ShowDialog(this) == DialogResult.OK)
             {
                 textbox_main.Font = fontDialog.Font;
             }
@@ -176,11 +140,58 @@ namespace Csharp_homework1
         {
             textbox_main.ForeColor = Color.Black;
         }
-
         private void 關於AToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            說明LToolStripButton.PerformClick();
+            form_M12a_notepad_about m12a = new form_M12a_notepad_about();
+
+            m12a.ShowDialog();
+            
         }
+
+
+
+        #endregion
+
+
+        #region -- tool_strip buttons --
+        private void 新增NToolStripButton_Click(object sender, EventArgs e)
+        {
+            新增NToolStripMenuItem.PerformClick();
+        }
+
+        private void 開啟OToolStripButton_Click(object sender, EventArgs e)
+        {
+            開啟OToolStripMenuItem.PerformClick();
+        }
+
+        private void 儲存SToolStripButton_Click(object sender, EventArgs e)
+        {
+            儲存SToolStripMenuItem.PerformClick();
+        }
+
+        private void 剪下UToolStripButton_Click(object sender, EventArgs e)
+        {
+            剪下TToolStripMenuItem.PerformClick();
+        }
+
+        private void 複製CToolStripButton_Click(object sender, EventArgs e)
+        {
+            複製CToolStripMenuItem.PerformClick();
+        }
+
+        private void 貼上PToolStripButton_Click(object sender, EventArgs e)
+        {
+            貼上PToolStripMenuItem.PerformClick();
+        }
+
+        private void 說明LToolStripButton_Click(object sender, EventArgs e)
+        {
+            關於AToolStripMenuItem.PerformClick();
+        }
+
+        #endregion
+
+        #region -- clock --
 
         private void timer_clock_Tick(object sender, EventArgs e)
         {
@@ -210,8 +221,12 @@ namespace Csharp_homework1
             toolstriplabel_clock.Text = message;
         }
 
+        #endregion
 
         /****Undo Redo****/
+
+        #region -- undo redo --
+
 
         // copy all solution(waste of memory)
         /**
@@ -271,9 +286,8 @@ namespace Csharp_homework1
             canUndo = true ;
         }
         **/
-        
-        
-        private string lastContent="";
+
+        private string lastContent = "";
 
         private Stack<EditRecord> edit_history = new Stack<EditRecord>();
         private Stack<EditRecord> undo_history = new Stack<EditRecord>();
@@ -327,8 +341,8 @@ namespace Csharp_homework1
 
             newedit.editString = GetEditString(textbox_main.Text, lastContent, newedit.isInsertion, newedit.selecstart, newedit.editLength);
 
-            
-            edit_history.Push(newedit);            
+
+            edit_history.Push(newedit);
             undo_history.Clear();
 
             canUndo = true;
@@ -338,7 +352,7 @@ namespace Csharp_homework1
             取消復原RToolStripMenuItem.Enabled = canRedo;
 
             lastContent = textbox_main.Text;
-            
+
         }
 
         private void ImplementUndo()
@@ -347,13 +361,13 @@ namespace Csharp_homework1
 
             EditRecord record = undo_history.Peek();
 
-            if(record.isInsertion)
+            if (record.isInsertion)
             {
-                textbox_main.Text = textbox_main.Text.Remove(record.selecstart -record.editLength , record.editLength);
+                textbox_main.Text = textbox_main.Text.Remove(record.selecstart - record.editLength, record.editLength);
             }
             else
             {
-                textbox_main.Text = textbox_main.Text.Insert(record.selecstart , record.editString);
+                textbox_main.Text = textbox_main.Text.Insert(record.selecstart, record.editString);
             }
 
             canRedo = true;
@@ -364,21 +378,21 @@ namespace Csharp_homework1
 
         }
 
-        
+
         private void ImplementRedo()
         {
-                        
+
             edit_history.Push(undo_history.Pop());
 
             EditRecord record = edit_history.Peek();
 
             if (record.isInsertion)
             {
-                textbox_main.Text = textbox_main.Text.Insert(record.selecstart - record.editLength , record.editString);
+                textbox_main.Text = textbox_main.Text.Insert(record.selecstart - record.editLength, record.editString);
             }
             else
             {
-                textbox_main.Text = textbox_main.Text.Remove(record.selecstart  , record.editLength);
+                textbox_main.Text = textbox_main.Text.Remove(record.selecstart, record.editLength);
             }
 
             canRedo = undo_history.Count > 0;
@@ -388,9 +402,9 @@ namespace Csharp_homework1
             取消復原RToolStripMenuItem.Enabled = canRedo;
         }
 
-               
 
-        private bool IsInsertion(TextBox editor,string last_content)
+
+        private bool IsInsertion(TextBox editor, string last_content)
         {
             return editor.TextLength > last_content.Length;
         }
@@ -400,11 +414,11 @@ namespace Csharp_homework1
             return Math.Abs(editor.TextLength - last_content.Length);
         }
 
-        private string GetEditString(string content , string last_content, bool isInsertion , int selecstart , int len) 
+        private string GetEditString(string content, string last_content, bool isInsertion, int selecstart, int len)
         {
-            if (isInsertion) 
+            if (isInsertion)
             {
-                return content.Substring(selecstart-len, len);
+                return content.Substring(selecstart - len, len);
             }
             else
             {
@@ -427,7 +441,7 @@ namespace Csharp_homework1
             canRedo = false;
         }
 
-        
+        #endregion
 
     }
 }

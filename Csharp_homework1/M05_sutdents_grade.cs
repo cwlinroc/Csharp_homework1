@@ -24,13 +24,10 @@ namespace Csharp_homework1
         {
             InitializeComponent();
             InitialListView();
-            ReFreshSeed();
         }
-
 
         private void InitialListView()
         {
-
             listview_scoreboard.Columns.Add("姓名", 80, HorizontalAlignment.Right);
             listview_scoreboard.Columns.Add("國文", 50, HorizontalAlignment.Right);
             listview_scoreboard.Columns.Add("英文", 50, HorizontalAlignment.Right);
@@ -39,18 +36,10 @@ namespace Csharp_homework1
             listview_scoreboard.Columns.Add("平均", 60, HorizontalAlignment.Right);
             listview_scoreboard.Columns.Add("最低", 70, HorizontalAlignment.Left);
             listview_scoreboard.Columns.Add("最高", 70, HorizontalAlignment.Left);
-
-            
-
-            //listview_scoreboard.Columns[0]
         }
 
-        private void ReFreshSeed()
-        {
-            Random rng = new Random();
-            Utility.RandSeed = rng.Next();
-        }
 
+        #region -- buttons --
 
         private void btn_add_studentsdata_Click(object sender, EventArgs e)
         {
@@ -70,7 +59,6 @@ namespace Csharp_homework1
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void btn_add_randomdata_Click(object sender, EventArgs e)
@@ -93,7 +81,6 @@ namespace Csharp_homework1
             btn_add_randomdata.Enabled = true;
             btn_add_20randomdata.Enabled = true;
             btn_add_studentsdata.Enabled = true;
-
         }
 
         private void btn_statistic_Click(object sender, EventArgs e)
@@ -113,21 +100,21 @@ namespace Csharp_homework1
             btn_add_randomdata.Enabled = false;
             btn_add_20randomdata.Enabled = false;
             btn_add_studentsdata.Enabled = false;
-
         }
 
 
+        #endregion
         private class Students
         {
             public string name;
             public int[] score;
 
-            public int highestsubjectpointer;
-            public int lowestsubjectpointer;
+            public int highestSubjectPointer;
+            public int lowestSubjectPointer;
 
             public Students()
             {
-                Random rng = new Random(Utility.RandSeed);
+                Random rng = new Random(Guid.NewGuid().GetHashCode());
 
                 name = "";
                 name += (char)('A' + (rng.Next() % 26)); ;
@@ -143,8 +130,6 @@ namespace Csharp_homework1
                 {
                     score[i] = rng.Next() % 100;
                 }
-
-                Utility.RandSeed = rng.Next();
             }
 
             public Students(string name, params int[] score)
@@ -161,27 +146,26 @@ namespace Csharp_homework1
 
             public void FindMinMax()
             {
-                highestsubjectpointer = 0;
-                lowestsubjectpointer = 0;
+                highestSubjectPointer = 0;
+                lowestSubjectPointer = 0;
 
                 if (subjectnumbers < 2) return;
 
                 for (int i = 1; i < subjectnumbers; i++)
                 {
-                    if (score[i] > score[highestsubjectpointer])
+                    if (score[i] > score[highestSubjectPointer])
                     {
-                        highestsubjectpointer = i;
+                        highestSubjectPointer = i;
                     }
-                    if (score[i] < score[lowestsubjectpointer])
+                    if (score[i] < score[lowestSubjectPointer])
                     {
-                        lowestsubjectpointer = i;
+                        lowestSubjectPointer = i;
                     }
                 }
-
             }
-
-
         }
+
+        #region -- methods --
 
         private void CheckInput()
         {
@@ -208,7 +192,7 @@ namespace Csharp_homework1
                 return;
             }
 
-            if(int.Parse(textBox_chinesescore.Text)<0 || int.Parse(textBox_englishscore.Text) < 0
+            if (int.Parse(textBox_chinesescore.Text) < 0 || int.Parse(textBox_englishscore.Text) < 0
                 || int.Parse(textBox_mathscore.Text) < 0)
             {
                 throw new ListErrorException("你跟這位同學有仇嗎");
@@ -216,16 +200,14 @@ namespace Csharp_homework1
             }
 
             if (int.Parse(textBox_chinesescore.Text) > 100 || int.Parse(textBox_englishscore.Text) > 100
-                || int.Parse(textBox_mathscore.Text) > 100 )
+                || int.Parse(textBox_mathscore.Text) > 100)
             {
                 throw new ListErrorException("滿分是100，謝大哥");
                 return;
             }
-
-
         }
 
-        public class ListErrorException : Exception 
+        public class ListErrorException : Exception
         {
             public ListErrorException(string message) : base(message)
             {
@@ -237,24 +219,22 @@ namespace Csharp_homework1
             Students student = new Students();
             studentslist.Add(student);
 
-            AddStudentToList(student);         
-
+            AddStudentToList(student);
         }
 
         private void AddStudent(string name, int score1, int score2, int score3)
         {
-            Students student = new Students(name,score1,score2,score3);
+            Students student = new Students(name, score1, score2, score3);
             studentslist.Add(student);
 
             AddStudentToList(student);
-
         }
 
         private void AddStudentToList(Students student)
         {
             var item = new ListViewItem(student.name);
 
-            int sum = 0 ;
+            int sum = 0;
 
             for (int i = 0; i < subjectnumbers; i++)
             {
@@ -263,16 +243,15 @@ namespace Csharp_homework1
             }//各科
 
             item.SubItems.Add(sum.ToString());//總分
-            item.SubItems.Add(((double)sum/subjectnumbers).ToString("0.0"));//平均
+            item.SubItems.Add(((double)sum / subjectnumbers).ToString("0.0"));//平均
 
             student.FindMinMax();
 
-            item.SubItems.Add(subjectname[student.lowestsubjectpointer]
-                + student.score[student.lowestsubjectpointer].ToString());//最低
+            item.SubItems.Add(subjectname[student.lowestSubjectPointer]
+                + student.score[student.lowestSubjectPointer].ToString());//最低
 
-            item.SubItems.Add(subjectname[student.highestsubjectpointer] 
-                + student.score[student.highestsubjectpointer].ToString());//最高
-            
+            item.SubItems.Add(subjectname[student.highestSubjectPointer]
+                + student.score[student.highestSubjectPointer].ToString());//最高            
 
             listview_scoreboard.Items.Add(item);
         }
@@ -300,7 +279,7 @@ namespace Csharp_homework1
         {
             var item_sum = new ListViewItem("總分");
 
-            foreach(int score in sum)
+            foreach (int score in sum)
             {
                 item_sum.SubItems.Add(score.ToString());
             }
@@ -333,10 +312,9 @@ namespace Csharp_homework1
             }
 
             listview_statistic.Items.Add(item_low);
-
         }
 
-        
+        #endregion
     }
 
 

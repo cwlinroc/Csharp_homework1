@@ -161,7 +161,6 @@
     <Compile Include="M02a_loanreport.Designer.cs">
       <DependentUpon>M02a_loanreport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility.cs" />
     <Compile Include="M02_loancounter.cs">
       <SubType>Form</SubType>
     </Compile>

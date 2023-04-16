@@ -21,14 +21,14 @@ namespace Csharp_homework1
         private string[] arr0711str = { "mother張","emma","迪克蕭","J40","Candy","Cindy","Coconut","Motherfacker"};
 
 
+        #region -- buttons --
         private void btn_oddoreven_Click(object sender, EventArgs e)
         {
             try
             {
-                
                 int number = int.Parse(textbox_oddoreven.Text);
 
-                if (number%2==1)
+                if (number % 2 == 1)
                 {
                     textbox_resault.Text = $"輸入的數{number}為奇數";
                 }
@@ -36,13 +36,11 @@ namespace Csharp_homework1
                 {
                     textbox_resault.Text = $"輸入的數{number}為偶數";
                 }
-
             }
             catch
             {
                 MessageBox.Show("請輸入數字");
             }
-
         }
 
         private void btn_arrayfindminmax_Click(object sender, EventArgs e)
@@ -57,7 +55,6 @@ namespace Csharp_homework1
             }
             textbox_resault.Text = $"int陣列arr0711{{1,5,6,8,7,97,54,887,65,548}} \r\n" +
                 $"最大值為{maxnumber}\r\n最小值為{minnumber}";
-
         }
 
 
@@ -65,26 +62,26 @@ namespace Csharp_homework1
         {
             int totalnumber = 0;
 
-            foreach(string str in arr0711str) 
+            foreach (string str in arr0711str)
             {
-                if(str.Contains('c')||str.Contains('C'))
+                if (str.Contains('c') || str.Contains('C'))
                 {
                     totalnumber++;
                 }
             }
 
-            textbox_resault.Text = $"string陣列arr0711str{{\"mother張\",\"emma\",\"迪克蕭\",\"J40\",\"Candy\",\"Cindy\",\"Coconut\",\"Motherfacker\"}}\r\n" 
-                +$"有C及c的名字總共有{totalnumber}個";
+            textbox_resault.Text = $"string陣列arr0711str{{\"mother張\",\"emma\",\"迪克蕭\",\"J40\",\"Candy\",\"Cindy\",\"Coconut\",\"Motherfacker\"}}\r\n"
+                + $"有C及c的名字總共有{totalnumber}個";
         }
 
         private void btn_numberofoddandeven_Click(object sender, EventArgs e)
         {
-            int numberofodds = 0 ;
-            int numberofevens = 0 ;
+            int numberofodds = 0;
+            int numberofevens = 0;
 
             for (int i = 0; i < arr0711.Length; i++)
             {
-                if ( (arr0711[i]%2)==0)
+                if ((arr0711[i] % 2) == 0)
                 {
                     numberofevens++;
                 }
@@ -102,12 +99,12 @@ namespace Csharp_homework1
         {
             string longestname = "";
 
-            foreach(string str in arr0711str) 
+            foreach (string str in arr0711str)
             {
-                if(str.Length>longestname.Length)
+                if (str.Length > longestname.Length)
                 {
                     longestname = str;
-                }                    
+                }
             }
 
             textbox_resault.Text = $"string陣列arr0711str{{\"mother張\",\"emma\",\"迪克蕭\",\"J40\",\"Candy\",\"Cindy\",\"Coconut\",\"Motherfacker\"}}\r\n"
@@ -118,11 +115,11 @@ namespace Csharp_homework1
         {
             string resault = "";
 
-            for(int x =0 ; x<10 ; x++)
+            for (int x = 0; x < 10; x++)
             {
-                for(int y =0 ; y<10 ; y++)
+                for (int y = 0; y < 10; y++)
                 {
-                    if(x==0||y==0||x==9||y==9)
+                    if (x == 0 || y == 0 || x == 9 || y == 9)
                     {
                         resault += "1 ";
                     }
@@ -183,9 +180,9 @@ namespace Csharp_homework1
 
             textbox_resault.Text = $"換位前 n1 = {n1}, n2 = {n2} \r\n";
 
-            n1 ^= n2 ;
-            n2 ^= n1 ;
-            n1 ^= n2 ;            
+            n1 ^= n2;
+            n2 ^= n1;
+            n1 ^= n2;
 
             textbox_resault.Text += $"換位後 n1 = {n1}, n2 = {n2} ";
         }
@@ -210,7 +207,8 @@ namespace Csharp_homework1
 
         private void btn_clearresualt_Click(object sender, EventArgs e)
         {
-            textbox_resault.Text = "結果" ;
-        }
+            textbox_resault.Text = "結果";
+        } 
+        #endregion
     }
 }
