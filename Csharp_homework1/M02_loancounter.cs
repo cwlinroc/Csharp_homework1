@@ -29,8 +29,6 @@ namespace Csharp_homework1
         private int PMT = 0;
 
        
-         
-
         private void btn_PMT_Click(object sender, EventArgs e)
         {
             Initialize();
@@ -53,7 +51,6 @@ namespace Csharp_homework1
 
             form_M02a_loanreport m03a = new form_M02a_loanreport(loan_amount, loan_term_year, lending_rate_year, PMT);
             m03a.Show();
-
         }
 
         private void Initialize()
@@ -70,13 +67,10 @@ namespace Csharp_homework1
 
         private void Calculate()
         {
-            
-
             double average_amortization_rate = (Math.Pow(1 + (double)lending_rate_month, loan_term_month) * (double)lending_rate_month)
                 / (Math.Pow((1 + (double)lending_rate_month), loan_term_month) - 1);
 
             PMT = (int)(average_amortization_rate * (loan_amount - down_payment));
-
         }
 
         

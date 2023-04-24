@@ -137,6 +137,7 @@ namespace Csharp_homework1
             newform.Show();
         }
 
+       
 
         private void OpenForm(Form newform)
         {

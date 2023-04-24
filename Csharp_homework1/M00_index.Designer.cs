@@ -59,10 +59,9 @@
             // 
             this.btn_showhelloform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_showhelloform.Location = new System.Drawing.Point(24, 18);
-            this.btn_showhelloform.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_showhelloform.Location = new System.Drawing.Point(18, 14);
             this.btn_showhelloform.Name = "btn_showhelloform";
-            this.btn_showhelloform.Size = new System.Drawing.Size(200, 30);
+            this.btn_showhelloform.Size = new System.Drawing.Size(189, 24);
             this.btn_showhelloform.TabIndex = 0;
             this.btn_showhelloform.Tag = "width";
             this.btn_showhelloform.Text = "Show Hello Form";
@@ -73,10 +72,9 @@
             // 
             this.btn_showloanform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_showloanform.Location = new System.Drawing.Point(24, 52);
-            this.btn_showloanform.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_showloanform.Location = new System.Drawing.Point(18, 42);
             this.btn_showloanform.Name = "btn_showloanform";
-            this.btn_showloanform.Size = new System.Drawing.Size(200, 30);
+            this.btn_showloanform.Size = new System.Drawing.Size(189, 24);
             this.btn_showloanform.TabIndex = 3;
             this.btn_showloanform.Tag = "width";
             this.btn_showloanform.Text = "Show Loan Form";
@@ -87,10 +85,9 @@
             // 
             this.btm_show_barapp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btm_show_barapp.Location = new System.Drawing.Point(24, 88);
-            this.btm_show_barapp.Margin = new System.Windows.Forms.Padding(4);
+            this.btm_show_barapp.Location = new System.Drawing.Point(18, 70);
             this.btm_show_barapp.Name = "btm_show_barapp";
-            this.btm_show_barapp.Size = new System.Drawing.Size(200, 30);
+            this.btm_show_barapp.Size = new System.Drawing.Size(189, 24);
             this.btm_show_barapp.TabIndex = 4;
             this.btm_show_barapp.Tag = "width";
             this.btm_show_barapp.Text = "Show bar app";
@@ -101,10 +98,10 @@
             // 
             this.btn_show_student_structform.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_student_structform.Location = new System.Drawing.Point(24, 122);
-            this.btn_show_student_structform.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_student_structform.Location = new System.Drawing.Point(18, 98);
+            this.btn_show_student_structform.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_student_structform.Name = "btn_show_student_structform";
-            this.btn_show_student_structform.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_student_structform.Size = new System.Drawing.Size(189, 24);
             this.btn_show_student_structform.TabIndex = 5;
             this.btn_show_student_structform.Tag = "width";
             this.btn_show_student_structform.Text = "Show Student Structform";
@@ -115,10 +112,10 @@
             // 
             this.btn_show_students_grade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_students_grade.Location = new System.Drawing.Point(24, 158);
-            this.btn_show_students_grade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_students_grade.Location = new System.Drawing.Point(18, 126);
+            this.btn_show_students_grade.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_students_grade.Name = "btn_show_students_grade";
-            this.btn_show_students_grade.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_students_grade.Size = new System.Drawing.Size(189, 24);
             this.btn_show_students_grade.TabIndex = 6;
             this.btn_show_students_grade.Tag = "width";
             this.btn_show_students_grade.Text = "Show Students Grade";
@@ -129,10 +126,10 @@
             // 
             this.btn_show_gradelist.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_gradelist.Location = new System.Drawing.Point(24, 192);
-            this.btn_show_gradelist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_gradelist.Location = new System.Drawing.Point(18, 154);
+            this.btn_show_gradelist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_gradelist.Name = "btn_show_gradelist";
-            this.btn_show_gradelist.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_gradelist.Size = new System.Drawing.Size(189, 24);
             this.btn_show_gradelist.TabIndex = 7;
             this.btn_show_gradelist.Tag = "width";
             this.btn_show_gradelist.Text = "Show Students Grade List";
@@ -143,10 +140,10 @@
             // 
             this.btn_show_method.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_method.Location = new System.Drawing.Point(24, 228);
-            this.btn_show_method.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_method.Location = new System.Drawing.Point(18, 182);
+            this.btn_show_method.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_method.Name = "btn_show_method";
-            this.btn_show_method.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_method.Size = new System.Drawing.Size(189, 24);
             this.btn_show_method.TabIndex = 8;
             this.btn_show_method.Tag = "width";
             this.btn_show_method.Text = "Show Method";
@@ -157,10 +154,10 @@
             // 
             this.btn_show_mycalculator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_mycalculator.Location = new System.Drawing.Point(24, 262);
-            this.btn_show_mycalculator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_mycalculator.Location = new System.Drawing.Point(18, 210);
+            this.btn_show_mycalculator.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_mycalculator.Name = "btn_show_mycalculator";
-            this.btn_show_mycalculator.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_mycalculator.Size = new System.Drawing.Size(189, 24);
             this.btn_show_mycalculator.TabIndex = 9;
             this.btn_show_mycalculator.Tag = "width";
             this.btn_show_mycalculator.Text = "Show My Calculator";
@@ -171,10 +168,10 @@
             // 
             this.btn_show_tictactoe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_tictactoe.Location = new System.Drawing.Point(24, 332);
-            this.btn_show_tictactoe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_tictactoe.Location = new System.Drawing.Point(18, 266);
+            this.btn_show_tictactoe.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_tictactoe.Name = "btn_show_tictactoe";
-            this.btn_show_tictactoe.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_tictactoe.Size = new System.Drawing.Size(189, 24);
             this.btn_show_tictactoe.TabIndex = 10;
             this.btn_show_tictactoe.Tag = "width";
             this.btn_show_tictactoe.Text = "Show Tic-Tac-Toe";
@@ -185,10 +182,10 @@
             // 
             this.btn_show_methodmk2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_methodmk2.Location = new System.Drawing.Point(24, 298);
-            this.btn_show_methodmk2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_methodmk2.Location = new System.Drawing.Point(18, 238);
+            this.btn_show_methodmk2.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_methodmk2.Name = "btn_show_methodmk2";
-            this.btn_show_methodmk2.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_methodmk2.Size = new System.Drawing.Size(189, 24);
             this.btn_show_methodmk2.TabIndex = 11;
             this.btn_show_methodmk2.Tag = "width";
             this.btn_show_methodmk2.Text = "Show Method MkII";
@@ -199,10 +196,10 @@
             // 
             this.btn_show_guess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_guess.Location = new System.Drawing.Point(24, 508);
-            this.btn_show_guess.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_guess.Location = new System.Drawing.Point(18, 406);
+            this.btn_show_guess.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_guess.Name = "btn_show_guess";
-            this.btn_show_guess.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_guess.Size = new System.Drawing.Size(189, 24);
             this.btn_show_guess.TabIndex = 12;
             this.btn_show_guess.Tag = "width";
             this.btn_show_guess.Text = "Show Guess";
@@ -213,10 +210,10 @@
             // 
             this.btn_show_screensaver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_screensaver.Location = new System.Drawing.Point(24, 368);
-            this.btn_show_screensaver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_screensaver.Location = new System.Drawing.Point(18, 294);
+            this.btn_show_screensaver.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_screensaver.Name = "btn_show_screensaver";
-            this.btn_show_screensaver.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_screensaver.Size = new System.Drawing.Size(189, 24);
             this.btn_show_screensaver.TabIndex = 13;
             this.btn_show_screensaver.Tag = "width";
             this.btn_show_screensaver.Text = "Show Screen Saver";
@@ -227,10 +224,10 @@
             // 
             this.btn_show_notepad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_notepad.Location = new System.Drawing.Point(24, 402);
-            this.btn_show_notepad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_notepad.Location = new System.Drawing.Point(18, 322);
+            this.btn_show_notepad.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_notepad.Name = "btn_show_notepad";
-            this.btn_show_notepad.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_notepad.Size = new System.Drawing.Size(189, 24);
             this.btn_show_notepad.TabIndex = 14;
             this.btn_show_notepad.Tag = "width";
             this.btn_show_notepad.Text = "Show NotePad";
@@ -241,10 +238,10 @@
             // 
             this.btn_show_paint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_paint.Location = new System.Drawing.Point(24, 438);
-            this.btn_show_paint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_paint.Location = new System.Drawing.Point(18, 350);
+            this.btn_show_paint.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_paint.Name = "btn_show_paint";
-            this.btn_show_paint.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_paint.Size = new System.Drawing.Size(189, 24);
             this.btn_show_paint.TabIndex = 15;
             this.btn_show_paint.Tag = "width";
             this.btn_show_paint.Text = "Show Paint";
@@ -255,10 +252,10 @@
             // 
             this.btn_show_pictureviewer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_pictureviewer.Location = new System.Drawing.Point(24, 472);
-            this.btn_show_pictureviewer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_pictureviewer.Location = new System.Drawing.Point(18, 378);
+            this.btn_show_pictureviewer.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_pictureviewer.Name = "btn_show_pictureviewer";
-            this.btn_show_pictureviewer.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_pictureviewer.Size = new System.Drawing.Size(189, 24);
             this.btn_show_pictureviewer.TabIndex = 16;
             this.btn_show_pictureviewer.Tag = "width";
             this.btn_show_pictureviewer.Text = "Show Picture Viewer";
@@ -269,10 +266,10 @@
             // 
             this.btn_show_alarm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_show_alarm.Location = new System.Drawing.Point(24, 542);
-            this.btn_show_alarm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_show_alarm.Location = new System.Drawing.Point(18, 434);
+            this.btn_show_alarm.Margin = new System.Windows.Forms.Padding(2);
             this.btn_show_alarm.Name = "btn_show_alarm";
-            this.btn_show_alarm.Size = new System.Drawing.Size(200, 30);
+            this.btn_show_alarm.Size = new System.Drawing.Size(189, 24);
             this.btn_show_alarm.TabIndex = 17;
             this.btn_show_alarm.Tag = "width";
             this.btn_show_alarm.Text = "Show Alarm Clock";
@@ -284,7 +281,6 @@
             this.splitContainer_all.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer_all.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_all.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer_all.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer_all.Name = "splitContainer_all";
             this.splitContainer_all.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -296,17 +292,14 @@
             // 
             this.splitContainer_all.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.splitContainer_all.Panel2.Controls.Add(this.splitContainer_bottom);
-            this.splitContainer_all.Size = new System.Drawing.Size(1845, 951);
-            this.splitContainer_all.SplitterDistance = 118;
-            this.splitContainer_all.SplitterWidth = 5;
+            this.splitContainer_all.Size = new System.Drawing.Size(1184, 661);
+            this.splitContainer_all.SplitterDistance = 100;
             this.splitContainer_all.TabIndex = 19;
             // 
             // splitContainer_bottom
             // 
             this.splitContainer_bottom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer_bottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer_bottom.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer_bottom.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer_bottom.Name = "splitContainer_bottom";
             // 
             // splitContainer_bottom.Panel1
@@ -333,21 +326,19 @@
             // splitContainer_bottom.Panel2
             // 
             this.splitContainer_bottom.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.splitContainer_bottom.Size = new System.Drawing.Size(1845, 828);
-            this.splitContainer_bottom.SplitterDistance = 350;
+            this.splitContainer_bottom.Size = new System.Drawing.Size(1178, 545);
+            this.splitContainer_bottom.SplitterDistance = 223;
             this.splitContainer_bottom.SplitterIncrement = 5;
-            this.splitContainer_bottom.SplitterWidth = 5;
             this.splitContainer_bottom.TabIndex = 0;
             // 
             // form_M00_index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1845, 951);
+            this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.splitContainer_all);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_M00_index";
             this.Text = "Csharp_Homework";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
